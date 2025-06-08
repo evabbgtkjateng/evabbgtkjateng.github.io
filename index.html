@@ -45,12 +45,18 @@
         }
         
         @keyframes pulse-glow {
-            0%, 100% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.2); }
-            50% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.2); }
+            0%, 100% { 
+                box-shadow: 0 0 5px rgba(242, 198, 65, 0.3);
+                text-shadow: 0 0 20px rgba(242, 198, 65, 0.5), 0 0 40px rgba(242, 198, 65, 0.3);
+            }
+            50% { 
+                box-shadow: 0 0 20px rgba(242, 198, 65, 0.6), 0 0 30px rgba(242, 198, 65, 0.4);
+                text-shadow: 0 0 25px rgba(242, 198, 65, 0.7), 0 0 50px rgba(242, 198, 65, 0.5);
+            }
         }
         
         .animate-pulse-glow {
-            animation: pulse-glow 2s ease-in-out infinite;
+            animation: pulse-glow 3s ease-in-out infinite;
         }
         
         .shadow-3xl {
@@ -106,32 +112,131 @@
     </style>
 </head>
 <body class="bg-gray-900 text-white font-['Inter']">
-    <img src="bg-hero.jpg" alt="Background Hero" class="absolute inset-0 w-full h-full object-cover z-0 opacity-30">
+    <!-- Hero Background with Broadway Overlay -->
+    <div class="fixed inset-0 z-0">
+        <img src="bg-hero.jpg" alt="Background Hero" class="w-full h-full object-cover opacity-40">
+        <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80"></div>
+        <!-- Broadway Spotlight Effects -->
+        <div class="absolute top-0 left-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-float"></div>
+    </div>
+    
     <div class="relative z-10 container mx-auto px-4 py-8">
-        <header class="text-center mb-12 relative z-0"> <!-- Added z-0 -->
-            <h1 class="text-5xl md:text-7xl font-['Bungee_Shade'] text-yellow-400 tracking-wider" style="font-family: 'Bungee Shade', cursive;">EVALUASI</h1>
-            <p class="text-3xl md:text-5xl font-['Bungee'] text-red-600" style="font-family: 'Bungee', cursive;">TENGAH TAHUN 2025</p>
-            <p class="text-xl md:text-2xl text-gray-300 mt-2">Rewind & Recharge: Refleksi capaian & identifikasi hambatan</p>
+        <!-- Broadway Header with Theatrical Styling -->
+        <header class="text-center mb-16 relative">
+            <!-- Decorative Broadway Elements -->
+            <div class="absolute -top-8 left-1/2 transform -translate-x-1/2">
+                <img src="marquee-broadway.png" alt="Broadway Marquee" class="w-32 md:w-48 opacity-80 animate-pulse">
+            </div>
+            
+            <!-- Main Title with Broadway Font and Effects -->
+            <div class="bg-black/70 backdrop-blur-md rounded-3xl p-8 md:p-12 border-4 border-secondary/30 shadow-2xl">
+                <div class="relative">
+                    <!-- Spotlight Circle Behind Title -->
+                    <div class="absolute inset-0 bg-gradient-radial from-secondary/20 to-transparent rounded-full blur-xl"></div>
+                    
+                    <h1 class="relative text-4xl md:text-6xl lg:text-8xl font-broadway text-secondary mb-4 tracking-wider drop-shadow-2xl animate-pulse-glow" 
+                        style="font-family: 'Broadway', 'Bungee Shade', cursive; text-shadow: 0 0 20px rgba(242, 198, 65, 0.5), 0 0 40px rgba(242, 198, 65, 0.3);">
+                        EVALUASI
+                    </h1>
+                    
+                    <div class="flex items-center justify-center gap-4 mb-4">
+                        <img src="stars-broadway.png" alt="Broadway Star" class="w-6 md:w-8 animate-bounce">
+                        <p class="text-2xl md:text-4xl lg:text-5xl font-bungee-shade text-primary font-bold tracking-wide drop-shadow-lg"
+                           style="font-family: 'Bungee Shade', cursive; text-shadow: 0 0 15px rgba(217, 4, 22, 0.4);">
+                            TENGAH TAHUN 2025
+                        </p>
+                        <img src="stars-broadway.png" alt="Broadway Star" class="w-6 md:w-8 animate-bounce" style="animation-delay: 0.5s;">
+                    </div>
+                    
+                    <div class="flex items-center justify-center gap-2 mb-6">
+                        <img src="symbol-broadway.png" alt="Broadway Symbol" class="w-4 md:w-6">
+                        <p class="text-lg md:text-xl lg:text-2xl text-accent font-semibold italic">
+                            Rewind & Recharge: Refleksi capaian & identifikasi hambatan
+                        </p>
+                        <img src="symbol-broadway.png" alt="Broadway Symbol" class="w-4 md:w-6">
+                    </div>
+                    
+                    <!-- Broadway Curtain Decoration -->
+                    <div class="flex justify-center gap-4">
+                        <img src="bulbs-broadway.png" alt="Broadway Bulbs" class="w-8 md:w-12 animate-bounce" style="animation-delay: 0.2s;">
+                        <img src="lightbox-broadway.png" alt="Broadway Lightbox" class="w-12 md:w-16 animate-float">
+                        <img src="bulbs-broadway.png" alt="Broadway Bulbs" class="w-8 md:w-12 animate-bounce" style="animation-delay: 0.4s;">
+                    </div>
+                </div>
+            </div>
         </header>
 
-        <nav class="mb-12 relative z-10">
-            <ul class="flex justify-center space-x-4 md:space-x-8 bg-black bg-opacity-50 p-4 rounded-lg">
-                <li><a href="index.html" class="text-yellow-400 hover:text-yellow-200 font-['Broadway'] text-lg md:text-xl" style="font-family: 'Broadway', cursive;">HOME</a></li>
-                <li><a href="videos.html" class="text-yellow-400 hover:text-yellow-200 font-['Broadway'] text-lg md:text-xl" style="font-family: 'Broadway', cursive;">VIDEOS</a></li>
-                <li><a href="gallery.html" class="text-yellow-400 hover:text-yellow-200 font-['Broadway'] text-lg md:text-xl" style="font-family: 'Broadway', cursive;">GALLERY</a></li>
-                <li><a href="news.html" class="text-yellow-400 hover:text-yellow-200 font-['Broadway'] text-lg md:text-xl" style="font-family: 'Broadway', cursive;">NEWS</a></li>
-            </ul>
+        <!-- Enhanced Navigation with Broadway Theme -->
+        <nav class="mb-16 sticky top-4 z-50">
+            <div class="bg-black/80 backdrop-blur-md border-2 border-secondary/40 rounded-2xl p-6 shadow-2xl">
+                <!-- Main Navigation -->
+                <ul class="flex flex-wrap justify-center items-center gap-2 md:gap-6 mb-4">
+                    <li>
+                        <a href="index.html" class="group relative px-4 py-2 text-secondary hover:text-accent font-broadway text-sm md:text-lg font-bold tracking-wide transition-all duration-300 hover:scale-110">
+                            <span class="relative z-10">🏠 HOME</span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-secondary/20 to-accent/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </a>
+                    </li>
+                    <li class="text-secondary/50">•</li>
+                    <li>
+                        <a href="videos.html" class="group relative px-4 py-2 text-secondary hover:text-accent font-broadway text-sm md:text-lg font-bold tracking-wide transition-all duration-300 hover:scale-110">
+                            <span class="relative z-10">🎬 VIDEOS</span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-secondary/20 to-accent/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </a>
+                    </li>
+                    <li class="text-secondary/50">•</li>
+                    <li>
+                        <a href="gallery.html" class="group relative px-4 py-2 text-secondary hover:text-accent font-broadway text-sm md:text-lg font-bold tracking-wide transition-all duration-300 hover:scale-110">
+                            <span class="relative z-10">📸 GALLERY</span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-secondary/20 to-accent/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </a>
+                    </li>
+                    <li class="text-secondary/50">•</li>
+                    <li>
+                        <a href="news.html" class="group relative px-4 py-2 text-secondary hover:text-accent font-broadway text-sm md:text-lg font-bold tracking-wide transition-all duration-300 hover:scale-110">
+                            <span class="relative z-10">📰 NEWS</span>
+                            <div class="absolute inset-0 bg-gradient-to-r from-secondary/20 to-accent/20 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        </a>
+                    </li>
+                </ul>
+                
+                <!-- Section Navigation -->
+                <div class="border-t border-secondary/30 pt-4">
+                    <ul class="flex flex-wrap justify-center items-center gap-2 md:gap-4 text-sm">
+                        <li>
+                            <a href="#about" class="text-accent/80 hover:text-accent font-medium transition-colors duration-300">Tentang</a>
+                        </li>
+                        <li class="text-accent/50">|</li>
+                        <li>
+                            <a href="#overview" class="text-accent/80 hover:text-accent font-medium transition-colors duration-300">Overview</a>
+                        </li>
+                        <li class="text-accent/50">|</li>
+                        <li>
+                            <a href="#jadwal" class="text-accent/80 hover:text-accent font-medium transition-colors duration-300">Jadwal</a>
+                        </li>
+                        <li class="text-accent/50">|</li>
+                        <li>
+                            <a href="#awards" class="text-accent/80 hover:text-accent font-medium transition-colors duration-300">Awards</a>
+                        </li>
+                        <li class="text-accent/50">|</li>
+                        <li>
+                            <a href="#tim" class="text-accent/80 hover:text-accent font-medium transition-colors duration-300">Tim</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
 
         <!-- Hero Images Container -->
         <div class="my-16 relative">
             <div class="flex justify-center items-end max-w-4xl mx-auto px-4">
                 <!-- Dita on the left -->
-                <img src="dita-broadway.png" alt="Dita Broadway" class="w-1/3 max-w-xs transform transition-all duration-300 hover:scale-105 z-10 -mr-8 md:-mr-12 rounded-lg shadow-lg">
+                <img src="https://ik.imagekit.io/kfw4taety/eva/dita-broadway.png?updatedAt=1749396992108" alt="Dita Broadway" class="w-1/3 max-w-xs transform transition-all duration-300 hover:scale-105 z-10 -mr-8 md:-mr-12 rounded-lg shadow-lg">
                 <!-- Azis in the center, slightly forward and larger -->
-                <img src="azis-broadway.png" alt="Azis Broadway" class="w-1/3 max-w-xs transform transition-all duration-300 hover:scale-110 z-20 scale-105 rounded-lg shadow-xl">
+                <img src="https://ik.imagekit.io/kfw4taety/eva/azis-broadway.png?updatedAt=1749396995502" alt="Azis Broadway" class="w-1/3 max-w-xs transform transition-all duration-300 hover:scale-110 z-20 scale-105 rounded-lg shadow-xl">
                 <!-- Sari on the right -->
-                <img src="sari-broadway.png" alt="Sari Broadway" class="w-1/3 max-w-xs transform transition-all duration-300 hover:scale-105 z-10 -ml-8 md:-ml-12 rounded-lg shadow-lg">
+                <img src="https://ik.imagekit.io/kfw4taety/eva/sari-broadway.png?updatedAt=1749396994184" alt="Sari Broadway" class="w-1/3 max-w-xs transform transition-all duration-300 hover:scale-105 z-10 -ml-8 md:-ml-12 rounded-lg shadow-lg">
             </div>
         </div>
 
@@ -408,7 +513,162 @@
                 <img src="symbol-broadway.png" alt="Broadway Symbol" class="absolute bottom-10 left-1/4 w-14 opacity-50 animate-float">
                 <img src="discount-broadway.png" alt="Broadway Discount" class="absolute bottom-20 right-10 w-20 opacity-60 animate-pulse">
             </div>
+        </section>
+
+        <!-- Tim Panitia Section -->
+        <section id="tim" class="bg-gradient-to-br from-gray-900 via-black to-dark rounded-3xl p-12 mb-12 shadow-2xl text-white relative overflow-hidden">
+            <!-- Broadway Decorative Background -->
+            <div class="absolute inset-0 opacity-20">
+                <img src="marquee-broadway.png" alt="Broadway Marquee" class="absolute top-10 right-10 w-32 rotate-12 opacity-60">
+                <img src="lightbox-broadway.png" alt="Broadway Lightbox" class="absolute bottom-10 left-10 w-28 -rotate-12 opacity-50">
+                <img src="stars-broadway.png" alt="Broadway Stars" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 opacity-30 animate-pulse">
+            </div>
             
+            <div class="relative z-10">
+                <div class="text-center mb-16">
+                    <div class="flex items-center justify-center gap-4 mb-6">
+                        <img src="bulbs-broadway.png" alt="Broadway Bulbs" class="w-12 animate-bounce">
+                        <h2 class="text-5xl font-black text-secondary font-broadway" style="font-family: 'Broadway', cursive; text-shadow: 0 0 20px rgba(242, 198, 65, 0.5);">
+                            TIM PANITIA
+                        </h2>
+                        <img src="bulbs-broadway.png" alt="Broadway Bulbs" class="w-12 animate-bounce" style="animation-delay: 0.5s;">
+                    </div>
+                    <p class="text-xl text-accent font-semibold">✨ Behind The Broadway Magic ✨</p>
+                    <div class="w-24 h-1 bg-gradient-to-r from-secondary to-accent mx-auto rounded-full mt-4"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Tim Member 1 -->
+                    <div class="bg-gradient-to-br from-secondary/10 to-accent/10 backdrop-blur-md border border-secondary/30 p-8 rounded-3xl card-hover shadow-xl group">
+                        <div class="text-center">
+                            <div class="relative mb-6">
+                                <div class="w-24 h-24 bg-gradient-to-br from-secondary to-accent rounded-full mx-auto flex items-center justify-center text-4xl font-bold text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                    🎭
+                                </div>
+                                <div class="absolute -top-2 -right-2">
+                                    <img src="stars-broadway.png" alt="Star" class="w-6 animate-pulse">
+                                </div>
+                            </div>
+                            <h3 class="text-2xl font-bold text-secondary mb-2">Ketua Panitia</h3>
+                            <p class="text-accent font-semibold mb-3">🌟 Event Director</p>
+                            <p class="text-gray-300 text-sm leading-relaxed">Memimpin orkestra Broadway ini dengan visi dan dedikasi tinggi untuk menciptakan pengalaman evaluasi yang berkesan.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Tim Member 2 -->
+                    <div class="bg-gradient-to-br from-accent/10 to-tertiary/10 backdrop-blur-md border border-accent/30 p-8 rounded-3xl card-hover shadow-xl group">
+                        <div class="text-center">
+                            <div class="relative mb-6">
+                                <div class="w-24 h-24 bg-gradient-to-br from-accent to-tertiary rounded-full mx-auto flex items-center justify-center text-4xl font-bold text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                    🎪
+                                </div>
+                                <div class="absolute -top-2 -right-2">
+                                    <img src="bulbs-broadway.png" alt="Bulb" class="w-6 animate-bounce">
+                                </div>
+                            </div>
+                            <h3 class="text-2xl font-bold text-accent mb-2">Koordinator Acara</h3>
+                            <p class="text-tertiary font-semibold mb-3">🎯 Production Manager</p>
+                            <p class="text-gray-300 text-sm leading-relaxed">Mengoordinasikan setiap detail acara dengan presisi tinggi, memastikan setiap momen berjalan sempurna.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Tim Member 3 -->
+                    <div class="bg-gradient-to-br from-tertiary/10 to-primary/10 backdrop-blur-md border border-tertiary/30 p-8 rounded-3xl card-hover shadow-xl group">
+                        <div class="text-center">
+                            <div class="relative mb-6">
+                                <div class="w-24 h-24 bg-gradient-to-br from-tertiary to-primary rounded-full mx-auto flex items-center justify-center text-4xl font-bold text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                    🎨
+                                </div>
+                                <div class="absolute -top-2 -right-2">
+                                    <img src="symbol-broadway.png" alt="Symbol" class="w-6 animate-float">
+                                </div>
+                            </div>
+                            <h3 class="text-2xl font-bold text-tertiary mb-2">Tim Kreatif</h3>
+                            <p class="text-primary font-semibold mb-3">🎨 Creative Director</p>
+                            <p class="text-gray-300 text-sm leading-relaxed">Merancang konsep Broadway yang memukau, menciptakan atmosfer teatrikal yang menginspirasi.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Tim Member 4 -->
+                    <div class="bg-gradient-to-br from-primary/10 to-dark/10 backdrop-blur-md border border-primary/30 p-8 rounded-3xl card-hover shadow-xl group">
+                        <div class="text-center">
+                            <div class="relative mb-6">
+                                <div class="w-24 h-24 bg-gradient-to-br from-primary to-dark rounded-full mx-auto flex items-center justify-center text-4xl font-bold text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                    📋
+                                </div>
+                                <div class="absolute -top-2 -right-2">
+                                    <img src="discount-broadway.png" alt="Tag" class="w-6 animate-pulse">
+                                </div>
+                            </div>
+                            <h3 class="text-2xl font-bold text-primary mb-2">Sekretaris</h3>
+                            <p class="text-dark font-semibold mb-3">📝 Documentation Lead</p>
+                            <p class="text-gray-300 text-sm leading-relaxed">Mendokumentasikan setiap momen berharga dan memastikan administrasi acara berjalan lancar.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Tim Member 5 -->
+                    <div class="bg-gradient-to-br from-secondary/10 to-primary/10 backdrop-blur-md border border-secondary/30 p-8 rounded-3xl card-hover shadow-xl group">
+                        <div class="text-center">
+                            <div class="relative mb-6">
+                                <div class="w-24 h-24 bg-gradient-to-br from-secondary to-primary rounded-full mx-auto flex items-center justify-center text-4xl font-bold text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                    💰
+                                </div>
+                                <div class="absolute -top-2 -right-2">
+                                    <img src="cinema-broadway.png" alt="Cinema" class="w-6 animate-bounce">
+                                </div>
+                            </div>
+                            <h3 class="text-2xl font-bold text-secondary mb-2">Bendahara</h3>
+                            <p class="text-primary font-semibold mb-3">💼 Financial Manager</p>
+                            <p class="text-gray-300 text-sm leading-relaxed">Mengelola anggaran acara dengan cermat, memastikan setiap investasi memberikan nilai maksimal.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Tim Member 6 -->
+                    <div class="bg-gradient-to-br from-accent/10 to-secondary/10 backdrop-blur-md border border-accent/30 p-8 rounded-3xl card-hover shadow-xl group">
+                        <div class="text-center">
+                            <div class="relative mb-6">
+                                <div class="w-24 h-24 bg-gradient-to-br from-accent to-secondary rounded-full mx-auto flex items-center justify-center text-4xl font-bold text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+                                    🎤
+                                </div>
+                                <div class="absolute -top-2 -right-2">
+                                    <img src="label-broadway.png" alt="Label" class="w-6 animate-float">
+                                </div>
+                            </div>
+                            <h3 class="text-2xl font-bold text-accent mb-2">MC & Host</h3>
+                            <p class="text-secondary font-semibold mb-3">🎭 Master of Ceremonies</p>
+                            <p class="text-gray-300 text-sm leading-relaxed">Memandu acara dengan karisma Broadway, menciptakan suasana yang meriah dan engaging.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Spirit Section -->
+                <div class="mt-16 text-center">
+                    <div class="bg-gradient-to-r from-secondary/20 to-accent/20 backdrop-blur-md border border-secondary/30 rounded-3xl p-8">
+                        <div class="flex items-center justify-center gap-4 mb-4">
+                            <img src="stars-broadway.png" alt="Stars" class="w-8 animate-pulse">
+                            <h3 class="text-3xl font-bold text-secondary font-broadway" style="font-family: 'Broadway', cursive;">
+                                THE SHOW MUST GO ON!
+                            </h3>
+                            <img src="stars-broadway.png" alt="Stars" class="w-8 animate-pulse" style="animation-delay: 0.5s;">
+                        </div>
+                        <p class="text-xl text-accent font-semibold mb-4">✨ Bersama-sama menciptakan Broadway Magic ✨</p>
+                        <p class="text-gray-300 leading-relaxed max-w-3xl mx-auto">
+                            Tim panitia yang berdedikasi ini bekerja dengan semangat Broadway, menggabungkan kreativitas, 
+                            profesionalisme, dan passion untuk menciptakan pengalaman evaluasi tengah tahun yang tak terlupakan. 
+                            Setiap anggota tim berkontribusi dengan keunikan mereka masing-masing, layaknya ensemble cast 
+                            dalam pertunjukan Broadway yang spektakuler.
+                        </p>
+                        
+                        <div class="flex justify-center gap-4 mt-6">
+                            <img src="bulbs-broadway.png" alt="Bulbs" class="w-6 animate-bounce">
+                            <img src="symbol-broadway.png" alt="Symbol" class="w-6 animate-float">
+                            <img src="stars-broadway.png" alt="Stars" class="w-6 animate-pulse">
+                            <img src="cinema-broadway.png" alt="Cinema" class="w-6 animate-bounce" style="animation-delay: 0.3s;">
+                            <img src="lightbox-broadway.png" alt="Lightbox" class="w-6 animate-float" style="animation-delay: 0.6s;">
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
     </div>
@@ -441,15 +701,15 @@
             });
         });
 
-        // Header background change on scroll
+        // Navigation highlight on scroll
         window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.classList.add('bg-white/98');
-                header.classList.remove('bg-white/95');
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 200) {
+                nav.classList.add('backdrop-blur-xl');
+                nav.classList.remove('backdrop-blur-md');
             } else {
-                header.classList.add('bg-white/95');
-                header.classList.remove('bg-white/98');
+                nav.classList.add('backdrop-blur-md');
+                nav.classList.remove('backdrop-blur-xl');
             }
         });
 
@@ -462,44 +722,22 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-fade-in');
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
                 }
             });
         }, observerOptions);
 
-        // Observe all sections
+        // Observe all sections for fade-in effect
         document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(30px)';
+            section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
             observer.observe(section);
         });
 
-        // Mobile menu toggle (if needed)
-        const mobileMenuBtn = document.querySelector('button');
-        const mobileMenu = document.querySelector('.nav-links');
-        
-        if (mobileMenuBtn && mobileMenu) {
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
-
-        // Add parallax effect to hero section
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('section.pt-32'); // More specific selector for hero
-            const heroImage = document.getElementById('hero-image');
-
-            // if (hero) { // Keep hero parallax if desired, otherwise remove
-            //     hero.style.transform = `translateY(${scrolled * 0.4}px)`; 
-            // }
-
-            if (heroImage) {
-                // Simple float, no scroll-based animation needed if it's just animate-float
-                // If you want it to move OR shrink on scroll, the previous JS for that can be reinstated.
-            }
-        });
-
-        // Add interactive effects for Broadway decorative elements
-        const broadwayElements = document.querySelectorAll('#broadway-decorative img');
+        // Broadway interactive effects
+        const broadwayElements = document.querySelectorAll('img[src*="broadway"]');
         
         broadwayElements.forEach((element, index) => {
             // Add staggered animation delay
@@ -507,40 +745,96 @@
             
             // Add interactive hover effects
             element.addEventListener('mouseenter', function() {
-                this.style.transform += ' scale(1.1)';
-                this.style.filter = 'brightness(1.2) saturate(1.3)';
+                this.style.transform += ' scale(1.15)';
+                this.style.filter = 'brightness(1.3) saturate(1.4) drop-shadow(0 0 15px rgba(242, 198, 65, 0.6))';
                 this.style.transition = 'all 0.3s ease-out';
             });
             
             element.addEventListener('mouseleave', function() {
-                this.style.transform = this.style.transform.replace(' scale(1.1)', '');
+                this.style.transform = this.style.transform.replace(' scale(1.15)', '');
                 this.style.filter = 'none';
             });
         });
 
-        // Add floating animation to decorative elements
-        const floatingElements = document.querySelectorAll('.animate-float');
-        floatingElements.forEach((element, index) => {
-            element.style.animationDelay = `${index * 0.5}s`;
+        // Team member card interactions
+        const teamCards = document.querySelectorAll('#tim .card-hover');
+        teamCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-15px) scale(1.05)';
+                this.style.boxShadow = '0 25px 50px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(242, 198, 65, 0.2)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+                this.style.boxShadow = '';
+            });
         });
 
-        // Add sparkle effect on click for stars
-        const starElements = document.querySelectorAll('img[src="stars-broadway.png"]');
-        starElements.forEach(star => {
-            star.addEventListener('click', function(e) {
+        // Add sparkle effect on click for Broadway elements
+        const clickableElements = document.querySelectorAll('img[src*="stars-broadway"], img[src*="bulbs-broadway"]');
+        clickableElements.forEach(element => {
+            element.style.cursor = 'pointer';
+            element.addEventListener('click', function(e) {
                 // Create sparkle effect
                 const sparkle = document.createElement('div');
                 sparkle.innerHTML = '✨';
                 sparkle.style.position = 'absolute';
                 sparkle.style.left = e.pageX + 'px';
                 sparkle.style.top = e.pageY + 'px';
-                sparkle.style.fontSize = '20px';
+                sparkle.style.fontSize = '24px';
                 sparkle.style.pointerEvents = 'none';
-                sparkle.style.animation = 'fadeOut 1s ease-out forwards';
+                sparkle.style.animation = 'fadeOut 1.5s ease-out forwards';
+                sparkle.style.zIndex = '1000';
                 document.body.appendChild(sparkle);
                 
-                setTimeout(() => sparkle.remove(), 1000);
+                setTimeout(() => sparkle.remove(), 1500);
             });
+        });
+
+        // Parallax effect for background elements
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.absolute img');
+            
+            parallaxElements.forEach((element, index) => {
+                const speed = 0.2 + (index * 0.1);
+                element.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+
+        // Header title animation on load
+        window.addEventListener('load', () => {
+            const title = document.querySelector('h1');
+            const subtitle = document.querySelector('header p');
+            
+            setTimeout(() => {
+                title.classList.add('animate-pulse-glow');
+            }, 500);
+            
+            setTimeout(() => {
+                subtitle.style.opacity = '1';
+                subtitle.style.transform = 'translateY(0)';
+            }, 1000);
+        });
+
+        // Dynamic lighting effect for header
+        document.addEventListener('mousemove', (e) => {
+            const header = document.querySelector('header > div');
+            const rect = header.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            if (x >= 0 && x <= rect.width && y >= 0 && y <= rect.height) {
+                const xPercent = (x / rect.width) * 100;
+                const yPercent = (y / rect.height) * 100;
+                
+                header.style.background = `
+                    radial-gradient(circle at ${xPercent}% ${yPercent}%, 
+                    rgba(242, 198, 65, 0.15) 0%, 
+                    rgba(0, 0, 0, 0.7) 50%),
+                    rgba(0, 0, 0, 0.7)
+                `;
+            }
         });
     </script>
 </body>
