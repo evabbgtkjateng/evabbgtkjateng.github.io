@@ -113,7 +113,23 @@
                     <span class="text-2xl">📅</span>
                     <span>11 - 12 Juni 2025</span>
                 </div>
-                <img src="azis-broadway.png" alt="Azis Broadway" id="hero-image" class="mx-auto my-8 w-96 md:w-[32rem] animate-float rounded-lg">
+
+                <!-- Hero Images Container -->
+                <div class="my-8"> <!-- Handles vertical margin, was on azis-broadway.png -->
+                    <div class="relative flex justify-center items-end max-w-3xl mx-auto px-4"> <!-- Centered flex container with padding -->
+                        <!-- Azis Image -->
+                        <img src="azis-broadway.png" alt="Azis Broadway" id="hero-image" 
+                             class="relative z-10 w-3/5 sm:w-1/2 md:w-96 lg:w-[30rem] animate-float rounded-lg 
+                                    transform -mr-10 sm:-mr-12 md:-mr-16 lg:-mr-20"> 
+                                    <!-- Azis: responsive width, negative margin for overlap -->
+
+                        <!-- Sari Image (to the right and behind Azis) -->
+                        <img src="sari-broadway.png" alt="Sari Broadway" 
+                             class="relative z-0 w-2/5 sm:w-2/5 md:w-80 lg:w-[26rem] rounded-lg 
+                                    transform scale-90 translate-y-3 md:translate-y-4"> 
+                                    <!-- Sari: responsive width, smaller, slightly lower, and behind. -->
+                    </div>
+                </div>
                 
                 <img src="bulbs-broadway.png" alt="Broadway Bulbs Decoration" class="mx-auto mt-10 mb-8 w-full max-w-md md:max-w-lg filter drop-shadow-md">
                 
