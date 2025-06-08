@@ -59,74 +59,160 @@
             scroll-behavior: smooth;
         }
         .news-item {
-            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+            transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, border-color 0.3s ease-out;
         }
         .news-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(217, 4, 22, 0.2);
+        }
+        
+        /* Broadway Theater Curtain Effect */
+        .theater-curtain {
+            background: linear-gradient(135deg, #8B0000 0%, #DC143C 50%, #8B0000 100%);
+            position: relative;
+        }
+        .theater-curtain::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 20px;
+            background: repeating-linear-gradient(
+                90deg,
+                #FFD700 0px,
+                #FFD700 10px,
+                #FFA500 10px,
+                #FFA500 20px
+            );
         }
     </style>
 </head>
-<body class="bg-gradient-to-br from-primary via-accent to-tertiary min-h-screen">
-    <!-- Header -->
-    <header class="fixed w-full top-0 z-50 glass bg-white/95 shadow-lg backdrop-blur-xl">
-        <nav class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <a href="index.html" class="text-2xl font-bold text-primary flex items-center gap-2">
-                    <span class="text-3xl">🎯</span>
-                    <span class="gradient-text">Eva Mid 2025</span>
-                </a>
-                <ul class="hidden md:flex space-x-8">
-                    <li><a href="index.html#overview" class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Overview</a></li>
-                    <li><a href="index.html#tujuan" class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Tujuan</a></li>
-                    <li><a href="index.html#jadwal" class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Jadwal</a></li>
-                    <li><a href="index.html#awards" class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Awards</a></li>
-                    <li><a href="videos.html" class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Video</a></li>
-                    <li><a href="gallery.html" class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Galeri</a></li>
-                    <li><a href="news.html" class="text-primary transition-colors duration-300 font-medium">Berita</a></li>
-                </ul>
-                <button class="md:hidden text-primary">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
+<body class="bg-gradient-to-br from-black via-gray-900 to-black min-h-screen">
+    <!-- Broadway Header -->
+    <header class="relative min-h-screen flex items-center justify-center bg-fixed" style="background-image: url('bg-hero.jpg'); background-size: cover; background-position: center;">
+        <!-- Overlay with Broadway elements -->
+        <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black/70"></div>
+        
+        <!-- Broadway Decorative Elements -->
+        <div class="absolute top-10 left-10 animate-pulse">
+            <img src="marquee-broadway.png" alt="Broadway Marquee" class="w-20 h-20 opacity-80">
+        </div>
+        <div class="absolute top-20 right-16 animate-bounce-slow">
+            <img src="stars-broadway.png" alt="Broadway Stars" class="w-16 h-16 opacity-70">
+        </div>
+        <div class="absolute bottom-20 left-20 animate-float">
+            <img src="bulbs-broadway.png" alt="Broadway Bulbs" class="w-24 h-24 opacity-75">
+        </div>
+        <div class="absolute bottom-16 right-12 animate-pulse-slow">
+            <img src="lightbox-broadway.png" alt="Broadway Lightbox" class="w-28 h-28 opacity-80">
+        </div>
+        
+        <!-- Main Header Content -->
+        <div class="relative z-10 text-center glass backdrop-blur-lg bg-black/30 p-12 rounded-3xl border-4 border-secondary/50 shadow-2xl max-w-4xl mx-6">
+            <div class="mb-8">
+                <img src="symbol-broadway.png" alt="Broadway Symbol" class="w-20 h-20 mx-auto mb-6 animate-pulse">
             </div>
-        </nav>
+            
+            <h1 class="font-broadway text-6xl md:text-8xl font-bold text-secondary mb-6 drop-shadow-2xl" 
+                style="text-shadow: 0 0 20px #F2C641, 0 0 40px #F2C641, 0 0 60px #F2C641;">
+                BERITA & SAMBUTAN
+            </h1>
+            
+            <div class="font-bungee text-2xl md:text-3xl text-white mb-8 drop-shadow-lg">
+                EVALUASI TENGAH TAHUN 2025
+            </div>
+            
+            <div class="font-broadway text-lg md:text-xl text-accent mb-6 drop-shadow-lg" 
+                 style="text-shadow: 0 0 10px #F2A950;">
+                ★ REWIND & RECHARGE ★
+            </div>
+            
+            <p class="text-white/90 text-lg md:text-xl leading-relaxed max-w-2xl mx-auto">
+                Berita terkini dan sambutan resmi dari kegiatan Evaluasi Tengah Tahun 2025
+            </p>
+        </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="pt-32 pb-20">
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-40 bg-black bg-opacity-80 backdrop-blur-sm">
         <div class="container mx-auto px-6">
-            <section id="news-content" class="bg-white rounded-3xl p-12 shadow-2xl">
+            <div class="flex justify-center space-x-8 py-4">
+                <a href="index.html" class="text-white hover:text-secondary transition-colors duration-300 font-medium">BERANDA</a>
+                <a href="news.html" class="text-secondary font-medium">BERITA</a>
+                <a href="gallery.html" class="text-white hover:text-secondary transition-colors duration-300 font-medium">GALERI</a>
+                <a href="videos.html" class="text-white hover:text-secondary transition-colors duration-300 font-medium">VIDEO</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="py-20 bg-gradient-to-br from-black via-gray-900 to-black">
+        <div class="container mx-auto px-6">
+            <section id="news-content" class="glass backdrop-blur-lg bg-white/10 rounded-3xl p-12 shadow-2xl border border-secondary/30">
                 <div class="text-center mb-16">
-                    <h1 class="text-5xl font-black mb-4 gradient-text">Berita & Sambutan</h1>
-                    <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+                    <h2 class="font-broadway text-5xl font-bold mb-4 text-secondary drop-shadow-lg" 
+                        style="text-shadow: 0 0 15px #F2C641;">
+                        BERITA TERKINI
+                    </h2>
+                    <div class="w-32 h-1 bg-gradient-to-r from-secondary to-accent mx-auto rounded-full mb-4"></div>
+                    <p class="text-white/80 text-lg font-sans">Informasi dan sambutan resmi dari kegiatan Eva Mid 2025</p>
                 </div>
 
                 <div class="space-y-12">
                     <!-- Placeholder News Item 1: Sambutan -->
-                    <article class="news-item bg-gray-50 p-8 rounded-xl shadow-lg">
-                        <h2 class="text-3xl font-bold text-gray-800 mb-4">Sambutan Kepala Balai</h2>
-                        <p class="text-gray-600 leading-relaxed mb-4">
-                            Assalamu'alaikum Warahmatullahi Wabarakatuh,<br>
-                            Salam sejahtera untuk kita semua.<br><br>
-                            Puji syukur kehadirat Tuhan Yang Maha Esa, karena atas rahmat dan karunia-Nya, kita dapat berkumpul pada hari ini dalam acara Evaluasi Tengah Tahun 2025 dengan tema "Rewind & Recharge: Refleksi capaian & identifikasi hambatan". Saya menyambut baik dan memberikan apresiasi setinggi-tingginya kepada seluruh panitia yang telah bekerja keras mempersiapkan acara ini, serta kepada seluruh peserta yang hadir dengan penuh semangat.
-                        </p>
-                        <p class="text-gray-600 leading-relaxed mb-4">
-                            Evaluasi tengah tahun ini merupakan momentum penting bagi kita semua untuk berhenti sejenak, merefleksikan apa yang telah kita capai selama setengah tahun berjalan, sekaligus mengidentifikasi berbagai tantangan dan hambatan yang mungkin kita hadapi. Ini adalah kesempatan emas untuk melakukan "Rewind", menengok kembali target dan rencana yang telah kita susun di awal tahun, serta "Recharge", mengisi kembali energi dan semangat kita untuk menghadapi sisa tahun dengan lebih optimal.
-                        </p>
-                        <a href="#" class="text-primary hover:text-dark font-semibold">Baca Selengkapnya &rarr;</a>
+                    <article class="news-item glass backdrop-blur-lg bg-white/20 p-8 rounded-xl shadow-lg border border-secondary/20 hover:border-secondary/50 transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <img src="symbol-broadway.png" alt="Broadway Symbol" class="w-8 h-8 mr-3 opacity-80">
+                            <h3 class="font-broadway text-3xl font-bold text-secondary drop-shadow-md">Sambutan Kepala Balai</h3>
+                        </div>
+                        <div class="space-y-4 text-white/90 leading-relaxed">
+                            <p>
+                                <strong class="text-secondary">Assalamu'alaikum Warahmatullahi Wabarakatuh,</strong><br>
+                                <strong class="text-secondary">Salam sejahtera untuk kita semua.</strong>
+                            </p>
+                            <p>
+                                Puji syukur kehadirat Tuhan Yang Maha Esa, karena atas rahmat dan karunia-Nya, kita dapat berkumpul pada hari ini dalam acara <strong class="text-accent">Evaluasi Tengah Tahun 2025</strong> dengan tema <strong class="text-secondary">"Rewind & Recharge: Refleksi capaian & identifikasi hambatan"</strong>. Saya menyambut baik dan memberikan apresiasi setinggi-tingginya kepada seluruh panitia yang telah bekerja keras mempersiapkan acara ini, serta kepada seluruh peserta yang hadir dengan penuh semangat.
+                            </p>
+                            <p>
+                                Evaluasi tengah tahun ini merupakan momentum penting bagi kita semua untuk berhenti sejenak, merefleksikan apa yang telah kita capai selama setengah tahun berjalan, sekaligus mengidentifikasi berbagai tantangan dan hambatan yang mungkin kita hadapi. Ini adalah kesempatan emas untuk melakukan <strong class="text-secondary">"Rewind"</strong>, menengok kembali target dan rencana yang telah kita susun di awal tahun, serta <strong class="text-accent">"Recharge"</strong>, mengisi kembali energi dan semangat kita untuk menghadapi sisa tahun dengan lebih optimal.
+                            </p>
+                        </div>
+                        <a href="#" class="inline-flex items-center mt-6 text-secondary hover:text-accent font-semibold transition-colors duration-300">
+                            <span>Baca Selengkapnya</span>
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
                     </article>
 
                     <!-- Placeholder News Item 2: Berita Acara -->
-                    <article class="news-item bg-gray-50 p-8 rounded-xl shadow-lg">
-                        <h2 class="text-3xl font-bold text-gray-800 mb-4">Pembukaan Eva Mid 2025: Semangat Refleksi dan Kolaborasi</h2>
-                        <p class="text-gray-500 text-sm mb-2">Dipublikasikan: 11 Juni 2025</p>
-                        <img src="placeholder-news-image.jpg" alt="Suasana Pembukaan Eva Mid 2025" class="rounded-lg mb-4 w-full h-64 object-cover bg-gray-300">
-                        <p class="text-gray-600 leading-relaxed mb-4">
-                            Acara Evaluasi Tengah Tahun (Eva Mid) 2025 resmi dibuka hari ini dengan penuh antusiasme dari seluruh peserta dan panitia. Mengusung tema "Rewind & Recharge", kegiatan ini bertujuan untuk menjadi wadah refleksi bersama atas capaian kinerja selama semester pertama dan mengidentifikasi potensi serta hambatan untuk perbaikan ke depan. Suasana hangat dan kolaboratif sangat terasa sejak awal acara, menandakan komitmen bersama untuk terus bertumbuh dan berkembang.
-                        </p>
-                        <a href="#" class="text-primary hover:text-dark font-semibold">Baca Selengkapnya &rarr;</a>
+                    <article class="news-item glass backdrop-blur-lg bg-white/20 p-8 rounded-xl shadow-lg border border-secondary/20 hover:border-secondary/50 transition-all duration-300">
+                        <div class="flex items-center mb-4">
+                            <img src="stars-broadway.png" alt="Broadway Stars" class="w-8 h-8 mr-3 opacity-80">
+                            <h3 class="font-broadway text-3xl font-bold text-secondary drop-shadow-md">Pembukaan Eva Mid 2025</h3>
+                        </div>
+                        <p class="text-accent text-sm mb-4 font-bungee">★ Dipublikasikan: 11 Juni 2025 ★</p>
+                        <div class="bg-gray-800/50 rounded-lg mb-6 h-64 flex items-center justify-center border border-secondary/20">
+                            <div class="text-center text-white/60">
+                                <img src="lightbox-broadway.png" alt="Broadway Lightbox" class="w-16 h-16 mx-auto mb-2 opacity-70">
+                                <p class="font-bungee">Foto Suasana Pembukaan</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4 text-white/90 leading-relaxed">
+                            <p>
+                                Acara <strong class="text-secondary">Evaluasi Tengah Tahun (Eva Mid) 2025</strong> resmi dibuka hari ini dengan penuh antusiasme dari seluruh peserta dan panitia. Mengusung tema <strong class="text-accent">"Rewind & Recharge"</strong>, kegiatan ini bertujuan untuk menjadi wadah refleksi bersama atas capaian kinerja selama semester pertama dan mengidentifikasi potensi serta hambatan untuk perbaikan ke depan.
+                            </p>
+                            <p>
+                                Suasana hangat dan kolaboratif sangat terasa sejak awal acara, menandakan komitmen bersama untuk terus bertumbuh dan berkembang dalam semangat <strong class="text-secondary">Broadway</strong> yang penuh dengan kolaborasi dan keunggulan.
+                            </p>
+                        </div>
+                        <a href="#" class="inline-flex items-center mt-6 text-secondary hover:text-accent font-semibold transition-colors duration-300">
+                            <span>Baca Selengkapnya</span>
+                            <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </a>
                     </article>
                     
                     <!-- Add more news items here -->
@@ -135,16 +221,95 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-16 mt-20">
-        <div class="container mx-auto px-6 text-center">
-            <div class="mb-8">
-                <h3 class="text-3xl font-bold mb-4 gradient-text">Evaluasi Tengah Tahun 2025</h3>
-                <p class="text-xl text-gray-300">Tema Refleksi</p>
+    <!-- Footer Broadway -->
+    <footer class="relative bg-gradient-to-b from-black to-gray-900 py-16 overflow-hidden">
+        <!-- Broadway Decorative Background -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-10 left-10 animate-pulse">
+                <img src="marquee-broadway.png" alt="Broadway Marquee" class="w-32 h-32">
             </div>
-            <div class="border-t border-gray-700 pt-8">
-                <p class="text-gray-400">&copy; 2025 Evaluasi Tengah Tahun - Tema Refleksi</p>
-                <p class="text-2xl mt-4">Bersama kita berkembang, bersama kita sukses! 🚀</p>
+            <div class="absolute top-20 right-20 animate-bounce-slow">
+                <img src="stars-broadway.png" alt="Broadway Stars" class="w-24 h-24">
+            </div>
+            <div class="absolute bottom-20 left-20 animate-float">
+                <img src="bulbs-broadway.png" alt="Broadway Bulbs" class="w-28 h-28">
+            </div>
+            <div class="absolute bottom-10 right-10 animate-pulse-slow">
+                <img src="lightbox-broadway.png" alt="Broadway Lightbox" class="w-36 h-36">
+            </div>
+        </div>
+        
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <div class="mb-12">
+                <img src="symbol-broadway.png" alt="Broadway Symbol" class="w-16 h-16 mx-auto mb-6 animate-pulse opacity-80">
+                <h3 class="font-broadway text-4xl md:text-5xl font-bold mb-4 text-secondary drop-shadow-lg" 
+                    style="text-shadow: 0 0 15px #F2C641;">
+                    EVALUASI TENGAH TAHUN 2025
+                </h3>
+                <p class="font-bungee text-xl md:text-2xl text-accent mb-6 drop-shadow-md">
+                    ★ REWIND & RECHARGE ★
+                </p>
+                <div class="w-32 h-1 bg-gradient-to-r from-secondary via-accent to-tertiary mx-auto rounded-full mb-8"></div>
+            </div>
+            
+            <!-- Broadway Quote -->
+            <div class="glass backdrop-blur-lg bg-white/10 p-8 rounded-2xl border border-secondary/30 mb-12 max-w-3xl mx-auto">
+                <p class="font-sans text-lg md:text-xl text-white/90 leading-relaxed italic mb-4">
+                    "Seperti pertunjukan Broadway yang memukau, setiap refleksi dan evaluasi adalah bagian dari performa terbaik kita menuju kesuksesan bersama"
+                </p>
+                <div class="flex justify-center items-center space-x-2">
+                    <img src="stars-broadway.png" alt="Stars" class="w-6 h-6 opacity-70">
+                    <span class="font-bungee text-secondary text-sm">BROADWAY SPIRIT</span>
+                    <img src="stars-broadway.png" alt="Stars" class="w-6 h-6 opacity-70">
+                </div>
+            </div>
+            
+            <!-- Footer Links dengan Broadway Style -->
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div>
+                    <h4 class="font-broadway text-xl text-secondary mb-4 drop-shadow-md">NAVIGASI</h4>
+                    <div class="space-y-2">
+                        <a href="index.html" class="block text-white/80 hover:text-secondary transition-colors duration-300 font-sans">Beranda</a>
+                        <a href="news.html" class="block text-secondary transition-colors duration-300 font-sans">Berita</a>
+                        <a href="gallery.html" class="block text-white/80 hover:text-secondary transition-colors duration-300 font-sans">Galeri</a>
+                        <a href="videos.html" class="block text-white/80 hover:text-secondary transition-colors duration-300 font-sans">Video</a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-broadway text-xl text-secondary mb-4 drop-shadow-md">KONTAK</h4>
+                    <div class="space-y-2 text-white/80 font-sans">
+                        <p>📧 eva2025@example.com</p>
+                        <p>📱 +62 xxx-xxxx-xxxx</p>
+                        <p>🌐 evabbgtkjateng.github.io</p>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-broadway text-xl text-secondary mb-4 drop-shadow-md">FOLLOW US</h4>
+                    <div class="flex justify-center space-x-4">
+                        <div class="w-10 h-10 bg-secondary/20 rounded-full flex items-center justify-center hover:bg-secondary/40 transition-colors duration-300 cursor-pointer">
+                            <span class="text-secondary text-lg">📘</span>
+                        </div>
+                        <div class="w-10 h-10 bg-secondary/20 rounded-full flex items-center justify-center hover:bg-secondary/40 transition-colors duration-300 cursor-pointer">
+                            <span class="text-secondary text-lg">📷</span>
+                        </div>
+                        <div class="w-10 h-10 bg-secondary/20 rounded-full flex items-center justify-center hover:bg-secondary/40 transition-colors duration-300 cursor-pointer">
+                            <span class="text-secondary text-lg">🐦</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright Broadway -->
+            <div class="border-t border-secondary/30 pt-8">
+                <p class="text-white/60 font-sans mb-4">&copy; 2025 Evaluasi Tengah Tahun - Broadway Theme Edition</p>
+                <div class="font-bungee text-lg md:text-xl text-accent drop-shadow-md">
+                    🎭 BERSAMA KITA BERKEMBANG, BERSAMA KITA SUKSES! 🎭
+                </div>
+                <div class="flex justify-center items-center mt-4 space-x-2">
+                    <img src="symbol-broadway.png" alt="Broadway Symbol" class="w-6 h-6 opacity-60">
+                    <span class="text-secondary/60 font-sans text-sm">Made with Broadway Spirit</span>
+                    <img src="symbol-broadway.png" alt="Broadway Symbol" class="w-6 h-6 opacity-60">
+                </div>
             </div>
         </div>
     </footer>
@@ -164,27 +329,38 @@
             });
         });
 
-        // Header background change on scroll
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) { 
-                header.classList.add('bg-white/98');
-                header.classList.remove('bg-white/95');
-            } else {
-                header.classList.add('bg-white/95');
-                header.classList.remove('bg-white/98');
-            }
+        // Broadway Effects: Dynamic text glow
+        const broadwayElements = document.querySelectorAll('.font-broadway');
+        broadwayElements.forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                this.style.textShadow = '0 0 30px #F2C641, 0 0 60px #F2C641, 0 0 90px #F2C641';
+            });
+            element.addEventListener('mouseleave', function() {
+                this.style.textShadow = '0 0 20px #F2C641, 0 0 40px #F2C641, 0 0 60px #F2C641';
+            });
+        });
+
+        // Broadway Spotlight Effect on News Items
+        const newsItems = document.querySelectorAll('.news-item');
+        newsItems.forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.boxShadow = '0 0 40px rgba(242, 198, 65, 0.3), 0 20px 40px rgba(217, 4, 22, 0.2)';
+            });
+            item.addEventListener('mouseleave', function() {
+                this.style.boxShadow = '0 20px 40px rgba(217, 4, 22, 0.2)';
+            });
         });
         
-        // Mobile menu toggle
-        const mobileMenuBtn = document.querySelector('header button.md:hidden');
-        const navMenu = document.querySelector('header ul.hidden.md:flex');
-
-        if (mobileMenuBtn && navMenu) {
-            mobileMenuBtn.addEventListener('click', () => {
-                navMenu.classList.toggle('hidden'); 
+        // Parallax effect for Broadway decorative elements
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const decorativeElements = document.querySelectorAll('.absolute img');
+            
+            decorativeElements.forEach((element, index) => {
+                const speed = 0.1 + (index * 0.02);
+                element.style.transform = `translateY(${scrolled * speed}px)`;
             });
-        }
+        });
     </script>
 </body>
 </html>
