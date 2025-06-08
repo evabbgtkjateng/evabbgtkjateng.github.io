@@ -344,7 +344,7 @@
                             <div class="text-6xl mb-4">🎬</div>
                             <h3 class="text-2xl text-white mb-2">Video akan segera tersedia</h3>
                             <p class="text-gray-300 mb-4">Broadway video content sedang dalam tahap produksi</p>
-                            <button class="bg-yellow-400 text-black px-6 py-2 rounded-lg font-bold hover:bg-yellow-300 transition-colors duration-300" onclick="this.closest('.fixed').remove()">
+                            <button class="bg-secondary text-black px-6 py-2 rounded-lg font-bold hover:bg-accent transition-colors duration-300" onclick="this.closest('.fixed').remove()">
                                 Tutup
                             </button>
                         </div>
@@ -393,7 +393,7 @@
         });
 
         // Play button functionality
-        const playButtons = document.querySelectorAll('button[class*="bg-yellow-400"], button[class*="bg-red-400"]');
+        const playButtons = document.querySelectorAll('button[class*="bg-secondary"], button[class*="bg-primary"]');
         playButtons.forEach(button => {
             button.addEventListener('click', function(e) {
                 e.stopPropagation();
@@ -419,7 +419,7 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="absolute top-4 right-4 text-white text-4xl hover:text-yellow-400 transition-colors duration-300">&times;</button>
+                        <button class="absolute top-4 right-4 text-white text-4xl hover:text-secondary transition-colors duration-300">&times;</button>
                     </div>
                 `;
                 
