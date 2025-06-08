@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evaluasi Tengah Tahun 2025 - Rewind & Recharge: Refleksi capaian & identifikasi hambatan</title>
-    <
+    
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -72,86 +73,46 @@
         }
     </style>
 </head>
-<body class="bg-gradient-to-br from-primary via-accent to-tertiary min-h-screen">
-    <!-- Header -->
-    <header class="fixed w-full top-0 z-50 glass bg-white/95 shadow-lg backdrop-blur-xl">
-        <nav class="container mx-auto px-6 py-4">
-            <div class="flex justify-between items-center">
-                <div class="text-2xl font-bold text-primary flex items-center gap-2">
-                    <span class="text-3xl">🎯</span>
-                    <span class="gradient-text">Eva Mid 2025</span>
-                </div>
-                <ul class="hidden md:flex space-x-8">
-                    <li><a href="#overview" class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Overview</a></li>
-                    <li><a href="#tujuan" class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Tujuan</a></li>
-                    <li><a href="#jadwal" class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Jadwal</a></li>
-                    <li><a href="#awards" class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Awards</a></li>
-                    <li><a href="videos.html" class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Video</a></li>
-                    <li><a href="gallery.html" class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Galeri</a></li>
-                    <li><a href="news.html" class="text-gray-700 hover:text-primary transition-colors duration-300 font-medium">Berita</a></li>
-                </ul>
-                <button class="md:hidden text-primary">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
+<body class="bg-gray-900 text-white font-['Inter']">
+    <img src="bg-hero.jpg" alt="Background Hero" class="absolute inset-0 w-full h-full object-cover z-0 opacity-30">
+    <div class="relative z-10 container mx-auto px-4 py-8">
+        <header class="text-center mb-12 relative">
+            <img src="label-broadway.png" alt="Broadway Label" class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 md:w-48 z-20">
+            <h1 class="text-5xl md:text-7xl font-['Bungee_Shade'] text-yellow-400 tracking-wider" style="font-family: 'Bungee Shade', cursive;">EVALUASI</h1>
+            <p class="text-3xl md:text-5xl font-['Bungee'] text-red-600" style="font-family: 'Bungee', cursive;">TENGAH TAHUN 2025</p>
+            <p class="text-xl md:text-2xl text-gray-300 mt-2">Rewind & Recharge: Refleksi capaian & identifikasi hambatan</p>
+            <img src="bulbs-broadway.png" alt="Broadway Bulbs" class="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-1/2 w-full max-w-md z-0 opacity-70">
+        </header>
+
+        <nav class="mb-12">
+            <ul class="flex justify-center space-x-4 md:space-x-8 bg-black bg-opacity-50 p-4 rounded-lg">
+                <li><a href="index.html" class="text-yellow-400 hover:text-yellow-200 font-['Broadway'] text-lg md:text-xl" style="font-family: 'Broadway', cursive;">HOME</a></li>
+                <li><a href="videos.html" class="text-yellow-400 hover:text-yellow-200 font-['Broadway'] text-lg md:text-xl" style="font-family: 'Broadway', cursive;">VIDEOS</a></li>
+                <li><a href="gallery.html" class="text-yellow-400 hover:text-yellow-200 font-['Broadway'] text-lg md:text-xl" style="font-family: 'Broadway', cursive;">GALLERY</a></li>
+                <li><a href="news.html" class="text-yellow-400 hover:text-yellow-200 font-['Broadway'] text-lg md:text-xl" style="font-family: 'Broadway', cursive;">NEWS</a></li>
+            </ul>
         </nav>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="pt-32 pb-20 text-white relative overflow-hidden bg-cover bg-center" style="background-image: url('bg-hero.jpg');">
-        <div class="absolute inset-0 bg-black/50"></div> <!-- Added a semi-transparent overlay for text readability -->
-        <div class="container mx-auto px-6 relative z-10">
-            <div class="text-center max-w-4xl mx-auto">
-                <img src="label-broadway.png" alt="Broadway Event Label" class="mx-auto mb-8 w-auto h-20 md:h-28 filter drop-shadow-lg">
-                <h1 class="text-6xl md:text-8xl font-black mb-6 animate-pulse-slow">
-                    <span class="block text-white drop-shadow-2xl">Rewind & Recharge</span>
-                </h1>
-                <p class="text-2xl md:text-3xl mb-4 font-medium text-white">Refleksi capaian & identifikasi hambatan.</p>
-                <div class="inline-flex items-center gap-2 bg-white/20 glass rounded-full px-6 py-3 text-xl font-semibold mb-12">
-                    <span class="text-2xl">📅</span>
-                    <span>11 - 12 Juni 2025</span>
-                </div>
-
-                <!-- Hero Images Container -->
-                <div class="my-8"> <!-- Handles vertical margin, was on azis-broadway.png -->
-                    <div class="relative flex justify-center items-end max-w-3xl mx-auto px-4"> <!-- Centered flex container with padding -->
-                        <!-- Azis Image -->
-                        <img src="azis-broadway.png" alt="Azis Broadway" id="hero-image" 
-                             class="relative z-10 w-3/5 sm:w-1/2 md:w-96 lg:w-[30rem] animate-float rounded-lg 
-                                    transform -mr-10 sm:-mr-12 md:-mr-16 lg:-mr-20"> 
-                                    <!-- Azis: responsive width, negative margin for overlap -->
-
-                        <!-- Sari Image (to the right and behind Azis) -->
-                        <img src="sari-broadway.png" alt="Sari Broadway" 
-                             class="relative z-0 w-3/5 sm:w-1/2 md:w-96 lg:w-[30rem] rounded-lg 
-                                    transform scale-90 translate-y-3 md:translate-y-4"> 
-                                    <!-- Sari: UPDATED to same base width as Azis, responsive width, smaller, slightly lower, and behind. -->
-                    </div>
-                </div>
-                
-                <img src="bulbs-broadway.png" alt="Broadway Bulbs Decoration" class="mx-auto mt-10 mb-8 w-full max-w-md md:max-w-lg filter drop-shadow-md">
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-                    <div class="glass bg-white/10 p-8 rounded-3xl border border-white/20 card-hover glow">
-                        <div class="text-5xl font-black text-secondary mb-2">134</div>
-                        <div class="text-lg font-medium opacity-90">Peserta</div>
-                    </div>
-                    <div class="glass bg-white/10 p-8 rounded-3xl border border-white/20 card-hover glow">
-                        <div class="text-5xl font-black text-secondary mb-2">13</div>
-                        <div class="text-lg font-medium opacity-90">Panitia</div>
-                    </div>
-                    <div class="glass bg-white/10 p-8 rounded-3xl border border-white/20 card-hover glow">
-                        <div class="text-5xl font-black text-secondary mb-2">3</div>
-                        <div class="text-lg font-medium opacity-90">Hari</div>
-                    </div>
-                </div>
+        <!-- Hero Images Container -->
+        <div class="my-16 relative">
+            <div class="flex justify-center items-end max-w-4xl mx-auto px-4">
+                <!-- Dita on the left -->
+                <img src="dita-broadway.png" alt="Dita Broadway" class="w-1/3 max-w-xs transform transition-all duration-300 hover:scale-105 z-10 -mr-8 md:-mr-12 rounded-lg shadow-lg">
+                <!-- Azis in the center, slightly forward and larger -->
+                <img src="azis-broadway.png" alt="Azis Broadway" class="w-1/3 max-w-xs transform transition-all duration-300 hover:scale-110 z-20 scale-105 rounded-lg shadow-xl">
+                <!-- Sari on the right -->
+                <img src="sari-broadway.png" alt="Sari Broadway" class="w-1/3 max-w-xs transform transition-all duration-300 hover:scale-105 z-10 -ml-8 md:-ml-12 rounded-lg shadow-lg">
             </div>
         </div>
-    </section>
 
-    <div class="container mx-auto px-6 -mt-10 relative z-20">
+        <section id="about" class="my-12 p-6 md:p-8 bg-black bg-opacity-60 rounded-lg shadow-xl relative">
+            <img src="lightbox-broadway.png" alt="Broadway Lightbox" class="absolute -top-8 -left-8 w-24 md:w-32 opacity-80 transform rotate-[-15deg]">
+            <h2 class="text-3xl md:text-4xl font-['Bungee'] text-red-600 mb-6 text-center" style="font-family: 'Bungee', cursive;">TENTANG ACARA</h2>
+            <p class="text-lg text-gray-300 leading-relaxed mb-4">Evaluasi Tengah Tahun 2025 adalah momen penting untuk merefleksikan capaian yang telah diraih serta mengidentifikasi hambatan yang dihadapi. Dengan tema "Rewind & Recharge", acara ini bertujuan untuk memberikan ruang bagi setiap individu dan tim untuk melakukan refleksi mendalam terhadap perjalanan yang telah dilalui.</p>
+            <p class="text-lg text-gray-300 leading-relaxed mb-4">Selama dua hari, peserta akan terlibat dalam berbagai sesi refleksi, diskusi, dan aktivitas kolaboratif yang dirancang untuk menggali lebih dalam tentang apa yang telah dicapai dan tantangan yang masih harus diatasi. Acara ini juga akan menjadi ajang apresiasi bagi mereka yang telah menunjukkan kinerja luar biasa.</p>
+            <p class="text-lg text-gray-300 leading-relaxed">Bergabunglah dalam perjalanan refleksi dan peremajaan ini, dan mari kita songsong masa depan yang lebih cerah bersama-sama!</p>
+        </section>
+
         <!-- Overview Section -->
         <section id="overview" class="bg-white rounded-3xl p-12 mb-12 shadow-2xl">
             <div class="text-center mb-16">
