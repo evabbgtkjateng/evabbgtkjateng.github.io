@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Broadway Poster Gallery - Evaluasi Tengah Tahun 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366F1',
+                        secondary: '#F2C641',
+                        accent: '#F59E0B',
+                        tertiary: '#EC4899',
+                        dark: '#0F172A'
+                    },
+                    fontFamily: {
+                        'broadway': ['Broadway', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Broadway';
+            src: url('data:font/truetype;charset=utf-8;base64,') format('truetype');
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .glass {
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #F2C641, #F59E0B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .glow {
+            box-shadow: 0 0 20px rgba(242, 198, 65, 0.3);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Navigation active state styling */
+        .nav-active {
+            background: linear-gradient(135deg, #F2C641, #F59E0B) !important;
+            color: #1F2937 !important;
+            font-weight: 600 !important;
+            box-shadow: 0 4px 15px rgba(242, 198, 65, 0.4) !important;
+            transform: translateY(-2px) !important;
+        }
+        
+        .nav-active:hover {
+            background: linear-gradient(135deg, #F59E0B, #F2C641) !important;
+            transform: translateY(-3px) !important;
+            box-shadow: 0 6px 20px rgba(242, 198, 65, 0.5) !important;
+        }
+        
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .animate-bounce {
+            animation: bounce 2s infinite;
+        }
+        
+        .animate-pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(5deg); }
+        }
+        
+        .animate-float-slow {
+            animation: float-slow 4s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-red-900 via-gray-800 to-black min-h-screen text-white">
+    <!-- Broadway Header -->
+    <header class="relative text-white py-12 md:py-20 overflow-hidden" style="background-image: url('https://ik.imagekit.io/kfw4taety/eva/bg-hero.png?updatedAt=1749437931627'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+        <!-- Background Overlay for better text readability -->
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+        
+        <div class="container mx-auto text-center relative z-20">
+            <h1 class="text-4xl md:text-7xl font-['Bungee'] mb-4 text-secondary tracking-wider opacity-95" style="font-family: 'Bungee', cursive; text-shadow: 3px 3px 12px rgba(0,0,0,0.8);">
+                🎭 BROADWAY POSTERS 🎭
+            </h1>
+            <p class="text-lg md:text-2xl mb-6 opacity-90" style="text-shadow: 2px 2px 6px rgba(0,0,0,0.7);">
+                ✨ Galeri Visual Tim & Pegawai Broadway ✨
+            </p>
+            <img src="" alt="" class="mx-auto mb-8 max-h-20 md:max-h-28 opacity-90">
+        </div>
+    </header>
+
+    <!-- Enhanced Navigation with Broadway Theme -->
+    <nav class="bg-black bg-opacity-90 backdrop-blur-md text-white py-4 sticky top-0 shadow-lg relative z-50 border-b border-secondary/20">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center items-center">
+                <ul class="flex flex-wrap justify-center space-x-2 md:space-x-6">
+                    <li><a href="index.html#hero-images" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">BROADWAY</a></li>
+                    <li><a href="index.html#peserta" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">PESERTA</a></li>
+                    <li><a href="index.html#jadwal" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">JADWAL</a></li>
+                    <li><a href="index.html#refleksi" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">REFLEKSI</a></li>
+                    <li><a href="index.html#aksi" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">AKSI</a></li>
+                    <li><a href="index.html#apresiasi" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">APRESIASI</a></li>
+                    <li><a href="gallery.html" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">GALERI</a></li>
+                    <li><a href="news.html" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">BERITA</a></li>
+                    <li><a href="poster.html" class="nav-active transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">POSTER</a></li>
+                    <li><a href="videos.html" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">VIDEO</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-8 min-h-screen relative">
+        <!-- Background overlay with opacity -->
+        <div class="absolute inset-0 z-0 pointer-events-none" style="background-image: url('https://ik.imagekit.io/kfw4taety/eva/bg-hero.png?updatedAt=1749437931627'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed; opacity: 0.3;"></div>
+        
+        <!-- Broadway Poster Gallery Section -->
+        <section id="broadway-poster-gallery" class="my-20 relative min-h-screen overflow-hidden z-10">
+            
+            <!-- SEGMENT 1: POSTER TIM BROADWAY -->
+            <div class="relative z-10 max-w-7xl mx-auto px-6 mb-20">
+                <!-- Broadway Title -->
+                <div class="text-center mb-16 relative">
+                    <h2 class="text-3xl sm:text-4xl md:text-6xl font-['Bungee'] text-secondary mb-4 tracking-wider opacity-95 relative z-10" style="font-family: 'Bungee', cursive; text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">
+                        🎭 POSTER TIM BROADWAY 🎭
+                    </h2>
+                    <div class="w-24 sm:w-32 h-1 bg-gradient-to-r from-secondary to-primary mx-auto rounded-full opacity-80"></div>
+                    <p class="text-gray-300 text-sm sm:text-base mt-2 opacity-80">✨ Poster Utama Tim Broadway EVA ✨</p>
+                </div>
+                
+                <!-- Main Broadway Poster -->
+                <div class="flex justify-center mb-16">
+                    <div class="bg-gradient-to-br from-secondary/20 to-accent/20 backdrop-blur-md border border-secondary/30 rounded-3xl hover-lift shadow-xl group overflow-hidden max-w-2xl">
+                        <div class="p-8 flex flex-col items-center justify-center text-center">
+                            <img src="https://ik.imagekit.io/kfw4taety/eva/Poster%20Broadway.png?updatedAt=1749483829012" 
+                                 alt="Tim Broadway" 
+                                 class="w-full max-w-lg rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-300 mb-6">
+                            
+                            <h3 class="text-4xl font-black text-secondary mb-4 font-['Bungee']" style="font-family: 'Broadway', cursive;">
+                                🎭 TIM BROADWAY 🎭
+                            </h3>
+                            <p class="text-xl text-accent font-bold mb-2">The Main Show</p>
+                            <p class="text-lg text-gray-300 max-w-lg">
+                                Tim inti yang mengkoordinasikan seluruh pertunjukan Broadway EVA BBG TK Jateng dengan semangat teatrikal yang memukau
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEGMENT 2: TIM KERJA -->
+            <div class="relative z-10 max-w-7xl mx-auto px-6 mb-20">
+                <!-- Work Teams Title -->
+                <div class="text-center mb-16 relative">
+                    <h2 class="text-3xl sm:text-4xl md:text-6xl font-['Bungee'] text-primary mb-4 tracking-wider opacity-95 relative z-10" style="font-family: 'Bungee', cursive; text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">
+                        👥 TIM KERJA BROADWAY 👥
+                    </h2>
+                    <div class="w-24 sm:w-32 h-1 bg-gradient-to-r from-primary to-tertiary mx-auto rounded-full opacity-80"></div>
+                    <p class="text-gray-300 text-sm sm:text-base mt-2 opacity-80">✨ Tim-Tim Kerja yang Mendukung Kesuksesan ✨</p>
+                </div>
+                
+                <!-- Work Teams Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Data dan Evaluasi -->
+                    <div class="bg-gradient-to-br from-purple-900/20 to-indigo-900/20 backdrop-blur-md border border-purple-500/30 rounded-3xl hover-lift shadow-xl group overflow-hidden">
+                        <div class="p-6 flex flex-col items-center justify-center text-center min-h-[400px]" style="background: linear-gradient(135deg, #3A0CA3 0%, #3A0CA3 100%);">
+                            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 w-full mb-6 shadow-2xl">
+                                <div class="w-full h-32 bg-gradient-to-br from-indigo-800 to-purple-900 rounded-xl flex items-center justify-center mb-4">
+                                    <span class="text-4xl">📊</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2 font-broadway">DATA & EVALUASI</h3>
+                                <div class="w-12 h-1 bg-white mx-auto rounded-full mb-3"></div>
+                                <p class="text-sm text-indigo-200">Analitis • Reflektif • Evaluatif</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="flex items-center justify-center mb-2">
+                                    <div class="w-4 h-4 rounded-full mr-2" style="background-color: #3A0CA3;"></div>
+                                    <span class="text-sm font-mono text-white">#3A0CA3</span>
+                                </div>
+                                <p class="text-xs text-indigo-200 max-w-xs">
+                                    Melambangkan ketajaman dan keakuratan analisis data
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hubungan Masyarakat -->
+                    <div class="bg-gradient-to-br from-red-900/20 to-pink-900/20 backdrop-blur-md border border-red-500/30 rounded-3xl hover-lift shadow-xl group overflow-hidden">
+                        <div class="p-6 flex flex-col items-center justify-center text-center min-h-[400px]" style="background: linear-gradient(135deg, #D7263D 0%, #B91C1C 100%);">
+                            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 w-full mb-6 shadow-2xl">
+                                <div class="w-full h-32 bg-gradient-to-br from-red-700 to-pink-800 rounded-xl flex items-center justify-center mb-4">
+                                    <span class="text-4xl">📱</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2 font-broadway">HUMAS & PUBLIKASI</h3>
+                                <div class="w-12 h-1 bg-white mx-auto rounded-full mb-3"></div>
+                                <p class="text-sm text-red-200">Komunikatif • Visual • Kreatif</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="flex items-center justify-center mb-2">
+                                    <div class="w-4 h-4 rounded-full mr-2" style="background-color: #D7263D;"></div>
+                                    <span class="text-sm font-mono text-white">#D7263D</span>
+                                </div>
+                                <p class="text-xs text-red-200 max-w-xs">
+                                    Energik dan kuat dalam media publikasi
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kemitraan dan Fasilitasi -->
+                    <div class="bg-gradient-to-br from-green-900/20 to-teal-900/20 backdrop-blur-md border border-green-500/30 rounded-3xl hover-lift shadow-xl group overflow-hidden">
+                        <div class="p-6 flex flex-col items-center justify-center text-center min-h-[400px]" style="background: linear-gradient(135deg, #2A9D8F 0%, #059669 100%);">
+                            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 w-full mb-6 shadow-2xl">
+                                <div class="w-full h-32 bg-gradient-to-br from-green-700 to-teal-800 rounded-xl flex items-center justify-center mb-4">
+                                    <span class="text-4xl">🤝</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2 font-broadway">KEMITRAAN & FASILITASI</h3>
+                                <div class="w-12 h-1 bg-white mx-auto rounded-full mb-3"></div>
+                                <p class="text-sm text-green-200">Kolaboratif • Adaptif • Terbuka</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="flex items-center justify-center mb-2">
+                                    <div class="w-4 h-4 rounded-full mr-2" style="background-color: #2A9D8F;"></div>
+                                    <span class="text-sm font-mono text-white">#2A9D8F</span>
+                                </div>
+                                <p class="text-xs text-green-200 max-w-xs">
+                                    Simbol harmoni dan kolaborasi
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pengembang Teknologi -->
+                    <div class="bg-gradient-to-br from-blue-900/20 to-cyan-900/20 backdrop-blur-md border border-blue-500/30 rounded-3xl hover-lift shadow-xl group overflow-hidden">
+                        <div class="p-6 flex flex-col items-center justify-center text-center min-h-[400px]" style="background: linear-gradient(135deg, #00B4D8 0%, #0077B6 100%);">
+                            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 w-full mb-6 shadow-2xl">
+                                <div class="w-full h-32 bg-gradient-to-br from-blue-600 to-cyan-700 rounded-xl flex items-center justify-center mb-4">
+                                    <span class="text-4xl">💻</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2 font-broadway">PENGEMBANG TEKNOLOGI</h3>
+                                <div class="w-12 h-1 bg-white mx-auto rounded-full mb-3"></div>
+                                <p class="text-sm text-blue-200">Inovatif • Teknis • Kreatif</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="flex items-center justify-center mb-2">
+                                    <div class="w-4 h-4 rounded-full mr-2" style="background-color: #00B4D8;"></div>
+                                    <span class="text-sm font-mono text-white">#00B4D8</span>
+                                </div>
+                                <p class="text-xs text-blue-200 max-w-xs">
+                                    Teknologi dan inovasi masa depan
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Peningkatan Kompetensi -->
+                    <div class="bg-gradient-to-br from-orange-900/20 to-yellow-900/20 backdrop-blur-md border border-orange-500/30 rounded-3xl hover-lift shadow-xl group overflow-hidden">
+                        <div class="p-6 flex flex-col items-center justify-center text-center min-h-[400px]" style="background: linear-gradient(135deg, #F8961E 0%, #FB8500 100%);">
+                            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 w-full mb-6 shadow-2xl">
+                                <div class="w-full h-32 bg-gradient-to-br from-orange-600 to-yellow-600 rounded-xl flex items-center justify-center mb-4">
+                                    <span class="text-4xl">📚</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2 font-broadway">PENINGKATAN KOMPETENSI</h3>
+                                <div class="w-12 h-1 bg-white mx-auto rounded-full mb-3"></div>
+                                <p class="text-sm text-orange-200">Pembelajaran • Peningkatan Kapasitas</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="flex items-center justify-center mb-2">
+                                    <div class="w-4 h-4 rounded-full mr-2" style="background-color: #F8961E;"></div>
+                                    <span class="text-sm font-mono text-white">#F8961E</span>
+                                </div>
+                                <p class="text-xs text-orange-200 max-w-xs">
+                                    Optimisme dan semangat berkembang
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Perencanaan dan Keuangan -->
+                    <div class="bg-gradient-to-br from-gray-900/20 to-slate-900/20 backdrop-blur-md border border-gray-500/30 rounded-3xl hover-lift shadow-xl group overflow-hidden">
+                        <div class="p-6 flex flex-col items-center justify-center text-center min-h-[400px]" style="background: linear-gradient(135deg, #6C757D 0%, #495057 100%);">
+                            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 w-full mb-6 shadow-2xl">
+                                <div class="w-full h-32 bg-gradient-to-br from-gray-600 to-slate-700 rounded-xl flex items-center justify-center mb-4">
+                                    <span class="text-4xl">💰</span>
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2 font-broadway">PERENCANAAN & KEUANGAN</h3>
+                                <div class="w-12 h-1 bg-white mx-auto rounded-full mb-3"></div>
+                                <p class="text-sm text-gray-300">Strategis • Detail • Pengendali Anggaran</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="flex items-center justify-center mb-2">
+                                    <div class="w-4 h-4 rounded-full mr-2" style="background-color: #6C757D;"></div>
+                                    <span class="text-sm font-mono text-white">#6C757D</span>
+                                </div>
+                                <p class="text-xs text-gray-300 max-w-xs">
+                                    Stabilitas dan tanggung jawab
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEGMENT 3: POSTER PEGAWAI -->
+            <div class="relative z-10 max-w-7xl mx-auto px-6 mb-20">
+                <!-- Employee Posters Title -->
+                <div class="text-center mb-16 relative">
+                    <h2 class="text-3xl sm:text-4xl md:text-6xl font-['Bungee'] text-tertiary mb-4 tracking-wider opacity-95 relative z-10" style="font-family: 'Bungee', cursive; text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">
+                        👤 POSTER PEGAWAI 👤
+                    </h2>
+                    <div class="w-24 sm:w-32 h-1 bg-gradient-to-r from-tertiary to-accent mx-auto rounded-full opacity-80"></div>
+                    <p class="text-gray-300 text-sm sm:text-base mt-2 opacity-80">✨ Profil Pegawai yang Berperan dalam Broadway ✨</p>
+                </div>
+                
+                <!-- Employee Posters Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Pejabat -->
+                    <div class="bg-gradient-to-br from-yellow-900/20 to-amber-900/20 backdrop-blur-md border border-yellow-500/30 rounded-3xl hover-lift shadow-xl group overflow-hidden">
+                        <div class="p-6 flex flex-col items-center justify-center text-center min-h-[350px]" style="background: linear-gradient(135deg, #FFD700 0%, #F59E0B 100%);">
+                            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 w-full mb-4 shadow-2xl">
+                                <div class="w-full h-24 bg-gradient-to-br from-yellow-600 to-amber-700 rounded-xl flex items-center justify-center mb-3">
+                                    <span class="text-3xl">👑</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-900 mb-2 font-broadway">PEJABAT</h3>
+                                <p class="text-xs text-gray-800">Kepemimpinan Strategis</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="flex items-center justify-center mb-2">
+                                    <div class="w-3 h-3 rounded-full mr-2" style="background-color: #FFD700;"></div>
+                                    <span class="text-xs font-mono text-gray-900">#FFD700</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Widyaiswara -->
+                    <div class="bg-gradient-to-br from-red-900/20 to-rose-900/20 backdrop-blur-md border border-red-600/30 rounded-3xl hover-lift shadow-xl group overflow-hidden">
+                        <div class="p-6 flex flex-col items-center justify-center text-center min-h-[350px]" style="background: linear-gradient(135deg, #9A031E 0%, #800020 100%);">
+                            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 w-full mb-4 shadow-2xl">
+                                <div class="w-full h-24 bg-gradient-to-br from-red-800 to-rose-900 rounded-xl flex items-center justify-center mb-3">
+                                    <span class="text-3xl">🎓</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-white mb-2 font-broadway">WIDYAISWARA</h3>
+                                <p class="text-xs text-red-200">Edukatif • Inspiratif</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="flex items-center justify-center mb-2">
+                                    <div class="w-3 h-3 rounded-full mr-2" style="background-color: #9A031E;"></div>
+                                    <span class="text-xs font-mono text-white">#9A031E</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pranata Lab -->
+                    <div class="bg-gradient-to-br from-purple-900/20 to-violet-900/20 backdrop-blur-md border border-purple-600/30 rounded-3xl hover-lift shadow-xl group overflow-hidden">
+                        <div class="p-6 flex flex-col items-center justify-center text-center min-h-[350px]" style="background: linear-gradient(135deg, #7209B7 0%, #6A0DAD 100%);">
+                            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 w-full mb-4 shadow-2xl">
+                                <div class="w-full h-24 bg-gradient-to-br from-purple-700 to-violet-800 rounded-xl flex items-center justify-center mb-3">
+                                    <span class="text-3xl">🧪</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-white mb-2 font-broadway">PRANATA LAB</h3>
+                                <p class="text-xs text-purple-200">Eksperimen • Teknis</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="flex items-center justify-center mb-2">
+                                    <div class="w-3 h-3 rounded-full mr-2" style="background-color: #7209B7;"></div>
+                                    <span class="text-xs font-mono text-white">#7209B7</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tata Laksana -->
+                    <div class="bg-gradient-to-br from-blue-900/20 to-steel-900/20 backdrop-blur-md border border-blue-600/30 rounded-3xl hover-lift shadow-xl group overflow-hidden">
+                        <div class="p-6 flex flex-col items-center justify-center text-center min-h-[350px]" style="background: linear-gradient(135deg, #468FAF 0%, #2E8B8B 100%);">
+                            <div class="bg-white/10 backdrop-blur-md rounded-2xl p-4 w-full mb-4 shadow-2xl">
+                                <div class="w-full h-24 bg-gradient-to-br from-blue-700 to-steel-700 rounded-xl flex items-center justify-center mb-3">
+                                    <span class="text-3xl">📋</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-white mb-2 font-broadway">TATA LAKSANA</h3>
+                                <p class="text-xs text-blue-200">Administratif • Rapi</p>
+                            </div>
+                            <div class="text-center">
+                                <div class="flex items-center justify-center mb-2">
+                                    <div class="w-3 h-3 rounded-full mr-2" style="background-color: #468FAF;"></div>
+                                    <span class="text-xs font-mono text-white">#468FAF</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Gradient Overlay for Depth -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-black/20 pointer-events-none"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-400/5 to-transparent pointer-events-none"></div>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-t from-black to-gray-900 text-white py-20 mt-20 relative overflow-hidden">
+       
+        <div class="container mx-auto px-6 text-center relative z-10">
+            <!-- Logo Section - Centered and Larger -->
+            <div class="mb-12">
+                <div class="flex justify-center mb-6">
+                    <img src="https://ik.imagekit.io/kfw4taety/eva/brodway-icon.png?updatedAt=1749481447510" 
+                         alt="Broadway Logo" 
+                         class="w-60 h-60 md:w-72 md:h-72 object-contain hover:scale-110 transition-transform duration-300 drop-shadow-2xl">
+                </div>
+                <h3 class="text-4xl md:text-5xl font-broadway mb-4 text-secondary" style="font-family: 'Broadway', cursive; text-shadow: 0 0 15px rgba(242, 198, 65, 0.4);">
+                    BROADWAY TO PROGRESS
+                </h3>
+                <p class="text-xl md:text-2xl text-accent font-bungee mb-6" style="font-family: 'Bungee', cursive;">REWIND & RECHARGE</p>
+                
+            </div>
+            
+            <!-- Footer Info -->
+            <div class="border-t border-secondary/30 pt-8">
+                <p class="text-gray-400 text-sm md:text-base font-sans mb-2">&copy; 2025 Panitia Evaluasi Tengah Tahun. BBGTK Provinsi Jawa Tengah.</p>
+                <p class="text-accent/80 text-xs md:text-sm mt-2 font-bungee" style="font-family: 'Bungee', cursive;">🌟 THE SHOW MUST GO ON! 🌟</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Enhanced Navigation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Handle smooth scrolling for internal links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Navigation highlight on scroll
+            window.addEventListener('scroll', () => {
+                const nav = document.querySelector('nav');
+                if (window.scrollY > 200) {
+                    nav.classList.add('backdrop-blur-xl');
+                    nav.classList.remove('backdrop-blur-md');
+                } else {
+                    nav.classList.add('backdrop-blur-md');
+                    nav.classList.remove('backdrop-blur-xl');
+                }
+            });
+        });
+
+        // Add interactive effects for Broadway poster gallery elements
+        const posterElements = document.querySelectorAll('#broadway-poster-gallery .hover-lift');
+        
+        posterElements.forEach((element, index) => {
+            // Add staggered animation delay
+            element.style.animationDelay = `${index * 0.1}s`;
+            
+            // Add interactive hover effects
+            element.addEventListener('mouseenter', function() {
+                this.style.filter = 'brightness(1.1) saturate(1.2)';
+                this.style.transition = 'all 0.3s ease-out';
+            });
+            
+            element.addEventListener('mouseleave', function() {
+                this.style.filter = 'none';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -3,69 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Broadway Team Posters - EVA BBG TK Jateng</title>
+    <title>Broadway Poster Gallery - Evaluasi Tengah Tahun 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#6366F1',
-                        secondary: '#F2C641',
-                        accent: '#F59E0B',
-                        tertiary: '#EC4899',
-                        dark: '#0F172A'
+                        'primary': '#D90416',
+                        'secondary': '#F2C641',
+                        'accent': '#F2A950',
+                        'tertiary': '#D95F43',
+                        'dark': '#A60505'
                     },
                     fontFamily: {
-                        'broadway': ['Broadway', 'cursive'],
+                        'sans': ['Bungee', 'Inter', 'system-ui', 'sans-serif'],
+                        'bungee-shade': ['Bungee Shade', 'sans-serif'],
+                        'broadway': ['Broadway', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 3s ease-in-out infinite',
+                        'bounce-slow': 'bounce 2s infinite',
                     }
                 }
             }
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
         @font-face {
             font-family: 'Broadway';
-            src: url('data:font/truetype;charset=utf-8;base64,') format('truetype');
+            font-style: normal;
+            font-weight: 400;
+            src: local('Broadway'), url('https://www.cdnfonts.com/s/13073/BROADW.woff') format('woff');
         }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-        }
-        
-        .poster-card {
-            aspect-ratio: 2/3;
-            min-height: 500px;
-        }
-        
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.7; }
-        }
-        
         @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
         }
-        
-        .animate-bounce { animation: bounce 2s infinite; }
-        .animate-pulse { animation: pulse 2s infinite; }
-        .animate-float { animation: float 3s ease-in-out infinite; }
-        
-        .bg-gradient-broadway {
-            background: linear-gradient(135deg, #0F172A 0%, #1E293B 25%, #334155 50%, #475569 75%, #64748B 100%);
+        .glass {
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #D90416, #F2C641);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .glow {
+            box-shadow: 0 0 30px rgba(217, 4, 22, 0.3);
+        }
+        html {
+            scroll-behavior: smooth;
         }
         
         /* Navigation active state styling */
@@ -93,427 +84,236 @@
         }
     </style>
 </head>
+<body class="bg-gradient-to-br from-red-900 via-gray-800 to-black min-h-screen text-white">
+        
+    </style>
+</head>
+   
+    <!-- Enhanced Navigation with Broadway Theme -->
+    <nav class="bg-black bg-opacity-90 backdrop-blur-md text-white py-4 sticky top-0 shadow-lg relative z-50 border-b border-secondary/20">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-center items-center">
+                <ul class="flex flex-wrap justify-center space-x-2 md:space-x-6">
+                    <li><a href="index.html#hero-images" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">BROADWAY</a></li>
+                    <li><a href="index.html#peserta" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">PESERTA</a></li>
+                    <li><a href="index.html#jadwal" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">JADWAL</a></li>
+                    <li><a href="index.html#refleksi" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">REFLEKSI</a></li>
+                    <li><a href="index.html#aksi" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">AKSI</a></li>
+                    <li><a href="index.html#apresiasi" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">APRESIASI</a></li>
+                    <li><a href="gallery.html" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">GALERI</a></li>
+                    <li><a href="news.html" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">BERITA</a></li>
+                    <li><a href="poster.html" class="nav-active transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">POSTER</a></li>
+                    <li><a href="videos.html" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">VIDEO</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-<body class="bg-gray-900 text-white font-['Inter'] relative">
-    <!-- Background Image -->
-    <div class="fixed inset-0 z-0">
-        <img src="https://ik.imagekit.io/kfw4taety/eva/bg-hero.png?updatedAt=1749437931627" alt="Background Hero" class="w-full h-full object-cover opacity-40">
-    </div>
-    
-    <div class="relative z-10 container mx-auto px-4 py-8">
-        <!-- Header Section -->
-        <section class="bg-gradient-to-br from-gray-900 via-black to-dark rounded-3xl p-12 mb-12 shadow-2xl text-white relative overflow-hidden">
-            <div class="relative z-10">
-                <div class="text-center mb-16">
-                    <div class="flex items-center justify-center gap-4 mb-6">
-                        <img src="bulbs-broadway.png" alt="Broadway Bulbs" class="w-12 animate-bounce">
-                        <h1 class="text-5xl font-black text-secondary font-broadway" style="font-family: 'Broadway', cursive; text-shadow: 0 0 20px rgba(242, 198, 65, 0.5);">
-                            BROADWAY TEAM POSTERS
-                        </h1>
-                        <img src="bulbs-broadway.png" alt="Broadway Bulbs" class="w-12 animate-bounce" style="animation-delay: 0.5s;">
-                    </div>
-                    <p class="text-xl text-accent font-semibold" style="font-family: 'Inter', sans-serif;">🎭 Poster Tim Kerja Broadway EVA BBG TK Jateng 🎭</p>
-                    <div class="w-24 h-1 bg-gradient-to-r from-secondary to-accent mx-auto rounded-full mt-4"></div>
+    <main class="container mx-auto px-4 py-8 min-h-screen relative">
+        <!-- Background overlay with opacity -->
+        <div class="absolute inset-0 z-0 pointer-events-none" style="background-image: url('https://ik.imagekit.io/kfw4taety/eva/bg-hero.png?updatedAt=1749437931627'); background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed; opacity: 0.3;"></div>
+        
+        <!-- SEGMENT 1: POSTER TIM BROADWAY (Main Broadway Poster) -->
+        <section id="broadway-main-poster" class="my-20 relative z-10">
+            <div class="max-w-7xl mx-auto px-6">
+                <!-- Broadway Title -->
+                <div class="text-center mb-16 relative">
+                    <h2 class="text-3xl sm:text-4xl md:text-6xl font-['Bungee'] text-secondary mb-4 tracking-wider opacity-95 relative z-10" style="font-family: 'Bungee', cursive; text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">
+                        🎭 POSTER TIM BROADWAY 🎭
+                    </h2>
+                    <div class="w-24 sm:w-32 h-1 bg-gradient-to-r from-secondary to-primary mx-auto rounded-full opacity-80"></div>
+                    <p class="text-gray-300 text-sm sm:text-base mt-2 opacity-100">✨ Poster Utama Tim Broadway EVA ✨</p>
+                </div>
+                
+                <!-- Main Broadway Poster -->
+                <div class="bg-gradient-to-br from-secondary/20 to-primary/20 p-8 rounded-3xl shadow-2xl hover:shadow-secondary/30 transition-all duration-500 text-center">
+                    <img src="https://ik.imagekit.io/kfw4taety/eva/Poster%20Broadway.png?updatedAt=1749483829012" 
+                         alt="Tim Broadway" 
+                         class="w-full max-w-2xl mx-auto rounded-2xl shadow-2xl hover:scale-105 transition-transform duration-300 mb-6">
+                    
+                    <h3 class="text-4xl font-black text-secondary mb-4 font-['Bungee']" style="font-family: 'Broadway', cursive;">
+                        🎪 TIM BROADWAY 🎪
+                    </h3>
+                    <p class="text-xl text-accent font-bold mb-2">The Main Show Coordinators</p>
+                    <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+                        Tim inti yang mengkoordinasikan seluruh pertunjukan Broadway EVA BBG TK Jateng dengan semangat teatrikal yang memukau dan spektakuler
+                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- Enhanced Navigation with Broadway Theme -->
-        <nav class="bg-black bg-opacity-90 backdrop-blur-md text-white py-4 sticky top-0 shadow-lg relative z-50 border-b border-secondary/20 mb-12">
-            <div class="container mx-auto px-4">
-                <div class="flex justify-center items-center">
-                    <ul class="flex flex-wrap justify-center space-x-2 md:space-x-6">
-                        <li><a href="index.html#hero-images" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">BROADWAY</a></li>
-                        <li><a href="index.html#peserta" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">PESERTA</a></li>
-                        <li><a href="index.html#jadwal" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">JADWAL</a></li>
-                        <li><a href="index.html#refleksi" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">REFLEKSI</a></li>
-                        <li><a href="index.html#aksi" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">AKSI</a></li>
-                        <li><a href="index.html#apresiasi" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">APRESIASI</a></li>
-                        <li><a href="gallery.html" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">GALERI</a></li>
-                        <li><a href="news.html" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">BERITA</a></li>
-                        <li><a href="poster.html" class="nav-active transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">POSTER</a></li>
-                        <li><a href="videos.html" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">VIDEO</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <!-- Posters Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            
-            <!-- Tim Broadway (Featured First) -->
-            <div class="md:col-span-2 bg-gradient-to-br from-secondary/20 to-accent/20 backdrop-blur-md border border-secondary/30 rounded-3xl card-hover shadow-xl group overflow-hidden">
-                <div class="poster-card relative bg-gradient-to-br from-secondary/10 to-accent/10 p-8 flex flex-col items-center justify-center text-center">
-                    <div class="absolute top-4 left-4">
-                        <img src="stars-broadway.png" alt="Star" class="w-8 animate-pulse">
-                    </div>
-                    <div class="absolute top-4 right-4">
-                        <img src="bulbs-broadway.png" alt="Bulb" class="w-8 animate-bounce">
-                    </div>
-                    
-                    <img src="https://ik.imagekit.io/kfw4taety/eva/Poster%20Broadway.png?updatedAt=1749483829012" 
-                         alt="Tim Broadway" 
-                         class="w-full max-w-md rounded-2xl shadow-2xl group-hover:scale-105 transition-transform duration-300 mb-6">
-                    
-                    <h2 class="text-4xl font-black text-secondary mb-4 font-broadway" style="font-family: 'Broadway', cursive;">
-                        🎭 TIM BROADWAY 🎭
+        <!-- SEGMENT 2: TIM KERJA (Work Teams) -->
+        <section id="work-teams" class="my-20 relative z-10">
+            <div class="max-w-7xl mx-auto px-6">
+                <!-- Tim Kerja Title -->
+                <div class="text-center mb-16 relative">
+                    <h2 class="text-3xl sm:text-4xl md:text-6xl font-['Bungee'] text-primary mb-4 tracking-wider opacity-95 relative z-10" style="font-family: 'Bungee', cursive; text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">
+                        🎬 TIM KERJA 🎬
                     </h2>
-                    <p class="text-xl text-accent font-bold mb-2">The Main Show</p>
-                    <p class="text-lg text-gray-300 max-w-lg">
-                        Tim inti yang mengkoordinasikan seluruh pertunjukan Broadway EVA BBG TK Jateng dengan semangat teatrikal yang memukau
-                    </p>
+                    <div class="w-24 sm:w-32 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full opacity-80"></div>
+                    <p class="text-gray-300 text-sm sm:text-base mt-2 opacity-100">✨ Tim Kerja Professional EVA Broadway ✨</p>
                 </div>
-            </div>
+                
+                <!-- Work Teams Grid (3 columns, 2 rows = 6 teams) -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <!-- Data dan Evaluasi -->
+                    <div class="bg-gradient-to-br from-purple-900/60 to-indigo-900/60 p-3 rounded-3xl shadow-2xl hover:shadow-purple/30 transition-all duration-500 hover-lift">
+                        <div class="text-center">
+                            <div class="w-full h-96 bg-gradient-to-br from-indigo-800 to-purple-900 rounded-xl flex items-center justify-center mb-3 overflow-hidden">
+                                <img src="https://ik.imagekit.io/kfw4taety/Poster%20Broadway/1.png?updatedAt=1749490265967" 
+                                     alt="Data & Evaluasi Team Poster" 
+                                     class="w-full h-full object-contain rounded-xl hover:scale-105 transition-transform duration-300">
+                            </div>
+                            <h3 class="text-xl font-bold text-white font-['Bungee']">DATA & EVALUASI</h3>
+                        </div>
+                    </div>
 
-            <!-- Data dan Evaluasi -->
-            <div class="bg-gradient-to-br from-purple-900/20 to-indigo-900/20 backdrop-blur-md border border-purple-500/30 rounded-3xl card-hover shadow-xl group overflow-hidden">
-                <div class="poster-card relative p-8 flex flex-col items-center justify-center text-center" style="background: linear-gradient(135deg, #3A0CA3 0%, #3A0CA3 100%);">
-                    <div class="absolute top-4 right-4">
-                        <img src="symbol-broadway.png" alt="Symbol" class="w-6 animate-float">
-                    </div>
-                    
-                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 w-full max-w-sm mb-6 shadow-2xl">
-                        <div class="w-full h-48 bg-gradient-to-br from-indigo-800 to-purple-900 rounded-xl flex items-center justify-center mb-4">
-                            <span class="text-6xl">📊</span>
+                    <!-- Hubungan Masyarakat -->
+                    <div class="bg-gradient-to-br from-red-900/60 to-pink-900/60 p-3 rounded-3xl shadow-2xl hover:shadow-red/30 transition-all duration-500 hover-lift">
+                        <div class="text-center">
+                            <div class="w-full h-96 bg-gradient-to-br from-red-700 to-pink-800 rounded-xl flex items-center justify-center mb-3 overflow-hidden">
+                                <img src="https://ik.imagekit.io/kfw4taety/Poster%20Broadway/2.png?updatedAt=1749490264210" 
+                                     alt="Humas & Publikasi Team Poster" 
+                                     class="w-full h-full object-contain rounded-xl hover:scale-105 transition-transform duration-300">
+                            </div>
+                            <h3 class="text-xl font-bold text-white font-['Bungee']">HUMAS & PUBLIKASI</h3>
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-2 font-broadway">DATA & EVALUASI</h3>
-                        <div class="w-12 h-1 bg-white mx-auto rounded-full mb-3"></div>
-                        <p class="text-sm text-indigo-200">Analitis • Reflektif • Evaluatif</p>
                     </div>
-                    
-                    <div class="text-center">
-                        <div class="flex items-center justify-center mb-2">
-                            <div class="w-4 h-4 rounded-full mr-2" style="background-color: #3A0CA3;"></div>
-                            <span class="text-sm font-mono text-white">#3A0CA3</span>
-                        </div>
-                        <p class="text-xs text-indigo-200 max-w-xs">
-                            Melambangkan ketajaman, keakuratan, dan refleksi dalam setiap analisis data
-                        </p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Hubungan Masyarakat, Publikasi, dan Dokumentasi -->
-            <div class="bg-gradient-to-br from-red-900/20 to-pink-900/20 backdrop-blur-md border border-red-500/30 rounded-3xl card-hover shadow-xl group overflow-hidden">
-                <div class="poster-card relative p-8 flex flex-col items-center justify-center text-center" style="background: linear-gradient(135deg, #D7263D 0%, #B91C1C 100%);">
-                    <div class="absolute top-4 right-4">
-                        <img src="cinema-broadway.png" alt="Cinema" class="w-6 animate-bounce">
-                    </div>
-                    
-                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 w-full max-w-sm mb-6 shadow-2xl">
-                        <div class="w-full h-48 bg-gradient-to-br from-red-700 to-pink-800 rounded-xl flex items-center justify-center mb-4">
-                            <span class="text-6xl">📱</span>
+                    <!-- Kemitraan dan Fasilitasi -->
+                    <div class="bg-gradient-to-br from-green-900/60 to-teal-900/60 p-3 rounded-3xl shadow-2xl hover:shadow-green/30 transition-all duration-500 hover-lift">
+                        <div class="text-center">
+                            <div class="w-full h-96 bg-gradient-to-br from-green-700 to-teal-800 rounded-xl flex items-center justify-center mb-3">
+                                <span class="text-8xl">🤝</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white font-['Bungee']">KEMITRAAN & FASILITASI</h3>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2 font-broadway">HUMAS & PUBLIKASI</h3>
-                        <div class="w-12 h-1 bg-white mx-auto rounded-full mb-3"></div>
-                        <p class="text-sm text-red-200">Komunikatif • Visual • Kreatif</p>
                     </div>
-                    
-                    <div class="text-center">
-                        <div class="flex items-center justify-center mb-2">
-                            <div class="w-4 h-4 rounded-full mr-2" style="background-color: #D7263D;"></div>
-                            <span class="text-sm font-mono text-white">#D7263D</span>
-                        </div>
-                        <p class="text-xs text-red-200 max-w-xs">
-                            Enerjik, perhatian, kuat di media dan publikasi
-                        </p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Kemitraan dan Fasilitasi -->
-            <div class="bg-gradient-to-br from-green-900/20 to-teal-900/20 backdrop-blur-md border border-green-500/30 rounded-3xl card-hover shadow-xl group overflow-hidden">
-                <div class="poster-card relative p-8 flex flex-col items-center justify-center text-center" style="background: linear-gradient(135deg, #2A9D8F 0%, #059669 100%);">
-                    <div class="absolute top-4 right-4">
-                        <img src="lightbox-broadway.png" alt="Lightbox" class="w-6 animate-float">
-                    </div>
-                    
-                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 w-full max-w-sm mb-6 shadow-2xl">
-                        <div class="w-full h-48 bg-gradient-to-br from-green-700 to-teal-800 rounded-xl flex items-center justify-center mb-4">
-                            <span class="text-6xl">🤝</span>
+                    <!-- Pengembang Teknologi -->
+                    <div class="bg-gradient-to-br from-blue-900/60 to-cyan-900/60 p-3 rounded-3xl shadow-2xl hover:shadow-blue/30 transition-all duration-500 hover-lift">
+                        <div class="text-center">
+                            <div class="w-full h-96 bg-gradient-to-br from-blue-600 to-cyan-700 rounded-xl flex items-center justify-center mb-3">
+                                <span class="text-8xl">💻</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white font-['Bungee']">PENGEMBANG TEKNOLOGI</h3>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-2 font-broadway">KEMITRAAN & FASILITASI</h3>
-                        <div class="w-12 h-1 bg-white mx-auto rounded-full mb-3"></div>
-                        <p class="text-sm text-green-200">Kolaboratif • Adaptif • Terbuka</p>
                     </div>
-                    
-                    <div class="text-center">
-                        <div class="flex items-center justify-center mb-2">
-                            <div class="w-4 h-4 rounded-full mr-2" style="background-color: #2A9D8F;"></div>
-                            <span class="text-sm font-mono text-white">#2A9D8F</span>
+
+                    <!-- Peningkatan Kompetensi -->
+                    <div class="bg-gradient-to-br from-orange-900/60 to-yellow-900/60 p-3 rounded-3xl shadow-2xl hover:shadow-orange/30 transition-all duration-500 hover-lift">
+                        <div class="text-center">
+                            <div class="w-full h-96 bg-gradient-to-br from-orange-600 to-yellow-600 rounded-xl flex items-center justify-center mb-3">
+                                <span class="text-8xl">📚</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white font-['Bungee']">PENINGKATAN KOMPETENSI</h3>
                         </div>
-                        <p class="text-xs text-green-200 max-w-xs">
-                            Simbol harmoni, kolaborasi, dan pertumbuhan
-                        </p>
+                    </div>
+
+                    <!-- Perencanaan dan Keuangan -->
+                    <div class="bg-gradient-to-br from-gray-900/60 to-slate-900/60 p-3 rounded-3xl shadow-2xl hover:shadow-gray/30 transition-all duration-500 hover-lift">
+                        <div class="text-center">
+                            <div class="w-full h-96 bg-gradient-to-br from-gray-600 to-slate-700 rounded-xl flex items-center justify-center mb-3">
+                                <span class="text-8xl">💰</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white font-['Bungee']">PERENCANAAN & KEUANGAN</h3>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Pejabat -->
-            <div class="bg-gradient-to-br from-yellow-900/20 to-amber-900/20 backdrop-blur-md border border-yellow-500/30 rounded-3xl card-hover shadow-xl group overflow-hidden">
-                <div class="poster-card relative p-8 flex flex-col items-center justify-center text-center" style="background: linear-gradient(135deg, #FFD700 0%, #F59E0B 100%);">
-                    <div class="absolute top-4 right-4">
-                        <img src="stars-broadway.png" alt="Stars" class="w-6 animate-pulse">
-                    </div>
-                    
-                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 w-full max-w-sm mb-6 shadow-2xl">
-                        <div class="w-full h-48 bg-gradient-to-br from-yellow-600 to-amber-700 rounded-xl flex items-center justify-center mb-4">
-                            <span class="text-6xl">👑</span>
+        <!-- SEGMENT 3: POSTER PEGAWAI (Employee Posters) -->
+        <section id="employee-posters" class="my-20 relative z-10">
+            <div class="max-w-7xl mx-auto px-6">
+                <!-- Poster Pegawai Title -->
+                <div class="text-center mb-16 relative">
+                    <h2 class="text-3xl sm:text-4xl md:text-6xl font-['Bungee'] text-accent mb-4 tracking-wider opacity-95 relative z-10" style="font-family: 'Bungee', cursive; text-shadow: 2px 2px 8px rgba(0,0,0,0.7);">
+                        👥 POSTER PEGAWAI 👥
+                    </h2>
+                    <div class="w-24 sm:w-32 h-1 bg-gradient-to-r from-accent to-tertiary mx-auto rounded-full opacity-80"></div>
+                    <p class="text-gray-300 text-sm sm:text-base mt-2 opacity-100">✨ Kategori Pegawai EVA Broadway ✨</p>
+                </div>
+                
+                <!-- Employee Categories Grid (4 columns, 1 row = 4 categories) -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                    <!-- Pejabat -->
+                    <div class="bg-gradient-to-br from-yellow-900/60 to-amber-900/60 p-6 rounded-3xl shadow-2xl hover:shadow-yellow/30 transition-all duration-500 hover-lift">
+                        <div class="text-center">
+                            <div class="w-full h-40 bg-gradient-to-br from-yellow-600 to-amber-700 rounded-xl flex items-center justify-center mb-4">
+                                <span class="text-5xl">👑</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 font-['Bungee']" style="color: #FFD700;">PEJABAT</h3>
+                            <div class="w-8 h-1 bg-gray-900 mx-auto rounded-full mb-3"></div>
+                            <p class="text-sm text-gray-300">Kepemimpinan Strategis</p>
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-2 font-broadway">PEJABAT</h3>
-                        <div class="w-12 h-1 bg-gray-900 mx-auto rounded-full mb-3"></div>
-                        <p class="text-sm text-gray-800">Kepemimpinan • Arah Strategis</p>
                     </div>
-                    
-                    <div class="text-center">
-                        <div class="flex items-center justify-center mb-2">
-                            <div class="w-4 h-4 rounded-full mr-2" style="background-color: #FFD700;"></div>
-                            <span class="text-sm font-mono text-gray-900">#FFD700</span>
+
+                    <!-- Perlengkapan dan Rumah Tangga -->
+                    <div class="bg-gradient-to-br from-amber-900/60 to-yellow-800/60 p-6 rounded-3xl shadow-2xl hover:shadow-amber/30 transition-all duration-500 hover-lift">
+                        <div class="text-center">
+                            <div class="w-full h-40 bg-gradient-to-br from-amber-700 to-yellow-800 rounded-xl flex items-center justify-center mb-4">
+                                <span class="text-5xl">🔧</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2 font-['Bungee']">PERLENGKAPAN & RT</h3>
+                            <div class="w-8 h-1 bg-white mx-auto rounded-full mb-3"></div>
+                            <p class="text-sm text-amber-200">Operasional & Logistik</p>
                         </div>
-                        <p class="text-xs text-gray-800 max-w-xs">
-                            Kekuatan, kebangsawanan, keputusan strategis
-                        </p>
+                    </div>
+
+                    <!-- Pranata Laboratorium -->
+                    <div class="bg-gradient-to-br from-purple-900/60 to-violet-900/60 p-6 rounded-3xl shadow-2xl hover:shadow-purple/30 transition-all duration-500 hover-lift">
+                        <div class="text-center">
+                            <div class="w-full h-40 bg-gradient-to-br from-purple-700 to-violet-800 rounded-xl flex items-center justify-center mb-4">
+                                <span class="text-5xl">🧪</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-white mb-2 font-['Bungee']">PRANATA LAB</h3>
+                            <div class="w-8 h-1 bg-white mx-auto rounded-full mb-3"></div>
+                            <p class="text-sm text-purple-200">Eksperimen & Teknis</p>
+                        </div>
+                    </div>
+
+                    <!-- Widyaiswara -->
+                    <div class="bg-gradient-to-br from-red-900/60 to-rose-900/60 p-6 rounded-3xl shadow-2xl hover:shadow-red/30 transition-all duration-500 hover-lift">
+                        <div class="text-center">
+                            <div class="w-full h-40 bg-gradient-to-br from-red-800 to-rose-900 rounded-xl flex items-center justify-center mb-4">
+                                <span class="text-5xl">🎓</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2 font-['Bungee']">WIDYAISWARA</h3>
+                            <div class="w-8 h-1 bg-white mx-auto rounded-full mb-3"></div>
+                            <p class="text-sm text-red-200">Edukatif & Inspiratif</p>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <!-- Pengembang Teknologi Pembelajaran -->
-            <div class="bg-gradient-to-br from-blue-900/20 to-cyan-900/20 backdrop-blur-md border border-blue-500/30 rounded-3xl card-hover shadow-xl group overflow-hidden">
-                <div class="poster-card relative p-8 flex flex-col items-center justify-center text-center" style="background: linear-gradient(135deg, #00B4D8 0%, #0077B6 100%);">
-                    <div class="absolute top-4 right-4">
-                        <img src="bulbs-broadway.png" alt="Bulb" class="w-6 animate-bounce">
-                    </div>
-                    
-                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 w-full max-w-sm mb-6 shadow-2xl">
-                        <div class="w-full h-48 bg-gradient-to-br from-blue-600 to-cyan-700 rounded-xl flex items-center justify-center mb-4">
-                            <span class="text-6xl">💻</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2 font-broadway">PENGEMBANG TEKNOLOGI</h3>
-                        <div class="w-12 h-1 bg-white mx-auto rounded-full mb-3"></div>
-                        <p class="text-sm text-blue-200">Inovatif • Teknis • Kreatif</p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <div class="flex items-center justify-center mb-2">
-                            <div class="w-4 h-4 rounded-full mr-2" style="background-color: #00B4D8;"></div>
-                            <span class="text-sm font-mono text-white">#00B4D8</span>
-                        </div>
-                        <p class="text-xs text-blue-200 max-w-xs">
-                            Mewakili teknologi, inovasi, dan masa depan
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Peningkatan Kompetensi -->
-            <div class="bg-gradient-to-br from-orange-900/20 to-yellow-900/20 backdrop-blur-md border border-orange-500/30 rounded-3xl card-hover shadow-xl group overflow-hidden">
-                <div class="poster-card relative p-8 flex flex-col items-center justify-center text-center" style="background: linear-gradient(135deg, #F8961E 0%, #FB8500 100%);">
-                    <div class="absolute top-4 right-4">
-                        <img src="label-broadway.png" alt="Label" class="w-6 animate-float">
-                    </div>
-                    
-                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 w-full max-w-sm mb-6 shadow-2xl">
-                        <div class="w-full h-48 bg-gradient-to-br from-orange-600 to-yellow-600 rounded-xl flex items-center justify-center mb-4">
-                            <span class="text-6xl">📚</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2 font-broadway">PENINGKATAN KOMPETENSI</h3>
-                        <div class="w-12 h-1 bg-white mx-auto rounded-full mb-3"></div>
-                        <p class="text-sm text-orange-200">Pembelajaran • Peningkatan Kapasitas</p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <div class="flex items-center justify-center mb-2">
-                            <div class="w-4 h-4 rounded-full mr-2" style="background-color: #F8961E;"></div>
-                            <span class="text-sm font-mono text-white">#F8961E</span>
-                        </div>
-                        <p class="text-xs text-orange-200 max-w-xs">
-                            Optimisme, semangat tumbuh dan berkembang
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Perencanaan dan Keuangan -->
-            <div class="bg-gradient-to-br from-gray-900/20 to-slate-900/20 backdrop-blur-md border border-gray-500/30 rounded-3xl card-hover shadow-xl group overflow-hidden">
-                <div class="poster-card relative p-8 flex flex-col items-center justify-center text-center" style="background: linear-gradient(135deg, #6C757D 0%, #495057 100%);">
-                    <div class="absolute top-4 right-4">
-                        <img src="discount-broadway.png" alt="Discount" class="w-6 animate-pulse">
-                    </div>
-                    
-                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 w-full max-w-sm mb-6 shadow-2xl">
-                        <div class="w-full h-48 bg-gradient-to-br from-gray-600 to-slate-700 rounded-xl flex items-center justify-center mb-4">
-                            <span class="text-6xl">💰</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2 font-broadway">PERENCANAAN & KEUANGAN</h3>
-                        <div class="w-12 h-1 bg-white mx-auto rounded-full mb-3"></div>
-                        <p class="text-sm text-gray-300">Strategis • Detail • Pengendali Anggaran</p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <div class="flex items-center justify-center mb-2">
-                            <div class="w-4 h-4 rounded-full mr-2" style="background-color: #6C757D;"></div>
-                            <span class="text-sm font-mono text-white">#6C757D</span>
-                        </div>
-                        <p class="text-xs text-gray-300 max-w-xs">
-                            Stabilitas, tanggung jawab, dan ketelitian
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Perlengkapan dan Rumah Tangga -->
-            <div class="bg-gradient-to-br from-amber-900/20 to-yellow-900/20 backdrop-blur-md border border-amber-600/30 rounded-3xl card-hover shadow-xl group overflow-hidden">
-                <div class="poster-card relative p-8 flex flex-col items-center justify-center text-center" style="background: linear-gradient(135deg, #7B3F00 0%, #8B4513 100%);">
-                    <div class="absolute top-4 right-4">
-                        <img src="symbol-broadway.png" alt="Symbol" class="w-6 animate-float">
-                    </div>
-                    
-                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 w-full max-w-sm mb-6 shadow-2xl">
-                        <div class="w-full h-48 bg-gradient-to-br from-amber-700 to-yellow-800 rounded-xl flex items-center justify-center mb-4">
-                            <span class="text-6xl">🔧</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2 font-broadway">PERLENGKAPAN & RT</h3>
-                        <div class="w-12 h-1 bg-white mx-auto rounded-full mb-3"></div>
-                        <p class="text-sm text-amber-200">Operasional • Logistik • Pendukung Teknis</p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <div class="flex items-center justify-center mb-2">
-                            <div class="w-4 h-4 rounded-full mr-2" style="background-color: #7B3F00;"></div>
-                            <span class="text-sm font-mono text-white">#7B3F00</span>
-                        </div>
-                        <p class="text-xs text-amber-200 max-w-xs">
-                            Kuat, tangguh, dan dasar dari semua kegiatan
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Pranata Laboratorium Pendidikan -->
-            <div class="bg-gradient-to-br from-purple-900/20 to-violet-900/20 backdrop-blur-md border border-purple-600/30 rounded-3xl card-hover shadow-xl group overflow-hidden">
-                <div class="poster-card relative p-8 flex flex-col items-center justify-center text-center" style="background: linear-gradient(135deg, #7209B7 0%, #6A0DAD 100%);">
-                    <div class="absolute top-4 right-4">
-                        <img src="lightbox-broadway.png" alt="Lightbox" class="w-6 animate-float">
-                    </div>
-                    
-                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 w-full max-w-sm mb-6 shadow-2xl">
-                        <div class="w-full h-48 bg-gradient-to-br from-purple-700 to-violet-800 rounded-xl flex items-center justify-center mb-4">
-                            <span class="text-6xl">🧪</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2 font-broadway">PRANATA LAB PENDIDIKAN</h3>
-                        <div class="w-12 h-1 bg-white mx-auto rounded-full mb-3"></div>
-                        <p class="text-sm text-purple-200">Eksperimen • Teknis • Ilmiah</p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <div class="flex items-center justify-center mb-2">
-                            <div class="w-4 h-4 rounded-full mr-2" style="background-color: #7209B7;"></div>
-                            <span class="text-sm font-mono text-white">#7209B7</span>
-                        </div>
-                        <p class="text-xs text-purple-200 max-w-xs">
-                            Mewakili ilmu pengetahuan dan kreativitas terapan
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tata Laksana, Kepegawaian, dan Persuratan -->
-            <div class="bg-gradient-to-br from-blue-900/20 to-steel-900/20 backdrop-blur-md border border-blue-600/30 rounded-3xl card-hover shadow-xl group overflow-hidden">
-                <div class="poster-card relative p-8 flex flex-col items-center justify-center text-center" style="background: linear-gradient(135deg, #468FAF 0%, #2E8B8B 100%);">
-                    <div class="absolute top-4 right-4">
-                        <img src="cinema-broadway.png" alt="Cinema" class="w-6 animate-bounce">
-                    </div>
-                    
-                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 w-full max-w-sm mb-6 shadow-2xl">
-                        <div class="w-full h-48 bg-gradient-to-br from-blue-700 to-steel-700 rounded-xl flex items-center justify-center mb-4">
-                            <span class="text-6xl">📋</span>
-                        </div>
-                        <h3 class="text-xl font-bold text-white mb-2 font-broadway">TATA LAKSANA & KEPEGAWAIAN</h3>
-                        <div class="w-12 h-1 bg-white mx-auto rounded-full mb-3"></div>
-                        <p class="text-sm text-blue-200">Administratif • Rapi • Pengelolaan SDM</p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <div class="flex items-center justify-center mb-2">
-                            <div class="w-4 h-4 rounded-full mr-2" style="background-color: #468FAF;"></div>
-                            <span class="text-sm font-mono text-white">#468FAF</span>
-                        </div>
-                        <p class="text-xs text-blue-200 max-w-xs">
-                            Kedisiplinan, ketertiban, dan profesionalisme
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Widyaiswara -->
-            <div class="bg-gradient-to-br from-red-900/20 to-rose-900/20 backdrop-blur-md border border-red-600/30 rounded-3xl card-hover shadow-xl group overflow-hidden">
-                <div class="poster-card relative p-8 flex flex-col items-center justify-center text-center" style="background: linear-gradient(135deg, #9A031E 0%, #800020 100%);">
-                    <div class="absolute top-4 right-4">
-                        <img src="stars-broadway.png" alt="Stars" class="w-6 animate-pulse">
-                    </div>
-                    
-                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 w-full max-w-sm mb-6 shadow-2xl">
-                        <div class="w-full h-48 bg-gradient-to-br from-red-800 to-rose-900 rounded-xl flex items-center justify-center mb-4">
-                            <span class="text-6xl">🎓</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-2 font-broadway">WIDYAISWARA</h3>
-                        <div class="w-12 h-1 bg-white mx-auto rounded-full mb-3"></div>
-                        <p class="text-sm text-red-200">Edukatif • Inspiratif • Transformatif</p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <div class="flex items-center justify-center mb-2">
-                            <div class="w-4 h-4 rounded-full mr-2" style="background-color: #9A031E;"></div>
-                            <span class="text-sm font-mono text-white">#9A031E</span>
-                        </div>
-                        <p class="text-xs text-red-200 max-w-xs">
-                            Karisma, inspirasi, dan semangat mengajar
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+        </section>
 
         <!-- Bottom Section -->
-        <div class="text-center mb-8">
+        <div class="text-center mb-8 relative z-10">
             <div class="bg-gradient-to-r from-secondary/20 to-accent/20 backdrop-blur-md border border-secondary/30 rounded-3xl p-8">
                 <div class="flex items-center justify-center gap-4 mb-4">
-                    <img src="stars-broadway.png" alt="Stars" class="w-8 animate-pulse">
-                    <h3 class="text-3xl font-bold text-secondary font-broadway" style="font-family: 'Broadway', cursive;">
+                    <h3 class="text-3xl font-bold text-secondary font-['Bungee']" style="font-family: 'Broadway', cursive;">
                         EVERY TEAM MATTERS!
                     </h3>
-                    <img src="stars-broadway.png" alt="Stars" class="w-8 animate-pulse" style="animation-delay: 0.5s;">
                 </div>
                 <p class="text-xl text-accent font-semibold mb-4" style="font-family: 'Inter', sans-serif;">✨ Setiap Tim Memiliki Peran Penting dalam Broadway EVA ✨</p>
                 <p class="text-gray-300 leading-relaxed max-w-3xl mx-auto" style="font-family: 'Inter', sans-serif;">
                     Seperti orkestra Broadway yang harmonis, setiap tim kerja memiliki warna dan karakter unik yang saling melengkapi 
                     untuk menciptakan pertunjukan evaluasi yang spektakuler dan berkesan.
                 </p>
-                
-                <div class="flex justify-center gap-4 mt-6">
-                    <img src="bulbs-broadway.png" alt="Bulbs" class="w-6 animate-bounce">
-                    <img src="symbol-broadway.png" alt="Symbol" class="w-6 animate-float">
-                    <img src="stars-broadway.png" alt="Stars" class="w-6 animate-pulse">
-                    <img src="cinema-broadway.png" alt="Cinema" class="w-6 animate-bounce" style="animation-delay: 0.3s;">
-                    <img src="lightbox-broadway.png" alt="Lightbox" class="w-6 animate-float" style="animation-delay: 0.6s;">
-                </div>
             </div>
         </div>
 
         <!-- Navigation -->
-        <div class="text-center mb-12">
+        <div class="text-center mb-12 relative z-10">
             <a href="index.html" class="inline-flex items-center gap-3 bg-gradient-to-r from-secondary to-accent text-gray-900 font-bold py-3 px-8 rounded-full hover:shadow-xl transform hover:scale-105 transition-all duration-300">
-                <img src="bulbs-broadway.png" alt="Back" class="w-5">
-                Kembali ke Beranda
-                <img src="bulbs-broadway.png" alt="Back" class="w-5">
+                Kembali ke Broadway
             </a>
         </div>
-    </div>
-
+    </main>
+                    
     <!-- Footer -->
     <footer class="bg-gradient-to-t from-black to-gray-900 text-white py-20 mt-20 relative overflow-hidden">
-       
         <div class="container mx-auto px-6 text-center relative z-10">
             <!-- Logo Section - Centered and Larger -->
             <div class="mb-12">
@@ -522,17 +322,16 @@
                          alt="Broadway Logo" 
                          class="w-60 h-60 md:w-72 md:h-72 object-contain hover:scale-110 transition-transform duration-300 drop-shadow-2xl">
                 </div>
-                <h3 class="text-4xl md:text-5xl font-broadway mb-4 text-secondary" style="font-family: 'Broadway', cursive; text-shadow: 0 0 15px rgba(242, 198, 65, 0.4);">
+                <h3 class="text-4xl md:text-5xl font-['Bungee'] mb-4 text-secondary" style="font-family: 'Broadway', cursive; text-shadow: 0 0 15px rgba(242, 198, 65, 0.4);">
                     BROADWAY TO PROGRESS
                 </h3>
-                <p class="text-xl md:text-2xl text-accent font-bungee mb-6" style="font-family: 'Bungee', cursive;">REWIND & RECHARGE</p>
-                
+                <p class="text-xl md:text-2xl text-accent font-['Bungee'] mb-6" style="font-family: 'Bungee', cursive;">REWIND & RECHARGE</p>
             </div>
             
             <!-- Footer Info -->
             <div class="border-t border-secondary/30 pt-8">
                 <p class="text-gray-400 text-sm md:text-base font-sans mb-2">&copy; 2025 Panitia Evaluasi Tengah Tahun. BBGTK Provinsi Jawa Tengah.</p>
-                <p class="text-accent/80 text-xs md:text-sm mt-2 font-bungee" style="font-family: 'Bungee', cursive;">🌟 THE SHOW MUST GO ON! 🌟</p>
+                <p class="text-accent/80 text-xs md:text-sm mt-2 font-['Bungee']" style="font-family: 'Bungee', cursive;">🌟 THE SHOW MUST GO ON! 🌟</p>
             </div>
         </div>
     </footer>
