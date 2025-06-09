@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evaluasi Tengah Tahun 2025 - Rewind & Recharge: Refleksi capaian & identifikasi hambatan</title>
+    <title>Broadway to Progress - Rewind & Recharge | BBGTK Jawa Tengah</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -95,10 +95,36 @@
             scroll-behavior: smooth;
         }
 
+        /* Navigation active state */
+        .nav-active {
+            background: linear-gradient(135deg, #D90416, #F2C641);
+            color: white !important;
+            box-shadow: 0 4px 15px rgba(217, 4, 22, 0.3);
+        }
+
+        /* Smooth hover effects */
+        .hover-lift {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .hover-lift:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
         /* Add CSS for fade out animation */
         @keyframes fadeOut {
             0% { opacity: 1; transform: translateY(0px); }
             100% { opacity: 0; transform: translateY(-30px); }
+        }
+        
+        @keyframes slideInUp {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        
+        .slide-in-up {
+            animation: slideInUp 0.6s ease-out;
         }
         
         #broadway-decorative {
@@ -114,7 +140,7 @@
 <body class="bg-gray-900 text-white font-['Inter']">
     <!-- Hero Background with Broadway Overlay -->
     <div class="fixed inset-0 z-0">
-        <img src="https://ik.imagekit.io/kfw4taety/eva/bg-hero.jpg?updatedAt=1749397854834" alt="Background Hero" class="w-full h-full object-cover opacity-40">
+        <img src="https://ik.imagekit.io/kfw4taety/eva/bg-hero.png?updatedAt=1749437931627" alt="Background Hero" class="w-full h-full object-cover opacity-40">
         <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80"></div>
         <!-- Broadway Spotlight Effects -->
         <div class="absolute top-0 left-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse-slow"></div>
@@ -130,44 +156,59 @@
             </div>
             
             <!-- Main Title with Broadway Font and Effects -->
-            <div class="bg-black/50 backdrop-blur-md rounded-3xl p-8 md:p-12 border-4 border-secondary/30 shadow-2xl">
+            <div class="bg-black/50 backdrop-blur-md rounded-3xl p-8 md:p-12 border-4 border-secondary/30 shadow-2xl slide-in-up">
                 <div class="relative">
                     <!-- Spotlight Circle Behind Title -->
                     <div class="absolute inset-0 bg-gradient-radial from-secondary/20 to-transparent rounded-full blur-xl"></div>
                     
                     <h1 class="relative text-4xl md:text-6xl lg:text-8xl font-broadway text-secondary mb-4 tracking-wider drop-shadow-2xl" 
                         style="font-family: 'Broadway', 'Bungee Shade', cursive; text-shadow: 0 0 20px rgba(242, 198, 65, 0.5), 0 0 40px rgba(242, 198, 65, 0.3);">
-                        EVALUASI
+                        BROADWAY TO PROGRESS
                     </h1>
                     
-                    <div class="flex items-center justify-center gap-4 mb-4">
+                    <div class="flex items-center justify-center gap-4 mb-6">
                         <p class="text-2xl md:text-4xl lg:text-5xl font-bungee-shade text-primary font-bold tracking-wide drop-shadow-lg"
                            style="font-family: 'Bungee Shade', cursive; text-shadow: 0 0 15px rgba(217, 4, 22, 0.4);">
-                            TENGAH TAHUN 2025
+                            REWIND & RECHARGE
                         </p>
                     </div>
                     
-                    <div class="flex items-center justify-center gap-2 mb-6">
-                        <p class="text-lg md:text-xl lg:text-2xl text-accent font-semibold italic">
-                            Rewind & Recharge: Refleksi capaian & identifikasi hambatan
+                    <div class="max-w-4xl mx-auto mb-6">
+                        <p class="text-lg md:text-xl text-gray-200 leading-relaxed font-medium">
+                            Sebuah panggung inspiratif tempat kita menengok ke belakang, bergerak ke depan, dan merayakan setiap langkah perubahan. 
+                            Mengusung tema <span class="text-secondary font-bold">rewind & recharge</span>, acara ini menjadi refleksi sekaligus 
+                            pemompa semangat untuk perubahan.
                         </p>
-                        <img src="symbol-broadway.png" alt="Broadway Symbol" class="w-4 md:w-6">
                     </div>
                     
-                   
+                    <!-- Call to Action Button -->
+                    <div class="flex justify-center gap-4 mt-8">
+                        <a href="#about" class="bg-gradient-to-r from-primary to-dark text-white px-8 py-4 rounded-full font-bold text-lg hover-lift animate-pulse-glow">
+                            Mulai Eksplorasi
+                        </a>
+                        <a href="#jadwal" class="bg-gradient-to-r from-secondary to-accent text-gray-800 px-8 py-4 rounded-full font-bold text-lg hover-lift">
+                            Lihat Jadwal
+                        </a>
+                    </div>
                 </div>
             </div>
         </header>
 
         <!-- Enhanced Navigation with Broadway Theme -->
-        <nav class="bg-black bg-opacity-80 text-white py-3 sticky top-0 shadow-lg relative z-50">
-            <div class="container mx-auto flex justify-center items-center">
-                <ul class="flex space-x-6 md:space-x-8">
-                    <li><a href="index.html" class="text-secondary font-bold transition-colors duration-300 px-3 py-2 rounded-md text-sm font-medium">BERANDA</a></li>
-                    <li><a href="news.html" class="hover:text-secondary transition-colors duration-300 px-3 py-2 rounded-md text-sm font-medium">BERITA</a></li>
-                    <li><a href="gallery.html" class="hover:text-secondary transition-colors duration-300 px-3 py-2 rounded-md text-sm font-medium">GALERI</a></li>
-                    <li><a href="videos.html" class="hover:text-secondary transition-colors duration-300 px-3 py-2 rounded-md text-sm font-medium">VIDEO</a></li>
-                </ul>
+        <nav class="bg-black bg-opacity-90 backdrop-blur-md text-white py-4 sticky top-0 shadow-lg relative z-50 border-b border-secondary/20">
+            <div class="container mx-auto px-4">
+                <div class="flex justify-center items-center">
+                    <ul class="flex flex-wrap justify-center space-x-2 md:space-x-6">
+                        <li><a href="#home" class="nav-active transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">BERANDA</a></li>
+                        <li><a href="#about" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">TENTANG</a></li>
+                        <li><a href="#peserta" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">PESERTA</a></li>
+                        <li><a href="#jadwal" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">JADWAL</a></li>
+                        <li><a href="#refleksi" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">REFLEKSI</a></li>
+                        <li><a href="#aksi" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">AKSI</a></li>
+                        <li><a href="#apresiasi" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">APRESIASI</a></li>
+                        <li><a href="gallery.html" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">GALERI</a></li>
+                    </ul>
+                </div>
             </div>
         </nav>
 
@@ -187,12 +228,111 @@
             <img src="marquee-broadway.png" alt="Broadway Marquee" class="mx-auto max-h-48 md:max-h-64 opacity-90 rounded-lg shadow-lg">
         </div>
 
-        <section id="about" class="my-12 p-6 md:p-8 bg-black bg-opacity-60 rounded-lg shadow-xl relative">
-            <img src="lightbox-broadway.png" alt="Broadway Lightbox" class="absolute -top-8 -left-8 w-24 md:w-32 opacity-80 transform rotate-[-15deg]">
-            <h2 class="text-3xl md:text-4xl font-['Bungee'] text-red-600 mb-6 text-center" style="font-family: 'Bungee', cursive;">TENTANG ACARA</h2>
-            <p class="text-lg text-gray-300 leading-relaxed mb-4">Evaluasi Tengah Tahun 2025 adalah momen penting untuk merefleksikan capaian yang telah diraih serta mengidentifikasi hambatan yang dihadapi. Dengan tema "Rewind & Recharge", acara ini bertujuan untuk memberikan ruang bagi setiap individu dan tim untuk melakukan refleksi mendalam terhadap perjalanan yang telah dilalui.</p>
-            <p class="text-lg text-gray-300 leading-relaxed mb-4">Selama dua hari, peserta akan terlibat dalam berbagai sesi refleksi, diskusi, dan aktivitas kolaboratif yang dirancang untuk menggali lebih dalam tentang apa yang telah dicapai dan tantangan yang masih harus diatasi. Acara ini juga akan menjadi ajang apresiasi bagi mereka yang telah menunjukkan kinerja luar biasa.</p>
-            <p class="text-lg text-gray-300 leading-relaxed">Bergabunglah dalam perjalanan refleksi dan peremajaan ini, dan mari kita songsong masa depan yang lebih cerah bersama-sama!</p>
+        <section id="about" class="bg-white rounded-3xl p-12 mb-12 shadow-2xl">
+            <div class="text-center mb-16">
+                <img src="lightbox-broadway.png" alt="Broadway Lightbox" class="mx-auto mb-8 w-auto h-24 md:h-32 opacity-90">
+                <h2 class="text-5xl font-black mb-4 gradient-text">Tentang Acara</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto mb-12">
+                <p class="text-xl text-gray-700 leading-relaxed text-center mb-8">
+                    Acara ini bertujuan untuk <span class="font-bold text-primary">mengevaluasi</span>, 
+                    <span class="font-bold text-tertiary">menginspirasi aksi</span>, dan 
+                    <span class="font-bold text-secondary">memberi apresiasi</span> atas kontribusi seluruh pegawai BBGTK Provinsi Jawa Tengah.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-secondary/20 to-secondary/5 p-8 rounded-3xl card-hover shadow-lg hover-lift">
+                    <div class="text-center mb-6">
+                        <div class="text-6xl mb-4">✨</div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Refleksi</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <span class="text-primary mt-1 text-xl">•</span>
+                            <span>Mengevaluasi tantangan dan pencapaian</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-primary mt-1 text-xl">•</span>
+                            <span>Mengidentifikasi area pengembangan</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gradient-to-br from-primary/20 to-primary/5 p-8 rounded-3xl card-hover shadow-lg hover-lift">
+                    <div class="text-center mb-6">
+                        <div class="text-6xl mb-4">🔥</div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Aksi</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <span class="text-primary mt-1 text-xl">•</span>
+                            <span>Simulasi perubahan dan kolaborasi ide</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-primary mt-1 text-xl">•</span>
+                            <span>Strategi implementasi nyata</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="bg-gradient-to-br from-accent/20 to-accent/5 p-8 rounded-3xl card-hover shadow-lg hover-lift">
+                    <div class="text-center mb-6">
+                        <div class="text-6xl mb-4">🌟</div>
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Apresiasi</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <span class="text-primary mt-1 text-xl">•</span>
+                            <span>Penghargaan atas semangat dan transformasi</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-primary mt-1 text-xl">•</span>
+                            <span>Perayaan pencapaian bersama</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Peserta Section -->
+        <section id="peserta" class="bg-gradient-to-br from-dark to-primary rounded-3xl p-12 mb-12 shadow-2xl text-white">
+            <div class="text-center mb-16">
+                <div class="text-6xl mb-6 animate-bounce-slow">👥</div>
+                <h2 class="text-5xl font-black mb-4 text-white">Target Peserta</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-secondary to-accent mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 mb-8 hover-lift">
+                    <div class="text-8xl font-black text-secondary mb-4">±120</div>
+                    <p class="text-2xl font-bold mb-4">Seluruh Pegawai BBGTK Provinsi Jawa Tengah</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-gradient-to-br from-secondary to-white p-6 rounded-2xl text-gray-800 hover-lift">
+                        <div class="text-4xl mb-3">👨‍💼</div>
+                        <h3 class="font-bold text-lg">Ketua Tim Kerja</h3>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-accent to-white p-6 rounded-2xl text-gray-800 hover-lift">
+                        <div class="text-4xl mb-3">💼</div>
+                        <h3 class="font-bold text-lg">Staf</h3>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-tertiary to-white p-6 rounded-2xl text-gray-800 hover-lift">
+                        <div class="text-4xl mb-3">🎓</div>
+                        <h3 class="font-bold text-lg">Widyaiswara</h3>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-secondary to-white p-6 rounded-2xl text-gray-800 hover-lift">
+                        <div class="text-4xl mb-3">💻</div>
+                        <h3 class="font-bold text-lg">Pengembang Teknologi Pembelajaran</h3>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Overview Section -->
@@ -446,6 +586,223 @@
                 </div>
             </div>
         </section> <!-- This is the end of awards section -->
+
+        <!-- Refleksi Section -->
+        <section id="refleksi" class="bg-gradient-to-br from-secondary/20 to-accent/10 rounded-3xl p-12 mb-12 shadow-2xl">
+            <div class="text-center mb-16">
+                <div class="text-6xl mb-6">✨</div>
+                <h2 class="text-5xl font-black mb-4 gradient-text">Refleksi</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Rewind & Recharge (Pribadi) -->
+                <div class="bg-white p-8 rounded-3xl shadow-xl hover-lift">
+                    <div class="text-center mb-6">
+                        <div class="text-5xl mb-4">🔄</div>
+                        <h3 class="text-3xl font-bold text-primary mb-4">Rewind & Recharge (Pribadi)</h3>
+                    </div>
+                    
+                    <ul class="space-y-4 text-gray-700">
+                        <li class="flex items-start gap-3">
+                            <span class="text-primary mt-1 text-xl">•</span>
+                            <span>Evaluasi resolusi awal tahun</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-primary mt-1 text-xl">•</span>
+                            <span>Identifikasi tantangan pribadi</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-primary mt-1 text-xl">•</span>
+                            <span>Penyesuaian strategi semester 2</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-primary mt-1 text-xl">•</span>
+                            <span>Penulisan surat motivasi untuk diri sendiri</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Tumbuh Bersama di Lembaga Baru (Tim/Lembaga) -->
+                <div class="bg-gradient-to-br from-primary to-dark p-8 rounded-3xl shadow-xl text-white hover-lift">
+                    <div class="text-center mb-6">
+                        <div class="text-5xl mb-4">🌱</div>
+                        <h3 class="text-3xl font-bold mb-4">Tumbuh Bersama di Lembaga Baru</h3>
+                        <p class="text-secondary font-semibold">(Tim/Lembaga)</p>
+                    </div>
+                    
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <span class="text-secondary mt-1 text-xl">•</span>
+                            <span>Game Bingo Adaptasi</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-secondary mt-1 text-xl">•</span>
+                            <span>Kartu Refleksi & diskusi tim</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-secondary mt-1 text-xl">•</span>
+                            <span>Pohon Komitmen tim</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aksi Section -->
+        <section id="aksi" class="bg-white rounded-3xl p-12 mb-12 shadow-2xl">
+            <div class="text-center mb-16">
+                <div class="text-6xl mb-6">🔥</div>
+                <h2 class="text-5xl font-black mb-4 gradient-text">Aksi</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Narasumber -->
+                <div class="lg:col-span-1">
+                    <div class="bg-gradient-to-br from-primary to-dark p-8 rounded-3xl text-white shadow-xl hover-lift h-full">
+                        <div class="text-center mb-6">
+                            <div class="text-5xl mb-4">👨‍🏫</div>
+                            <h3 class="text-2xl font-bold mb-2">Narasumber</h3>
+                            <p class="text-secondary text-3xl font-bold mb-2">Darmawan Aji</p>
+                            <p class="text-accent font-semibold">Productivity Coach</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Materi -->
+                <div class="lg:col-span-1">
+                    <div class="bg-gradient-to-br from-accent/20 to-tertiary/10 p-8 rounded-3xl shadow-xl hover-lift h-full">
+                        <div class="text-center mb-6">
+                            <div class="text-5xl mb-4">📚</div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">Materi</h3>
+                        </div>
+                        
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start gap-3">
+                                <span class="text-primary mt-1 text-xl">•</span>
+                                <span>Strategi semangat kerja & motivasi</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-primary mt-1 text-xl">•</span>
+                                <span>Manajemen waktu & prioritas</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-primary mt-1 text-xl">•</span>
+                                <span>Studi kasus inspiratif</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-primary mt-1 text-xl">•</span>
+                                <span>Budaya kerja inklusif</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Output -->
+                <div class="lg:col-span-1">
+                    <div class="bg-gradient-to-br from-secondary/20 to-accent/10 p-8 rounded-3xl shadow-xl hover-lift h-full">
+                        <div class="text-center mb-6">
+                            <div class="text-5xl mb-4">🎯</div>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">Output</h3>
+                        </div>
+                        
+                        <ul class="space-y-3 text-gray-700">
+                            <li class="flex items-start gap-3">
+                                <span class="text-primary mt-1 text-xl">•</span>
+                                <span>Semangat baru dan strategi menyelesaikan target</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-primary mt-1 text-xl">•</span>
+                                <span>Komitmen nyata pasca kegiatan</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <span class="text-primary mt-1 text-xl">•</span>
+                                <span>Kesadaran kolektif menuju kemajuan</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Apresiasi Section -->
+        <section id="apresiasi" class="bg-gradient-to-br from-tertiary to-primary rounded-3xl p-12 mb-12 shadow-2xl text-white">
+            <div class="text-center mb-16">
+                <div class="text-6xl mb-6">🌟</div>
+                <h2 class="text-5xl font-black mb-4">Apresiasi</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-secondary to-accent mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+                <!-- Info Waktu -->
+                <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 hover-lift">
+                    <div class="text-center mb-6">
+                        <div class="text-5xl mb-4">⏰</div>
+                        <h3 class="text-2xl font-bold mb-4">Waktu Pelaksanaan</h3>
+                    </div>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <span class="text-secondary text-2xl">📅</span>
+                            <span class="text-xl font-semibold">Day 2</span>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-secondary text-2xl">🕐</span>
+                            <span class="text-xl font-semibold">13.00 - 16.00</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Jenis Apresiasi -->
+                <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 hover-lift">
+                    <div class="text-center mb-6">
+                        <div class="text-5xl mb-4">🏆</div>
+                        <h3 class="text-2xl font-bold mb-4">Jenis Apresiasi</h3>
+                    </div>
+                    
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <span class="text-secondary mt-1 text-xl">•</span>
+                            <span>Penghargaan Formal & Fun</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <span class="text-secondary mt-1 text-xl">•</span>
+                            <span>Mini Drama Tim Kerja</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Drama Section -->
+            <div class="bg-gradient-to-r from-secondary/20 to-accent/20 backdrop-blur-md rounded-3xl p-8">
+                <div class="text-center mb-6">
+                    <div class="text-6xl mb-4">🎭</div>
+                    <h3 class="text-3xl font-bold mb-4">Mini Drama Tim Kerja</h3>
+                    <p class="text-xl text-secondary font-semibold">Menampilkan ide kreatif dan target setengah tahun ke depan dalam bentuk drama</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center hover-lift">
+                        <div class="text-4xl mb-3">🎨</div>
+                        <h4 class="font-bold text-lg mb-2">Kreativitas</h4>
+                        <p class="text-sm text-white/80">Mengekspresikan ide dengan cara yang unik dan menarik</p>
+                    </div>
+                    
+                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center hover-lift">
+                        <div class="text-4xl mb-3">🎯</div>
+                        <h4 class="font-bold text-lg mb-2">Target</h4>
+                        <p class="text-sm text-white/80">Menyampaikan visi dan misi setengah tahun mendatang</p>
+                    </div>
+                    
+                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center hover-lift">
+                        <div class="text-4xl mb-3">🤝</div>
+                        <h4 class="font-bold text-lg mb-2">Kolaborasi</h4>
+                        <p class="text-sm text-white/80">Menunjukkan kekompakan dan kerja sama tim</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Broadway Decorative Elements - Simple version for index page -->
         <section class="my-16 relative overflow-hidden">
