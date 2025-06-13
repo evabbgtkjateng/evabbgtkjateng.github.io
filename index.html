@@ -3,1615 +3,518 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Broadway to Progress - Rewind & Recharge | BBGTK Jawa Tengah</title>
+    <title>EVA 2025 - Eksplorasi Visual dan Aksi | BBGTK Provinsi Jawa Tengah</title>
+    <meta name="description" content="Selamat datang di EVA 2025 - Eksplorasi Visual dan Aksi bersama BBGTK Provinsi Jawa Tengah. Rangkaian kegiatan tahunan dengan tiga fase: Tanzaku, Broadway, dan Akhir Tahun.">
+    <meta name="keywords" content="EVA 2025, BBGTK, Jawa Tengah, Tanzaku, Broadway, Pendidikan, Visual, Aksi">
+    <meta name="author" content="BBGTK Provinsi Jawa Tengah">
     
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://evabbgtkjateng.github.io/">
+    <meta property="og:title" content="EVA 2025 - Eksplorasi Visual dan Aksi | BBGTK Provinsi Jawa Tengah">
+    <meta property="og:description" content="Rangkaian kegiatan tahunan dengan tiga fase besar: Tanzaku, Broadway, dan Akhir Tahun.">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://evabbgtkjateng.github.io/">
+    <meta property="twitter:title" content="EVA 2025 - Eksplorasi Visual dan Aksi">
+    <meta property="twitter:description" content="Rangkaian kegiatan tahunan dengan tiga fase besar: Tanzaku, Broadway, dan Akhir Tahun.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800&display=swap" as="style">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- TailwindCSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'primary': '#D90416',
-                        'secondary': '#F2C641',
-                        'accent': '#F2A950',
-                        'tertiary': '#D95F43',
-                        'dark': '#A60505'
+                        'eva-primary': '#FF6B6B',
+                        'eva-secondary': '#4ECDC4',
+                        'eva-accent': '#FFE66D',
+                        'eva-purple': '#A8E6CF',
+                        'eva-pink': '#FFB3BA',
+                        'eva-blue': '#BFDBF7',
+                        'eva-dark': '#2C3E50',
+                        'eva-gray': '#7F8C8D'
                     },
                     fontFamily: {
-                        'sans': ['Bungee', 'Inter', 'system-ui', 'sans-serif'], // Added Bungee and kept Inter as fallback
-                        'bungee-shade': ['Bungee Shade', 'sans-serif'],
-                        'broadway': ['Broadway', 'sans-serif'], // Added Broadway font
+                        'bebas': ['Bebas Neue', 'cursive'],
+                        'poppins': ['Poppins', 'sans-serif']
                     },
                     animation: {
                         'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 3s ease-in-out infinite',
-                        'bounce-slow': 'bounce 2s infinite',
+                        'bounce-slow': 'bounce 3s infinite',
+                        'pulse-slow': 'pulse 4s infinite',
+                        'wiggle': 'wiggle 1s ease-in-out infinite',
+                        'fade-in': 'fadeIn 1s ease-in-out',
+                        'slide-up': 'slideUp 0.8s ease-out',
+                        'scale-in': 'scaleIn 0.5s ease-out'
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' }
+                        },
+                        wiggle: {
+                            '0%, 100%': { transform: 'rotate(-3deg)' },
+                            '50%': { transform: 'rotate(3deg)' }
+                        },
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' }
+                        },
+                        slideUp: {
+                            '0%': { transform: 'translateY(50px)', opacity: '0' },
+                            '100%': { transform: 'translateY(0)', opacity: '1' }
+                        },
+                        scaleIn: {
+                            '0%': { transform: 'scale(0.8)', opacity: '0' },
+                            '100%': { transform: 'scale(1)', opacity: '1' }
+                        }
                     }
                 }
             }
         }
     </script>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Bungee+Shade&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
     <style>
-        @font-face {
-            font-family: 'Broadway';
-            font-style: normal;
-            font-weight: 400;
-            src: local('Broadway'), url('https://www.cdnfonts.com/s/13073/BROADW.woff') format('woff');
-        }
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+        /* Custom gradients and effects */
+        .gradient-bg {
+            background: linear-gradient(135deg, #FF6B6B 0%, #4ECDC4 25%, #FFE66D 50%, #A8E6CF 75%, #FFB3BA 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
         }
         
-        @keyframes pulse-glow {
-            0%, 100% { 
-                box-shadow: 0 0 5px rgba(242, 198, 65, 0.3);
-                text-shadow: 0 0 20px rgba(242, 198, 65, 0.5), 0 0 40px rgba(242, 198, 65, 0.3);
-            }
-            50% { 
-                box-shadow: 0 0 20px rgba(242, 198, 65, 0.6), 0 0 30px rgba(242, 198, 65, 0.4);
-                text-shadow: 0 0 25px rgba(242, 198, 65, 0.7), 0 0 50px rgba(242, 198, 65, 0.5);
-            }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
         
-        .animate-pulse-glow {
-            animation: pulse-glow 3s ease-in-out infinite;
-        }
-        
-        .shadow-3xl {
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.05);
-        }
-        
-        .bg-gradient-radial {
-            background: radial-gradient(circle, var(--tw-gradient-stops));
-        }
-        
-        .glass {
+        .glass-effect {
             backdrop-filter: blur(16px);
             -webkit-backdrop-filter: blur(16px);
+            background: rgba(255, 255, 255, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.18);
         }
         
-        .gradient-text {
-            background: linear-gradient(135deg, #D90416, #F2C641);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .glow {
-            box-shadow: 0 0 30px rgba(217, 4, 22, 0.3);
-        }
-        
-        .card-hover {
+        .eva-card {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
         
-        .card-hover:hover {
-            transform: translateY(-12px) scale(1.02);
+        .eva-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
         }
         
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Navigation active state */
-        .nav-active {
-            background: linear-gradient(135deg, #D90416, #F2C641);
-            color: white !important;
-            box-shadow: 0 4px 15px rgba(217, 4, 22, 0.3);
-        }
-
-        /* Smooth hover effects */
-        .hover-lift {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        .coming-soon {
+            position: relative;
+            overflow: hidden;
         }
         
-        .hover-lift:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-        }
-
-        /* Add CSS for fade out animation */
-        @keyframes fadeOut {
-            0% { opacity: 1; transform: translateY(0px); }
-            100% { opacity: 0; transform: translateY(-30px); }
-        }
-        
-        @keyframes slideInUp {
-            0% { opacity: 0; transform: translateY(30px); }
-            100% { opacity: 1; transform: translateY(0); }
+        .coming-soon::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            animation: shimmer 2s infinite;
         }
         
-        .slide-in-up {
-            animation: slideInUp 0.6s ease-out;
-        }
-        
-        /* Navigation active state styling */
-        .nav-active {
-            background: linear-gradient(135deg, #F2C641, #F59E0B) !important;
-            color: #1F2937 !important;
-            font-weight: 600 !important;
-            box-shadow: 0 4px 15px rgba(242, 198, 65, 0.4) !important;
-            transform: translateY(-2px) !important;
-        }
-        
-        .nav-active:hover {
-            background: linear-gradient(135deg, #F59E0B, #F2C641) !important;
-            transform: translateY(-3px) !important;
-            box-shadow: 0 6px 20px rgba(242, 198, 65, 0.5) !important;
-        }
-        
-        #broadway-decorative {
-            background: linear-gradient(135deg, 
-                rgba(217, 4, 22, 0.05) 0%, 
-                rgba(242, 198, 65, 0.05) 25%, 
-                rgba(242, 169, 80, 0.05) 50%, 
-                rgba(217, 95, 67, 0.05) 75%, 
-                rgba(166, 5, 5, 0.05) 100%);
+        @keyframes shimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
         }
     </style>
 </head>
-<body class="bg-gray-900 text-white font-['Inter']">
-    <!-- Hero Background with Broadway Overlay -->
-    <div class="fixed inset-0 z-0">
-        <img src="https://ik.imagekit.io/kfw4taety/eva/bg-hero.png?updatedAt=1749437931627" alt="Background Hero" class="w-full h-full object-cover opacity-40">
-        <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80"></div>
-        <!-- Broadway Spotlight Effects -->
-        <div class="absolute top-0 left-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse-slow"></div>
-        <div class="absolute bottom-0 right-1/4 w-80 h-80 bg-primary/10 rounded-full blur-3xl animate-float"></div>
-    </div>
+
+<body class="font-poppins bg-gradient-to-br from-eva-blue via-white to-eva-pink min-h-screen">
     
-    <div class="relative z-10 container mx-auto px-4 py-8">
-        <!-- Broadway Header with Theatrical Styling -->
-        <header class="text-center mb-16 relative">
-            <!-- Decorative Broadway Elements -->
-            <div class="absolute -top-8 left-1/2 transform -translate-x-1/2">
-                <img src="marquee-broadway.png" alt="Broadway Marquee" class="w-32 md:w-48 opacity-80 animate-pulse">
-            </div>
-            
-            <!-- Main Title with Broadway Font and Effects -->
-            <div class="bg-black/50 backdrop-blur-md rounded-3xl p-8 md:p-12 border-4 border-secondary/30 shadow-2xl slide-in-up">
-                <div class="relative">
-                    <!-- Spotlight Circle Behind Title -->
-                    <div class="absolute inset-0 bg-gradient-radial from-secondary/20 to-transparent rounded-full blur-xl"></div>
-                    
-                    <h1 class="relative text-4xl md:text-6xl lg:text-8xl font-broadway text-secondary mb-4 tracking-wider drop-shadow-2xl" 
-                        style="font-family: 'Broadway', 'Bungee Shade', cursive; text-shadow: 0 0 20px rgba(242, 198, 65, 0.5), 0 0 40px rgba(242, 198, 65, 0.3);">
-                        BROADWAY TO PROGRESS
-                    </h1>
-                    
-                    <div class="flex items-center justify-center gap-4 mb-6">
-                        <p class="text-2xl md:text-4xl lg:text-5xl font-bungee-shade text-primary font-bold tracking-wide drop-shadow-lg"
-                           style="font-family: 'Bungee Shade', cursive; text-shadow: 0 0 15px rgba(217, 4, 22, 0.4);">
-                            REWIND & RECHARGE
-                        </p>
-                    </div>
-                    
-                    <div class="max-w-4xl mx-auto mb-6">
-                        <p class="text-lg md:text-xl text-gray-200 leading-relaxed font-medium">
-                            Sebuah panggung inspiratif tempat kita menengok ke belakang, bergerak ke depan, dan merayakan setiap langkah perubahan. 
-                            Mengusung tema <span class="text-secondary font-bold">rewind & recharge</span>, acara ini menjadi refleksi sekaligus 
-                            pemompa semangat untuk perubahan.
-                        </p>
-                    </div>
-                    
-                    <!-- Down Arrow Button to Hero Images -->
-                    <div class="flex justify-center mt-8">
-                        <a href="#hero-images" class="group bg-gradient-to-r from-secondary to-accent text-gray-800 p-4 rounded-full hover-lift transition-all duration-300 hover:scale-110 animate-bounce">
-                            <svg class="w-8 h-8 group-hover:animate-pulse" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                            </svg>
-                        </a>
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 gradient-bg opacity-20"></div>
+        
+        <!-- Floating EVA Mascot Elements -->
+        <div class="absolute top-20 left-10 w-16 h-16 bg-eva-primary rounded-full opacity-30 animate-float"></div>
+        <div class="absolute top-40 right-20 w-12 h-12 bg-eva-secondary rounded-full opacity-40 animate-float" style="animation-delay: 1s;"></div>
+        <div class="absolute bottom-40 left-20 w-20 h-20 bg-eva-accent rounded-full opacity-25 animate-float" style="animation-delay: 2s;"></div>
+        <div class="absolute bottom-20 right-10 w-14 h-14 bg-eva-purple rounded-full opacity-35 animate-float" style="animation-delay: 3s;"></div>
+        
+        <!-- Sakura petals -->
+        <div class="absolute top-10 left-1/4 w-4 h-4 bg-eva-pink rounded-full opacity-60 animate-bounce-slow"></div>
+        <div class="absolute top-32 right-1/3 w-3 h-3 bg-eva-pink rounded-full opacity-40 animate-bounce-slow" style="animation-delay: 1.5s;"></div>
+        
+        <!-- Theater masks -->
+        <div class="absolute top-1/4 left-1/6 text-4xl opacity-20 animate-wiggle">🎭</div>
+        <div class="absolute bottom-1/4 right-1/6 text-3xl opacity-25 animate-wiggle" style="animation-delay: 2s;">🎪</div>
+        
+        <div class="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
+            <div class="animate-fade-in">
+                <!-- EVA Logo/Mascot placeholder -->
+                <div class="mb-8 flex justify-center">
+                    <div class="w-32 h-32 bg-gradient-to-br from-eva-primary to-eva-secondary rounded-full flex items-center justify-center text-6xl text-white shadow-2xl animate-pulse-slow">
+                        🎨
                     </div>
                 </div>
-            </div>
-        </header>
-
-        <!-- Enhanced Navigation with Broadway Theme -->
-        <nav class="bg-black bg-opacity-90 backdrop-blur-md text-white py-4 sticky top-0 shadow-lg relative z-50 border-b border-secondary/20">
-            <div class="container mx-auto px-4">
-                <div class="flex justify-center items-center">
-                    <ul class="flex flex-wrap justify-center space-x-2 md:space-x-6">
-                        <li><a href="#hero-images" class="transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">BROADWAY</a></li>
-                        <li><a href="#jadwal" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">JADWAL</a></li>
-                        <li><a href="#refleksi" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">REFLEKSI</a></li>
-                        <li><a href="#aksi" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">AKSI</a></li>
-                        <li><a href="#apresiasi" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">APRESIASI</a></li>
-                        <li><a href="gallery.html" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">GALERI</a></li>
-                        <li><a href="news.html" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">BERITA</a></li>
-                        <li><a href="poster.html" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">POSTER</a></li>
-                        <li><a href="videos.html" class="hover:text-secondary transition-all duration-300 px-4 py-2 rounded-full text-sm font-medium hover-lift">VIDEO</a></li>
-                    </ul>
+                
+                <h1 class="font-bebas text-5xl sm:text-7xl lg:text-8xl text-eva-dark mb-6 leading-none">
+                    Selamat Datang di<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-eva-primary via-eva-secondary to-eva-accent">
+                        EVA 2025
+                    </span>
+                </h1>
+                
+                <div class="w-32 h-1 bg-gradient-to-r from-eva-primary to-eva-secondary mx-auto mb-8"></div>
+                
+                <p class="text-xl sm:text-2xl text-eva-gray mb-4 font-light leading-relaxed max-w-4xl mx-auto">
+                    <span class="font-semibold text-eva-dark">Eksplorasi Visual dan Aksi</span><br>
+                    bersama BBGTK Provinsi Jawa Tengah
+                </p>
+                
+                <p class="text-lg text-eva-gray mb-12 max-w-3xl mx-auto">
+                    Rangkaian kegiatan tahunan dengan tiga fase besar yang menggabungkan kreativitas, seni, dan inspirasi untuk dunia pendidikan
+                </p>
+                
+                <!-- CTA Buttons -->
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mb-16">
+                    <a href="https://evabbgtkjateng.github.io/tanzaku/" class="group eva-card bg-gradient-to-r from-pink-400 to-purple-400 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                        <span class="mr-3">🎎</span>
+                        Tanzaku
+                        <span class="ml-2 group-hover:translate-x-1 inline-block transition-transform">→</span>
+                    </a>
+                    
+                    <a href="https://evabbgtkjateng.github.io/videos.html" class="group eva-card bg-gradient-to-r from-yellow-400 to-red-400 text-white px-8 py-4 rounded-full font-semibold text-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+                        <span class="mr-3">🎭</span>
+                        Broadway
+                        <span class="ml-2 group-hover:translate-x-1 inline-block transition-transform">→</span>
+                    </a>
+                    
+                    <button class="coming-soon bg-gray-300 text-gray-500 px-8 py-4 rounded-full font-semibold text-lg shadow-lg cursor-not-allowed opacity-60" disabled>
+                        <span class="mr-3">🎇</span>
+                        Coming Soon
+                        <span class="ml-2">⏳</span>
+                    </button>
                 </div>
-            </div>
-        </nav>
-
-        <!-- Hero Images Container -->
-        <div id="hero-images" class="mt-20 relative z-10">
-            <div class="flex justify-center items-end max-w-4xl mx-auto px-4">
-                <!-- Dita on the left -->
-                <img src="https://ik.imagekit.io/kfw4taety/eva/monic-red.png?updatedAt=1749480520960" alt="Dita Broadway" class="w-1/3 max-w-xs transform transition-all duration-300 hover:scale-105 z-10 -mr-8 md:-mr-12 rounded-lg shadow-lg">
-                <!-- Azis in the center, slightly forward and larger -->
-                <img src="https://ik.imagekit.io/kfw4taety/eva/aziz-red.png?updatedAt=1749475975043" alt="Azis Broadway" class="w-1/3 max-w-xs transform transition-all duration-300 hover:scale-110 z-20 scale-105 rounded-lg shadow-xl">
-                <!-- Sari on the right -->
-                <img src="https://ik.imagekit.io/kfw4taety/eva/apsari-red.png?updatedAt=1749479877875" alt="Sari Broadway" class="w-1/3 max-w-xs transform transition-all duration-300 hover:scale-105 z-10 -ml-8 md:-ml-12 rounded-lg shadow-lg">
+                
+                <!-- Phase indicators -->
+                <div class="flex justify-center items-center space-x-8 text-sm text-eva-gray">
+                    <div class="flex items-center">
+                        <div class="w-3 h-3 bg-green-400 rounded-full mr-2"></div>
+                        <span>Tanzaku</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-3 h-3 bg-green-400 rounded-full mr-2"></div>
+                        <span>Broadway</span>
+                    </div>
+                    <div class="flex items-center">
+                        <div class="w-3 h-3 bg-gray-400 rounded-full mr-2"></div>
+                        <span>Akhir Tahun</span>
+                    </div>
+                </div>
             </div>
         </div>
-
-
-        <section id="about" class="bg-white rounded-3xl p-12 mb-[-80px] relative z-20">
-
-            <div class="text-center mb-16">
-                <img src="lightbox-broadway.png" alt="Broadway Lightbox" class="mx-auto mb-8 w-auto h-24 md:h-32 opacity-90">
-                <h2 class="text-5xl font-black mb-4 gradient-text">Tentang Acara</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+        
+        <!-- Scroll indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <div class="w-6 h-10 border-2 border-eva-primary rounded-full flex justify-center">
+                <div class="w-1 h-3 bg-eva-primary rounded-full mt-2 animate-pulse"></div>
             </div>
-            
-            <div class="max-w-4xl mx-auto mb-12">
-                <p class="text-xl text-gray-700 leading-relaxed text-center mb-8">
-                    Acara ini bertujuan untuk <span class="font-bold text-primary">mengevaluasi</span>, 
-                    <span class="font-bold text-tertiary">menginspirasi aksi</span>, dan 
-                    <span class="font-bold text-secondary">memberi apresiasi</span> atas kontribusi seluruh pegawai BBGTK Provinsi Jawa Tengah.
+        </div>
+    </section>
+
+    <!-- Tentang EVA Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white/80">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16 animate-slide-up">
+                <h2 class="font-bebas text-4xl sm:text-5xl text-eva-dark mb-6">Tentang EVA</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-eva-primary to-eva-secondary mx-auto mb-8"></div>
+                <p class="text-xl text-eva-gray max-w-4xl mx-auto leading-relaxed">
+                    <span class="font-semibold text-eva-dark">EVA (Eksplorasi Visual dan Aksi)</span> adalah rangkaian kegiatan tahunan 
+                    yang dirancang untuk mengeksplorasi kreativitas, seni, dan inovasi dalam dunia pendidikan melalui tiga fase besar yang saling terhubung.
                 </p>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gradient-to-br from-secondary/20 to-secondary/5 p-8 rounded-3xl card-hover shadow-lg hover-lift">
-                    <div class="text-center mb-6">
-                        <div class="text-6xl mb-4">✨</div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Refleksi</h3>
-                    </div>
-                    <ul class="space-y-3 text-gray-700">
-                        <li class="flex items-start gap-3">
-                            <span class="text-primary mt-1 text-xl">•</span>
-                            <span>Mengevaluasi tantangan dan pencapaian</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-primary mt-1 text-xl">•</span>
-                            <span>Mengidentifikasi area pengembangan</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="bg-gradient-to-br from-primary/20 to-primary/5 p-8 rounded-3xl card-hover shadow-lg hover-lift">
-                    <div class="text-center mb-6">
-                        <div class="text-6xl mb-4">🔥</div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Aksi</h3>
-                    </div>
-                    <ul class="space-y-3 text-gray-700">
-                        <li class="flex items-start gap-3">
-                            <span class="text-primary mt-1 text-xl">•</span>
-                            <span>Simulasi perubahan dan kolaborasi ide</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-primary mt-1 text-xl">•</span>
-                            <span>Strategi implementasi nyata</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="bg-gradient-to-br from-accent/20 to-accent/5 p-8 rounded-3xl card-hover shadow-lg hover-lift">
-                    <div class="text-center mb-6">
-                        <div class="text-6xl mb-4">🌟</div>
-                        <h3 class="text-2xl font-bold text-gray-800 mb-4">Apresiasi</h3>
-                    </div>
-                    <ul class="space-y-3 text-gray-700">
-                        <li class="flex items-start gap-3">
-                            <span class="text-primary mt-1 text-xl">•</span>
-                            <span>Penghargaan atas semangat dan transformasi</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-primary mt-1 text-xl">•</span>
-                            <span>Perayaan pencapaian bersama</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-<br>
-        <!-- Peserta Section -->
-        <section id="peserta" class="bg-gradient-to-br from-dark to-primary rounded-3xl p-12 mb-12 shadow-2xl text-white mt-20">
-            <div class="text-center mb-16">
-                <div class="text-6xl mb-6 animate-bounce-slow">👥</div>
-                <h2 class="text-5xl font-black mb-4 text-white">Target Peserta</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-secondary to-accent mx-auto rounded-full"></div>
-            </div>
-            
-            <div class="max-w-4xl mx-auto text-center">
-                <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 mb-8 hover-lift">
-                    <div class="text-8xl font-black text-secondary mb-4">±120</div>
-                    <p class="text-2xl font-bold mb-4">Seluruh Pegawai BBGTK Provinsi Jawa Tengah</p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <div class="bg-gradient-to-br from-secondary to-white p-6 rounded-2xl text-gray-800 hover-lift">
-                        <div class="text-4xl mb-3">👨‍💼</div>
-                        <h3 class="font-bold text-lg">Kepala</h3>
-                    </div>
-                    
-                    <div class="bg-gradient-to-br from-accent to-white p-6 rounded-2xl text-gray-800 hover-lift">
-                        <div class="text-4xl mb-3">👥</div>
-                        <h3 class="font-bold text-lg">Kabag Umum</h3>
-                    </div>
-                    
-                    <div class="bg-gradient-to-br from-tertiary to-white p-6 rounded-2xl text-gray-800 hover-lift">
-                        <div class="text-4xl mb-3">💼</div>
-                        <h3 class="font-bold text-lg">Staff</h3>
-                    </div>
-                    
-                    <div class="bg-gradient-to-br from-primary to-white p-6 rounded-2xl text-gray-800 hover-lift">
-                        <div class="text-4xl mb-3">⚡</div>
-                        <h3 class="font-bold text-lg">Fungsional</h3>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Overview Section -->
-        <section id="overview" class="bg-white rounded-3xl p-12 mb-12 shadow-2xl">
-            <div class="text-center mb-16">
-                <h2 class="text-5xl font-black mb-4 gradient-text">Overview Kegiatan</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-gradient-to-br from-secondary to-accent p-8 rounded-3xl card-hover shadow-xl">
-                    <div class="text-6xl mb-6 animate-bounce-slow">🎯</div>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Tema Besar: REFLEKSI</h3>
-                    <ul class="space-y-3 text-gray-700">
-                        <li class="flex items-start gap-3">
-                            <span class="text-primary mt-1">•</span>
-                            <span>Merefleksikan capaian pribadi dan tim sesuai dengan apa yang telah disusun saat kegiatan capacity building awal tahun</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-primary mt-1">•</span>
-                            <span>Mengidentifikasi hambatan dalam mencapai capaian yang telah ditetapkan</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="bg-gradient-to-br from-accent to-tertiary p-8 rounded-3xl card-hover shadow-xl">
-                    <div class="text-6xl mb-6 animate-float">⚡</div>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-800">Aksi</h3>
-                    <ul class="space-y-3 text-gray-700">
-                        <li class="flex items-start gap-3">
-                            <span class="text-primary mt-1">•</span>
-                            <span>Meningkatkan pemahaman cara mencapai tujuan</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-primary mt-1">•</span>
-                            <span>Memahami strategi mengatasi hambatan dalam mencapai tujuan</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <div class="bg-gradient-to-br from-tertiary to-primary p-8 rounded-3xl card-hover shadow-xl text-white">
-                    <div class="text-6xl mb-6 animate-pulse-slow">🏆</div>
-                    <h3 class="text-2xl font-bold mb-4">Apresiasi</h3>
-                    <ul class="space-y-3">
-                        <li class="flex items-start gap-3">
-                            <span class="text-secondary mt-1">•</span>
-                            <span>Berbagi apresiasi baik secara pribadi dan tim</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-secondary mt-1">•</span>
-                            <span>Awards ceremony untuk berbagai kategori prestasi</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>        <!-- Dokumen Kegiatan Section -->
-        <section id="dokumen" class="bg-gradient-to-br from-primary/20 to-tertiary/10 rounded-3xl p-12 mb-12 shadow-2xl">
-            <div class="text-center mb-16">
-                <div class="text-6xl mb-6">📋</div>
-                <h2 class="text-5xl font-black mb-4 gradient-text">Dokumen Kegiatan</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Evaluasi Kegiatan -->
-                <div class="bg-white p-8 rounded-3xl shadow-xl hover-lift group">
-                    <div class="text-center mb-6">
-                        <div class="text-6xl mb-4 group-hover:animate-bounce">📊</div>
-                        <h3 class="text-3xl font-bold text-primary mb-4">Evaluasi Kegiatan</h3>
-                        <p class="text-gray-600 mb-6">Form evaluasi untuk mengukur efektivitas dan dampak kegiatan</p>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Phase 1: Tanzaku -->
+                <div class="text-center animate-scale-in">
+                    <div class="w-24 h-24 bg-gradient-to-br from-pink-400 to-purple-400 rounded-full flex items-center justify-center text-4xl text-white mx-auto mb-6 shadow-lg">
+                        🎎
                     </div>
-                    
-                    <div class="text-center">
-                        <a href="https://s.bbgtkjateng.org/evaluasikegiatan" target="_blank" 
-                           class="inline-flex items-center gap-3 bg-gradient-to-r from-primary to-dark text-white font-bold py-4 px-8 rounded-full hover:shadow-xl transform hover:scale-105 transition-all duration-300 group">
-                            <svg class="w-6 h-6 group-hover:rotate-12 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"></path>
-                            </svg>
-                            Akses Evaluasi
+                    <h3 class="font-bebas text-2xl text-eva-dark mb-4">TANZAKU</h3>
+                    <p class="text-eva-gray">
+                        Fase pertama yang mengangkat harapan dan aspirasi para pendidik melalui dokumenter inspiratif.
+                    </p>
+                </div>
+                
+                <!-- Phase 2: Broadway -->
+                <div class="text-center animate-scale-in" style="animation-delay: 0.2s;">
+                    <div class="w-24 h-24 bg-gradient-to-br from-yellow-400 to-red-400 rounded-full flex items-center justify-center text-4xl text-white mx-auto mb-6 shadow-lg">
+                        🎭
+                    </div>
+                    <h3 class="font-bebas text-2xl text-eva-dark mb-4">BROADWAY</h3>
+                    <p class="text-eva-gray">
+                        Fase kedua berupa pertunjukan spektakuler yang menggabungkan seni teater dan evaluasi kinerja.
+                    </p>
+                </div>
+                
+                <!-- Phase 3: Akhir Tahun -->
+                <div class="text-center animate-scale-in" style="animation-delay: 0.4s;">
+                    <div class="w-24 h-24 bg-gradient-to-br from-gray-400 to-gray-500 rounded-full flex items-center justify-center text-4xl text-white mx-auto mb-6 shadow-lg">
+                        🎇
+                    </div>
+                    <h3 class="font-bebas text-2xl text-eva-dark mb-4">AKHIR TAHUN</h3>
+                    <p class="text-eva-gray">
+                        Fase penutup yang akan menghadirkan perayaan dan refleksi atas pencapaian sepanjang tahun.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kegiatan Unggulan Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-eva-blue/30 to-eva-pink/30">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="font-bebas text-4xl sm:text-5xl text-eva-dark mb-6">Kegiatan Unggulan</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-eva-primary to-eva-secondary mx-auto mb-8"></div>
+                <p class="text-xl text-eva-gray max-w-3xl mx-auto">
+                    Tiga rangkaian kegiatan utama yang menjadi jantung dari EVA 2025
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Tanzaku Card -->
+                <div class="eva-card glass-effect rounded-2xl p-8 text-center shadow-xl">
+                    <div class="mb-6">
+                        <div class="w-full h-48 bg-gradient-to-br from-pink-200 to-purple-200 rounded-xl flex items-center justify-center mb-4 overflow-hidden">
+                            <div class="text-center">
+                                <div class="text-6xl mb-2">🎋</div>
+                                <p class="text-sm text-eva-gray">Kertas Harapan</p>
+                            </div>
+                        </div>
+                        <h3 class="font-bebas text-2xl text-eva-dark mb-4">TANZAKU</h3>
+                        <p class="text-eva-gray mb-6">
+                            Dokumenter inspiratif yang mengangkat harapan dan aspirasi para pendidik untuk masa depan pendidikan Indonesia.
+                        </p>
+                        <a href="https://evabbgtkjateng.github.io/tanzaku/" class="inline-block bg-gradient-to-r from-pink-400 to-purple-400 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                            Lihat Tanzaku →
                         </a>
                     </div>
                 </div>
-                
-                <!-- Panduan Kegiatan -->
-                <div class="bg-gradient-to-br from-secondary to-accent p-8 rounded-3xl shadow-xl hover-lift text-gray-800 group">
-                    <div class="text-center mb-6">
-                        <div class="text-6xl mb-4 group-hover:animate-pulse">📖</div>
-                        <h3 class="text-3xl font-bold mb-4">Panduan Kegiatan</h3>
-                        <p class="text-gray-700 mb-6">Dokumen lengkap panduan pelaksanaan kegiatan Broadway</p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <a href="https://drive.google.com/file/d/1LuLk1Kc1IXlDiQ3bWirsh9XZUJ-bE9lO/view?usp=sharing" target="_blank" 
-                           class="inline-flex items-center gap-3 bg-gradient-to-r from-dark to-primary text-white font-bold py-4 px-8 rounded-full hover:shadow-xl transform hover:scale-105 transition-all duration-300 group">
-                            <svg class="w-6 h-6 group-hover:rotate-12 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                            </svg>
-                            Download Panduan
+
+                <!-- Broadway Card -->
+                <div class="eva-card glass-effect rounded-2xl p-8 text-center shadow-xl">
+                    <div class="mb-6">
+                        <div class="w-full h-48 bg-gradient-to-br from-yellow-200 to-red-200 rounded-xl flex items-center justify-center mb-4 overflow-hidden">
+                            <div class="text-center">
+                                <div class="text-6xl mb-2">🎪</div>
+                                <p class="text-sm text-eva-gray">Teater Spektakuler</p>
+                            </div>
+                        </div>
+                        <h3 class="font-bebas text-2xl text-eva-dark mb-4">BROADWAY</h3>
+                        <p class="text-eva-gray mb-6">
+                            Pertunjukan teater yang menggabungkan seni, evaluasi kinerja, dan penghargaan dalam format Broadway yang memukau.
+                        </p>
+                        <a href="https://evabbgtkjateng.github.io/videos.html" class="inline-block bg-gradient-to-r from-yellow-400 to-red-400 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-300">
+                            Lihat Broadway →
                         </a>
                     </div>
                 </div>
-                
-                <!-- Surat Tugas -->
-                <div class="bg-gradient-to-br from-tertiary to-primary p-8 rounded-3xl shadow-xl hover-lift text-white group">
-                    <div class="text-center mb-6">
-                        <div class="text-6xl mb-4 group-hover:animate-bounce">📄</div>
-                        <h3 class="text-3xl font-bold mb-4">Surat Tugas</h3>
-                        <p class="mb-6">Dokumen resmi surat tugas kegiatan Broadway untuk peserta</p>
-                    </div>
-                    
-                    <div class="text-center">
-                        <a href="https://drive.google.com/file/d/16MOYsF-7-YjLZBz0P_EKy9ElvhujBSic/view?usp=sharing" target="_blank" 
-                           class="inline-flex items-center gap-3 bg-gradient-to-r from-white/20 to-white/30 text-white font-bold py-4 px-8 rounded-full hover:shadow-xl transform hover:scale-105 transition-all duration-300 group border border-white/30 hover:border-white/50">
-                            <svg class="w-6 h-6 group-hover:rotate-12 transition-transform" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V7.414A2 2 0 0015.414 6L12 2.586A2 2 0 0010.586 2H6zm5 6a1 1 0 10-2 0v3.586l-1.293-1.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V8z" clip-rule="evenodd"></path>
-                            </svg>
-                            Download Surat
-                        </a>
+
+                <!-- Akhir Tahun Card -->
+                <div class="eva-card glass-effect rounded-2xl p-8 text-center shadow-xl opacity-75">
+                    <div class="mb-6">
+                        <div class="w-full h-48 bg-gradient-to-br from-gray-200 to-gray-300 rounded-xl flex items-center justify-center mb-4 overflow-hidden coming-soon">
+                            <div class="text-center">
+                                <div class="text-6xl mb-2">🎆</div>
+                                <p class="text-sm text-eva-gray">Segera Hadir</p>
+                            </div>
+                        </div>
+                        <h3 class="font-bebas text-2xl text-eva-gray mb-4">AKHIR TAHUN</h3>
+                        <p class="text-eva-gray mb-6">
+                            Perayaan penutup tahun yang akan menghadirkan refleksi, apresiasi, dan perencanaan untuk tahun mendatang.
+                        </p>
+                        <button class="bg-gray-400 text-white px-6 py-3 rounded-full font-semibold cursor-not-allowed" disabled>
+                            Sedang Disiapkan...
+                        </button>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Schedule Section -->
-        <section id="jadwal" class="bg-white rounded-3xl p-12 mb-12 shadow-2xl">
+    <!-- Testimoni Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-5xl font-black mb-4 gradient-text">Jadwal Kegiatan</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+                <h2 class="font-bebas text-4xl sm:text-5xl text-eva-dark mb-6">Kesan Peserta EVA 2024</h2>
+                <div class="w-20 h-1 bg-gradient-to-r from-eva-primary to-eva-secondary mx-auto mb-8"></div>
+                <p class="text-xl text-eva-gray max-w-3xl mx-auto">
+                    Suara-suara inspiratif dari para peserta yang telah merasakan pengalaman EVA tahun sebelumnya
+                </p>
             </div>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- Day 1 -->
-                <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-3xl border-l-8 border-primary shadow-xl">
-                    <h3 class="text-3xl font-bold text-primary mb-8 text-center">HARI PERTAMA - 11 Juni 2025</h3>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-gradient-to-r hover:from-secondary/20 hover:to-accent/20 transition-all duration-300">
-                            <div class="bg-gradient-to-r from-primary to-dark text-white px-4 py-2 rounded-full text-sm font-bold min-w-fit">08:00 - 08:30</div>
-                            <div class="flex-1">
-                                <div class="font-bold text-gray-800 mb-1">Pembukaan</div>
-                                <div class="text-gray-600 text-sm">Kepala mengisi voting untuk awards kategori: Laporan Paripurna, The Go-To Buddy, Menyala Tim-ku</div>
-                            </div>
-                        </div>
 
-                        <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-gradient-to-r hover:from-secondary/20 hover:to-accent/20 transition-all duration-300">
-                            <div class="bg-gradient-to-r from-primary to-dark text-white px-4 py-2 rounded-full text-sm font-bold min-w-fit">08:30 - 10:00</div>
-                            <div class="flex-1">
-                                <div class="font-bold text-gray-800 mb-1">Refleksi (Sesi 1)</div>
-                                <div class="text-gray-600 text-sm">Refleksi diri (Rewind & Recharge)</div>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-gradient-to-r hover:from-secondary/20 hover:to-accent/20 transition-all duration-300">
-                            <div class="bg-gradient-to-r from-primary to-dark text-white px-4 py-2 rounded-full text-sm font-bold min-w-fit">10:00 - 10:15</div>
-                            <div class="flex-1">
-                                <div class="font-bold text-gray-800 mb-1">Coffee Break</div>
-                                <div class="text-gray-600 text-sm">Mengisi voting untuk awards kategori: Google berjalan, Master of multitasking, Sniper focus</div>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-gradient-to-r hover:from-secondary/20 hover:to-accent/20 transition-all duration-300">
-                            <div class="bg-gradient-to-r from-primary to-dark text-white px-4 py-2 rounded-full text-sm font-bold min-w-fit">10:15 - 11:45</div>
-                            <div class="flex-1">
-                                <div class="font-bold text-gray-800 mb-1">Refleksi (Sesi 2)</div>
-                                <div class="text-gray-600 text-sm">Refleksi Lembaga (bingo adaptasi dan kartu refleksi)</div>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-gradient-to-r hover:from-secondary/20 hover:to-accent/20 transition-all duration-300">
-                            <div class="bg-gradient-to-r from-primary to-dark text-white px-4 py-2 rounded-full text-sm font-bold min-w-fit">11:45 - 13:00</div>
-                            <div class="flex-1">
-                                <div class="font-bold text-gray-800 mb-1">Break</div>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-gradient-to-r hover:from-secondary/20 hover:to-accent/20 transition-all duration-300">
-                            <div class="bg-gradient-to-r from-primary to-dark text-white px-4 py-2 rounded-full text-sm font-bold min-w-fit">13:00 - 15:00</div>
-                            <div class="flex-1">
-                                <div class="font-bold text-gray-800 mb-1">Aksi</div>
-                                <div class="text-gray-600 text-sm">Narasumber luar</div>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-gradient-to-r hover:from-secondary/20 hover:to-accent/20 transition-all duration-300">
-                            <div class="bg-gradient-to-r from-primary to-dark text-white px-4 py-2 rounded-full text-sm font-bold min-w-fit">15:00 - 15:30</div>
-                            <div class="flex-1">
-                                <div class="font-bold text-gray-800 mb-1">Coffee Break</div>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-gradient-to-r hover:from-secondary/20 hover:to-accent/20 transition-all duration-300">
-                            <div class="bg-gradient-to-r from-primary to-dark text-white px-4 py-2 rounded-full text-sm font-bold min-w-fit">15:30 - 16:00</div>
-                            <div class="flex-1">
-                                <div class="font-bold text-gray-800 mb-1">Kesimpulan dan Penugasan</div>
-                                <div class="text-gray-600 text-sm">Sounding tugas untuk kegiatan besok terkait goals tim dan kebutuhan properti untuk visualisasi Golden Scene</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Day 2 -->
-                <div class="bg-gradient-to-br from-accent to-tertiary p-8 rounded-3xl border-l-8 border-tertiary shadow-xl text-white">
-                    <h3 class="text-3xl font-bold mb-8 text-center">HARI KEDUA - 12 Juni 2025</h3>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-white/10 transition-all duration-300">
-                            <div class="bg-gradient-to-r from-secondary to-accent text-gray-800 px-4 py-2 rounded-full text-sm font-bold min-w-fit">08:00 - 08:30</div>
-                            <div class="flex-1">
-                                <div class="font-bold mb-1">Reminder Penugasan</div>
-                                <div class="text-white/80 text-sm">Dikumpulkan semua di aula lt 5, reminder terkait tugas semalam, melanjutkan diskusi - sesi foto per tim secara bergantian</div>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-white/10 transition-all duration-300">
-                            <div class="bg-gradient-to-r from-secondary to-accent text-gray-800 px-4 py-2 rounded-full text-sm font-bold min-w-fit">08:30 - 11:00</div>
-                            <div class="flex-1">
-                                <div class="font-bold mb-1">Aktivitas Kelompok</div>
-                                <div class="text-white/80 text-sm">Latihan Golden Scene - sesi foto per tim secara bergantian, diatur MC</div>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-white/10 transition-all duration-300">
-                            <div class="bg-gradient-to-r from-secondary to-accent text-gray-800 px-4 py-2 rounded-full text-sm font-bold min-w-fit">11:00 - 13:00</div>
-                            <div class="flex-1">
-                                <div class="font-bold mb-1">Break</div>
-                            </div>
-                        </div>
-
-                        <div class="bg-gradient-to-r from-secondary to-accent p-6 rounded-3xl text-gray-800">
-                            <div class="flex items-start gap-4">
-                                <div class="bg-gradient-to-r from-primary to-dark text-white px-4 py-2 rounded-full text-sm font-bold min-w-fit">13:00 - 15:00</div>
-                                <div class="flex-1">
-                                    <div class="font-black text-2xl mb-2 flex items-center gap-2">
-                                        <span>🌟</span>
-                                        <span>GOLDEN SCENE</span>
-                                        <span>🌟</span>
-                                    </div>
-                                    <div class="text-sm">Penampilan Golden Scene setiap tim dan pembacaan awards</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-white/10 transition-all duration-300">
-                            <div class="bg-gradient-to-r from-secondary to-accent text-gray-800 px-4 py-2 rounded-full text-sm font-bold min-w-fit">15:00 - 15:30</div>
-                            <div class="flex-1">
-                                <div class="font-bold mb-1">Coffee Break</div>
-                            </div>
-                        </div>
-
-                        <div class="bg-gradient-to-r from-secondary to-accent p-6 rounded-3xl text-gray-800">
-                            <div class="flex items-start gap-4">
-                                <div class="bg-gradient-to-r from-primary to-dark text-white px-4 py-2 rounded-full text-sm font-bold min-w-fit">15:30 - 16:00</div>
-                                <div class="flex-1">
-                                    <div class="font-black text-2xl flex items-center gap-2">
-                                        <span>🎉</span>
-                                        <span>PENUTUPAN</span>
-                                        <span>🎉</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>        <!-- Dress Code Section -->
-        <section id="dress-code" class="bg-white rounded-3xl p-12 mb-12 shadow-2xl">
-            <div class="text-center mb-16">
-                <div class="text-6xl mb-6">👔</div>
-                <h2 class="text-5xl font-black mb-4 gradient-text">Dress Code</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
-                <p class="text-gray-600 mt-4">Ketentuan pakaian per hari kegiatan</p>
-            </div>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- Day 1 -->
-                <div class="bg-gradient-to-br from-gray-50 to-white p-8 rounded-3xl border-l-8 border-primary shadow-xl">
-                    <div class="text-center mb-8">
-                        <div class="bg-gradient-to-r from-primary to-dark text-white px-6 py-3 rounded-full text-lg font-bold inline-block mb-4">
-                            📅 HARI PERTAMA - 11 Juni 2025
-                        </div>
-                    </div>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-gradient-to-r hover:from-secondary/20 hover:to-accent/20 transition-all duration-300">
-                            <div class="bg-gradient-to-r from-primary to-dark text-white px-4 py-2 rounded-full text-sm font-bold min-w-fit">👕</div>
-                            <div class="flex-1">
-                                <div class="font-bold text-gray-800 mb-1">Atasan</div>
-                                <div class="text-gray-600 text-sm">Kaos kegiatan</div>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-gradient-to-r hover:from-secondary/20 hover:to-accent/20 transition-all duration-300">
-                            <div class="bg-gradient-to-r from-primary to-dark text-white px-4 py-2 rounded-full text-sm font-bold min-w-fit">👖</div>
-                            <div class="flex-1">
-                                <div class="font-bold text-gray-800 mb-1">Bawahan</div>
-                                <div class="text-gray-600 text-sm">Celana (pria/wanita) atau rok (wanita)</div>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-gradient-to-r hover:from-secondary/20 hover:to-accent/20 transition-all duration-300">
-                            <div class="bg-gradient-to-r from-primary to-dark text-white px-4 py-2 rounded-full text-sm font-bold min-w-fit">👟</div>
-                            <div class="flex-1">
-                                <div class="font-bold text-gray-800 mb-1">Alas Kaki</div>
-                                <div class="text-gray-600 text-sm">Menyesuaikan (heels, flat shoes, loafers, pantofel)</div>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-gradient-to-r hover:from-secondary/20 hover:to-accent/20 transition-all duration-300">
-                            <div class="bg-gradient-to-r from-primary to-dark text-white px-4 py-2 rounded-full text-sm font-bold min-w-fit">🎨</div>
-                            <div class="flex-1">
-                                <div class="font-bold text-gray-800 mb-1">Warna</div>
-                                <div class="text-gray-600 text-sm">Hitam, putih, navy</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Day 2 -->
-                <div class="bg-gradient-to-br from-primary to-dark p-8 rounded-3xl border-l-8 border-tertiary shadow-xl text-white">
-                    <div class="text-center mb-8">
-                        <div class="bg-gradient-to-r from-secondary to-accent text-gray-800 px-6 py-3 rounded-full text-lg font-bold inline-block mb-4">
-                            📅 HARI KEDUA - 12 Juni 2025
-                        </div>
-                    </div>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-white/10 transition-all duration-300">
-                            <div class="bg-gradient-to-r from-secondary to-accent text-gray-800 px-4 py-2 rounded-full text-sm font-bold min-w-fit">👔</div>
-                            <div class="flex-1">
-                                <div class="font-bold mb-1">Atasan</div>
-                                <div class="text-white/80 text-sm">Kemeja (pria/wanita), blouse, dress (wanita)</div>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-white/10 transition-all duration-300">
-                            <div class="bg-gradient-to-r from-secondary to-accent text-gray-800 px-4 py-2 rounded-full text-sm font-bold min-w-fit">👗</div>
-                            <div class="flex-1">
-                                <div class="font-bold mb-1">Bawahan</div>
-                                <div class="text-white/80 text-sm">Celana (pria/wanita) atau rok (wanita)</div>
-                            </div>
-                        </div>
-
-                        <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-white/10 transition-all duration-300">
-                            <div class="bg-gradient-to-r from-secondary to-accent text-gray-800 px-4 py-2 rounded-full text-sm font-bold min-w-fit">👠</div>
-                            <div class="flex-1">
-                                <div class="font-bold mb-1">Alas Kaki</div>
-                                <div class="text-white/80 text-sm">Menyesuaikan (heels, flat shoes, loafers, pantofel)</div>
-                            </div>
-                        </div>                        <div class="flex items-start gap-4 p-4 rounded-2xl hover:bg-white/10 transition-all duration-300">
-                            <div class="bg-gradient-to-r from-secondary to-accent text-gray-800 px-4 py-2 rounded-full text-sm font-bold min-w-fit">🔴</div>
-                            <div class="flex-1">
-                                <div class="font-bold mb-1">Warna</div>
-                                <div class="text-white/80 text-sm">Nuansa hitam, merah</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Awards Section -->
-        <section id="awards" class="bg-gradient-to-br from-dark to-primary rounded-3xl p-12 mb-12 shadow-2xl text-white">
-            <div class="text-center mb-16">
-                <img src="lightbox-broadway.png" alt="Awards Spotlight" class="mx-auto mb-8 w-auto h-32 md:h-48 opacity-90">
-                <h2 class="text-5xl font-black mb-4 text-white">Kategori Awards</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-secondary to-accent mx-auto rounded-full"></div>
-            </div>
-            
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gradient-to-br from-secondary to-white p-8 rounded-3xl card-hover shadow-xl text-gray-800">
-                    <div class="text-6xl mb-4 animate-bounce-slow">📊</div>
-                    <h3 class="text-2xl font-bold mb-3">Laporan Paripurna</h3>
-                    <p class="text-gray-600">Penghargaan untuk laporan terlengkap dan terstruktur</p>
+                <!-- Testimoni 1 -->
+                <div class="glass-effect rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-eva-primary to-eva-secondary rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            S
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-eva-dark">Siti Nurhaliza</h4>
+                            <p class="text-sm text-eva-gray">Guru SD, Semarang</p>
+                        </div>
+                    </div>
+                    <p class="text-eva-gray italic">
+                        "EVA 2024 memberikan inspirasi luar biasa. Tanzaku mengajarkan kami untuk memiliki harapan besar, 
+                        Broadway menunjukkan bahwa evaluasi bisa menjadi momen yang menyenangkan."
+                    </p>
                 </div>
-                
-                <div class="bg-gradient-to-br from-accent to-white p-8 rounded-3xl card-hover shadow-xl text-gray-800">
-                    <div class="text-6xl mb-4 animate-pulse-slow">🤝</div>
-                    <h3 class="text-2xl font-bold mb-3">The Go-To Buddy</h3>
-                    <p class="text-gray-600">Penghargaan untuk rekan yang selalu siap membantu</p>
+
+                <!-- Testimoni 2 -->
+                <div class="glass-effect rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-eva-accent to-eva-purple rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            B
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-eva-dark">Budi Santoso</h4>
+                            <p class="text-sm text-eva-gray">Guru SMP, Solo</p>
+                        </div>
+                    </div>
+                    <p class="text-eva-gray italic">
+                        "Konsep Broadway dalam evaluasi sangat inovatif! Membuat proses penilaian menjadi lebih humanis 
+                        dan memotivasi kami untuk terus berkembang."
+                    </p>
                 </div>
-                
-                <div class="bg-gradient-to-br from-tertiary to-white p-8 rounded-3xl card-hover shadow-xl text-gray-800">
-                    <div class="text-6xl mb-4 animate-float">🔥</div>
-                    <h3 class="text-2xl font-bold mb-3">Menyala Tim-ku</h3>
-                    <p class="text-gray-600">Penghargaan untuk tim dengan semangat terbaik</p>
-                </div>
-                
-                <div class="bg-gradient-to-br from-secondary to-white p-8 rounded-3xl card-hover shadow-xl text-gray-800">
-                    <div class="text-6xl mb-4 animate-bounce-slow">🏃</div>
-                    <h3 class="text-2xl font-bold mb-3">Google Berjalan</h3>
-                    <p class="text-gray-600">Penghargaan untuk yang selalu update informasi</p>
-                </div>
-                
-                <div class="bg-gradient-to-br from-accent to-white p-8 rounded-3xl card-hover shadow-xl text-gray-800">
-                    <div class="text-6xl mb-4 animate-pulse-slow">⚡</div>
-                    <h3 class="text-2xl font-bold mb-3">Master of Multitasking</h3>
-                    <p class="text-gray-600">Penghargaan untuk yang mahir menangani banyak tugas</p>
-                </div>
-                
-                <div class="bg-gradient-to-br from-tertiary to-white p-8 rounded-3xl card-hover shadow-xl text-gray-800">
-                    <div class="text-6xl mb-4 animate-float">🎯</div>
-                    <h3 class="text-2xl font-bold mb-3">Sniper Focus</h3>
-                    <p class="text-gray-600">Penghargaan untuk fokus dan presisi terbaik</p>
+
+                <!-- Testimoni 3 -->
+                <div class="glass-effect rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-gradient-to-br from-eva-secondary to-eva-blue rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            A
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-eva-dark">Ayu Lestari</h4>
+                            <p class="text-sm text-eva-gray">Guru SMA, Yogyakarta</p>
+                        </div>
+                    </div>
+                    <p class="text-eva-gray italic">
+                        "EVA bukan hanya kegiatan evaluasi, tapi juga momen refleksi dan pengembangan diri. 
+                        Dokumenter Tanzaku sangat menyentuh hati."
+                    </p>
                 </div>
             </div>
-        </section> <!-- This is the end of awards section -->
-
-        <!-- Refleksi Section -->
-        <section id="refleksi" class="bg-gradient-to-br from-secondary/20 to-accent/10 rounded-3xl p-12 mb-12 shadow-2xl">
-            <div class="text-center mb-16">
-                <div class="text-6xl mb-6">✨</div>
-                <h2 class="text-5xl font-black mb-4 gradient-text">Refleksi</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
-            </div>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- Rewind & Recharge (Pribadi) -->
-                <div class="bg-white p-8 rounded-3xl shadow-xl hover-lift">
-                    <div class="text-center mb-6">
-                        <div class="text-5xl mb-4">🔄</div>
-                        <h3 class="text-3xl font-bold text-primary mb-4">Rewind & Recharge (Pribadi)</h3>
-                    </div>
-                    
-                    <ul class="space-y-4 text-gray-700">
-                        <li class="flex items-start gap-3">
-                            <span class="text-primary mt-1 text-xl">•</span>
-                            <span>Evaluasi resolusi awal tahun</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-primary mt-1 text-xl">•</span>
-                            <span>Identifikasi tantangan pribadi</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-primary mt-1 text-xl">•</span>
-                            <span>Penyesuaian strategi semester 2</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-primary mt-1 text-xl">•</span>
-                            <span>Penulisan surat motivasi untuk diri sendiri</span>
-                        </li>
-                    </ul>
-                </div>
-                
-                <!-- Tumbuh Bersama di Lembaga Baru (Tim/Lembaga) -->
-                <div class="bg-gradient-to-br from-primary to-dark p-8 rounded-3xl shadow-xl text-white hover-lift">
-                    <div class="text-center mb-6">
-                        <div class="text-5xl mb-4">🌱</div>
-                        <h3 class="text-3xl font-bold mb-4">Tumbuh Bersama di Lembaga Baru</h3>
-                        <p class="text-secondary font-semibold">(Tim/Lembaga)</p>
-                    </div>
-                      <ul class="space-y-4">
-                        <li class="flex items-start gap-3">
-                            <span class="text-secondary mt-1 text-xl">•</span>
-                            <span>Capaian kinerja</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-secondary mt-1 text-xl">•</span>
-                            <span>Tantangan dan Solusi</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-secondary mt-1 text-xl">•</span>
-                            <span>Jadwal Program Kerja</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-secondary mt-1 text-xl">•</span>
-                            <span>Inovasi Timja</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- Letter for Myself Section -->
-        <section id="letter-for-myself" class="bg-red-600 rounded-3xl p-12 mb-12 shadow-2xl">
-            <div class="text-center mb-16">
-                <div class="text-6xl mb-6">💌</div>
-                <h2 class="text-5xl font-black mb-4 gradient-text">Letter for Myself</h2>
-                <p class="text-xl text-white-700 font-semibold">Menulis surat motivasi untuk diri sendiri</p>
-                <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full mt-4"></div>
-            </div>
-            
-            <div class="max-w-4xl mx-auto">
-                <!-- Main Card -->
-                <div class="bg-white/90 backdrop-blur-md rounded-3xl p-8 shadow-xl hover-lift border border-secondary/20">
-                    <div class="text-center mb-8">
-                        <div class="text-5xl mb-4">📝</div>
-                        <h3 class="text-3xl font-bold text-primary mb-4">Surat untuk Masa Depan Saya</h3>
-                        <p class="text-lg text-gray-700 leading-relaxed">
-                            Ambil momen untuk menulis surat kepada diri Anda sendiri. Bagikan refleksi, harapan, dan komitmen untuk semester kedua. 
-                            Surat ini akan menjadi pengingat dan motivasi Anda di masa mendatang.
-                        </p>
-                    </div>
-                    
-                    <!-- Content Areas -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">                        <!-- What to Write -->
-                        <div class="bg-gradient-to-br from-secondary/10 to-accent/10 p-6 rounded-2xl">
-                            <h4 class="text-xl font-bold text-primary mb-4 flex items-center gap-2">
-                                <span class="text-2xl">💡</span> Apa yang Bisa Ditulis?
-                            </h4>
-                            <ul class="space-y-3 text-gray-700">
-                                <li class="flex items-start gap-3">
-                                    <span class="text-primary mt-1 text-lg">•</span>
-                                    <span>Tuliskan 1 resolusimu yang akan kamu fokuskan 6 bulan kedepan</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span class="text-primary mt-1 text-lg">•</span>
-                                    <span>Tuliskan 1 kata motivasi dan penyemangat bagi dirimu sendiri</span>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <!-- Benefits -->
-                        <div class="bg-gradient-to-br from-primary/10 to-tertiary/10 p-6 rounded-2xl">
-                            <h4 class="text-xl font-bold text-primary mb-4 flex items-center gap-2">
-                                <span class="text-2xl">🌟</span> Manfaat
-                            </h4>
-                            <ul class="space-y-3 text-gray-700">
-                                <li class="flex items-start gap-3">
-                                    <span class="text-primary mt-1 text-lg">•</span>
-                                    <span>Dokumentasi perjalanan pribadi</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span class="text-primary mt-1 text-lg">•</span>
-                                    <span>Sumber motivasi di masa sulit</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span class="text-primary mt-1 text-lg">•</span>
-                                    <span>Pengingat komitmen dan tujuan</span>
-                                </li>
-                                <li class="flex items-start gap-3">
-                                    <span class="text-primary mt-1 text-lg">•</span>
-                                    <span>Refleksi mendalam tentang diri</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    
-                    <!-- Call to Action -->
-                    <div class="text-center">
-                        <div class="bg-gradient-to-r from-primary to-dark p-6 rounded-2xl text-white mb-6">
-                            <h4 class="text-2xl font-bold mb-3">📬 Tulis Surat Anda</h4>
-                            <p class="text-lg mb-4">Gunakan form di bawah ini untuk menulis surat kepada diri Anda sendiri</p>
-                        </div>
-                        
-                        <!-- Google Forms Button -->
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSclktpr1mCEn4-pQ_Vp3hPGDmlPVywiBvPayPqhVO0Xmc51IA/viewform" 
-                           target="_blank" 
-                           class="inline-flex items-center gap-3 bg-gradient-to-r from-secondary to-accent text-gray-800 font-bold text-xl px-8 py-4 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 hover-lift">
-                            <span class="text-2xl">✍️</span>
-                            <span>Mulai Menulis Surat</span>
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                            </svg>
-                        </a>
-                        
-                        <p class="text-sm text-gray-600 mt-4">
-                            <span class="text-primary font-semibold">Privasi terjamin:</span> Surat Anda bersifat pribadi dan hanya akan dikirim kembali kepada Anda di masa mendatang
-                        </p>
-                    </div>
-                </div>
-                
-                <!-- Decorative Quote -->
-                <div class="mt-12 text-center">
-                    <div class="bg-gradient-to-r from-tertiary/20 to-primary/20 backdrop-blur-md rounded-2xl p-8 border border-primary/20">
-                        <div class="text-4xl mb-4">💫</div>
-                        <blockquote class="text-2xl font-bold text-white italic mb-4">
-                            "The best time to plant a tree was 20 years ago. The second best time is now."
-                        </blockquote>
-                        <p class="text-lg text-yellow-600 font-semibold">
-                            Jadikan surat ini sebagai benih untuk pertumbuhan Anda di masa depan
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Aksi Section -->
-        <section id="aksi" class="bg-white rounded-3xl p-12 mb-12 shadow-2xl">
-            <div class="text-center mb-16">
-                <div class="text-6xl mb-6">🔥</div>
-                <h2 class="text-5xl font-black mb-4 gradient-text">Aksi</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
-            </div>
-            
-            <!-- Narasumber Profile Card - Full Width Elegant Layout -->
-            <div class="mb-12">
-                <div class="bg-gradient-to-r from-primary to-dark rounded-3xl overflow-hidden text-white shadow-2xl hover-lift relative min-h-[400px]">
-                    <!-- Broadway Decorative Elements -->
-                    <div class="absolute top-6 right-6 opacity-30 z-20">
-                        <img src="stars-broadway.png" alt="Broadway Stars" class="w-10 animate-pulse">
-                    </div>
-                    <div class="absolute bottom-6 right-6 opacity-20 z-20">
-                        <img src="bulbs-broadway.png" alt="Broadway Bulbs" class="w-8 animate-bounce">
-                    </div>
-                    <div class="absolute top-1/2 right-1/4 transform -translate-x-1/2 -translate-y-1/2 opacity-10 z-10">
-                        <img src="symbol-broadway.png" alt="Broadway Symbol" class="w-32 animate-float">
-                    </div>
-                    
-                    <div class="relative z-10 flex flex-col lg:flex-row h-full">
-                        <!-- Photo Section - Left Side (Full Height) -->
-                        <div class="lg:w-1/3 relative">
-                            <img src="https://ik.imagekit.io/kfw4taety/eva/darmawan-broadway.png?updatedAt=1749441372195" 
-                                 alt="Darmawan Aji" 
-                                 class="w-full h-full lg:min-h-[400px] object-cover object-center">
-                            <!-- Decorative badges on photo -->
-                            <div class="absolute top-4 right-4 bg-secondary rounded-full p-3 shadow-lg">
-                                <span class="text-2xl">🎯</span>
-                            </div>
-                            <div class="absolute bottom-4 left-4 bg-accent rounded-full p-2 shadow-lg">
-                                <span class="text-xl">⭐</span>
-                            </div>
-                        </div>
-                        
-                        <!-- Info Section - Right Side -->
-                        <div class="lg:w-2/3 p-8 flex flex-col justify-center">
-                            <!-- Name & Title -->
-                            <div class="mb-8">
-                                <h3 class="text-4xl lg:text-5xl font-bold text-secondary mb-4" style="font-family: 'Broadway', cursive;">
-                                    Darmawan Aji
-                                </h3>
-                                <p class="text-accent font-semibold text-xl lg:text-2xl mb-4">
-                                    🌟 Productivity Coach & Motivational Speaker
-                                </p>
-                                <div class="w-24 h-1 bg-gradient-to-r from-secondary to-accent rounded-full mb-4"></div>
-                                
-                                <!-- Social Media Links -->
-                                <div class="flex flex-col gap-2 mb-4">
-                                    <div class="flex flex-wrap gap-3">
-                                        <a href="https://darmawanaji.com/" target="_blank" class="text-secondary text-sm hover:text-accent transition-colors duration-300">🌐 Portfolio</a>
-                                        <a href="https://www.facebook.com/coachaji" target="_blank" class="text-secondary text-sm hover:text-accent transition-colors duration-300">📘 Facebook</a>
-                                        <a href="https://instagram.com/ajipedia" target="_blank" class="text-secondary text-sm hover:text-accent transition-colors duration-300">📸 Instagram</a>
-                                        <a href="https://www.youtube.com/channel/UCBmXg1Pu8fCra146FxKWheg" target="_blank" class="text-secondary text-sm hover:text-accent transition-colors duration-300">📺 YouTube</a>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Bio Information Grid -->
-                            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-                                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
-                                    <h4 class="font-bold text-secondary mb-3 flex items-center gap-2 text-lg">
-                                        <span class="text-2xl">🎓</span> Expertise
-                                    </h4>
-                                    <p class="text-white/90 text-sm leading-relaxed">
-                                        Praktisi berpengalaman dalam bidang produktivitas, manajemen waktu, dan pengembangan mindset dengan fokus pada transformasi budaya kerja.
-                                    </p>
-                                </div>
-                                
-                                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
-                                    <h4 class="font-bold text-secondary mb-3 flex items-center gap-2 text-lg">
-                                        <span class="text-2xl">💼</span> Pengalaman
-                                    </h4>
-                                    <p class="text-white/90 text-sm leading-relaxed">
-                                        Telah membimbing ratusan profesional dan organisasi dalam meningkatkan efektivitas kerja dan mencapai target dengan semangat berkelanjutan.
-                                    </p>
-                                </div>
-                                
-                                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 hover:bg-white/15 transition-all duration-300 md:col-span-2 xl:col-span-1">
-                                    <h4 class="font-bold text-secondary mb-3 flex items-center gap-2 text-lg">
-                                        <span class="text-2xl">🎯</span> Fokus Sesi
-                                    </h4>
-                                    <p class="text-white/90 text-sm leading-relaxed">
-                                        Memberikan strategi praktis untuk "Recharge" semangat kerja dan mencapai target semester kedua dengan pendekatan sustainable.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                
-                <!-- Materi -->
-                <div class="lg:col-span-1">
-                    <div class="bg-gradient-to-br from-accent/20 to-tertiary/10 p-8 rounded-3xl shadow-xl hover-lift h-full">
-                        <div class="text-center mb-6">
-                            <div class="text-5xl mb-4">📚</div>
-                            <h3 class="text-2xl font-bold text-gray-800 mb-4">Materi</h3>
-                        </div>
-                        
-                        <ul class="space-y-3 text-gray-700">
-                            <li class="flex items-start gap-3">
-                                <span class="text-primary mt-1 text-xl">•</span>
-                                <span>Strategi semangat kerja & motivasi</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-primary mt-1 text-xl">•</span>
-                                <span>Manajemen waktu & prioritas</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-primary mt-1 text-xl">•</span>
-                                <span>Studi kasus inspiratif</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-primary mt-1 text-xl">•</span>
-                                <span>Budaya kerja inklusif</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                
-                <!-- Output -->
-                <div class="lg:col-span-1">
-                    <div class="bg-gradient-to-br from-secondary/20 to-accent/10 p-8 rounded-3xl shadow-xl hover-lift h-full">
-                        <div class="text-center mb-6">
-                            <div class="text-5xl mb-4">🎯</div>
-                            <h3 class="text-2xl font-bold text-gray-800 mb-4">Output</h3>
-                        </div>
-                        
-                        <ul class="space-y-3 text-gray-700">
-                            <li class="flex items-start gap-3">
-                                <span class="text-primary mt-1 text-xl">•</span>
-                                <span>Semangat baru dan strategi menyelesaikan target</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-primary mt-1 text-xl">•</span>
-                                <span>Komitmen nyata pasca kegiatan</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <span class="text-primary mt-1 text-xl">•</span>
-                                <span>Kesadaran kolektif menuju kemajuan</span>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Apresiasi Section -->
-        <section id="apresiasi" class="bg-gradient-to-br from-tertiary to-primary rounded-3xl p-12 mb-12 shadow-2xl text-white">
-            <div class="text-center mb-16">
-                <div class="text-6xl mb-6">🌟</div>
-                <h2 class="text-5xl font-black mb-4">Apresiasi</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-secondary to-accent mx-auto rounded-full"></div>
-            </div>
-            
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
-                <!-- Info Waktu -->
-                <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 hover-lift">
-                    <div class="text-center mb-6">
-                        <div class="text-5xl mb-4">⏰</div>
-                        <h3 class="text-2xl font-bold mb-4">Waktu Pelaksanaan</h3>
-                    </div>
-                    
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-4">
-                            <span class="text-secondary text-2xl">📅</span>
-                            <span class="text-xl font-semibold">Day 2</span>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <span class="text-secondary text-2xl">🕐</span>
-                            <span class="text-xl font-semibold">13.00 - 16.00</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Jenis Apresiasi -->
-                <div class="bg-white/10 backdrop-blur-md rounded-3xl p-8 hover-lift">
-                    <div class="text-center mb-6">
-                        <div class="text-5xl mb-4">🏆</div>
-                        <h3 class="text-2xl font-bold mb-4">Jenis Aktivitas</h3>
-                    </div>
-                    
-                    <ul class="space-y-3">
-                        <li class="flex items-start gap-3">
-                            <span class="text-secondary mt-1 text-xl">•</span>
-                            <span>Penghargaan Formal & Fun</span>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <span class="text-secondary mt-1 text-xl">•</span>
-                            <span>Menampilkan Ide Kreatif dan Target 6 bulan kedepan lewat fragmen</span>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            
-            <!-- Golden Scene Section -->
-            <div class="bg-gradient-to-r from-secondary/20 to-accent/20 backdrop-blur-md rounded-3xl p-8">
-                <div class="text-center mb-6">
-                    <div class="text-6xl mb-4">🎭</div>
-                    <h3 class="text-3xl font-bold mb-4">Golden Scene</h3>
-                    <p class="text-xl text-secondary font-semibold">Menampilkan ide kreatif dan target 6 bulan kedepan lewat fragmen</p>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
-                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center hover-lift">
-                        <div class="text-4xl mb-3">🎨</div>
-                        <h4 class="font-bold text-lg mb-2">Kreativitas</h4>
-                        <p class="text-sm text-white/80">Mengekspresikan ide dengan cara yang unik dan menarik</p>
-                    </div>
-                    
-                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center hover-lift">
-                        <div class="text-4xl mb-3">🎯</div>
-                        <h4 class="font-bold text-lg mb-2">Komitmen dan Resolusi</h4>
-                        <p class="text-sm text-white/80">Menyampaikan visi dan misi setengah tahun mendatang</p>
-                    </div>
-                    
-                    <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 text-center hover-lift">
-                        <div class="text-4xl mb-3">🤝</div>
-                        <h4 class="font-bold text-lg mb-2">Kolaborasi</h4>
-                        <p class="text-sm text-white/80">Menunjukkan kekompakan dan kerja sama tim</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Broadway Decorative Elements - Simple version for index page -->
-        <section class="my-16 relative overflow-hidden">
-            <!-- Background decorative elements -->
-            <div class="absolute inset-0 pointer-events-none opacity-30">
-                <img src="stars-broadway.png" alt="Broadway Stars" class="absolute top-10 left-10 w-16 opacity-60 animate-pulse">
-                <img src="bulbs-broadway.png" alt="Broadway Bulbs" class="absolute top-20 right-20 w-12 opacity-70 animate-bounce">
-                <img src="symbol-broadway.png" alt="Broadway Symbol" class="absolute bottom-10 left-1/4 w-14 opacity-50 animate-float">
-                <img src="discount-broadway.png" alt="Broadway Discount" class="absolute bottom-20 right-10 w-20 opacity-60 animate-pulse">
-            </div>
-        </section>
-
-        <!-- Tim Panitia Section -->
-        <section id="tim" class="bg-gradient-to-br from-gray-900 via-black to-dark rounded-3xl p-12 mb-12 shadow-2xl text-white relative overflow-hidden">
-            <!-- Broadway Decorative Background -->
-            <div class="absolute inset-0 opacity-20">
-                <img src="marquee-broadway.png" alt="Broadway Marquee" class="absolute top-10 right-10 w-32 rotate-12 opacity-60">
-                <img src="lightbox-broadway.png" alt="Broadway Lightbox" class="absolute bottom-10 left-10 w-28 -rotate-12 opacity-50">
-                <img src="stars-broadway.png" alt="Broadway Stars" class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-20 opacity-30 animate-pulse">
-            </div>
-            
-            <div class="relative z-10">
-                <div class="text-center mb-16">
-                    <div class="flex items-center justify-center gap-4 mb-6">
-                        <h2 class="text-5xl font-black text-secondary font-broadway" style="font-family: 'Broadway', cursive; text-shadow: 0 0 20px rgba(242, 198, 65, 0.5);">
-                            TIM PANITIA
-                        </h2>
-                    </div>
-                    <p class="text-xl text-accent font-semibold" style="font-family: 'Inter', sans-serif;">✨ Behind The Broadway Magic ✨</p>
-                    <div class="w-24 h-1 bg-gradient-to-r from-secondary to-accent mx-auto rounded-full mt-4"></div>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Aziz - Ketua Panitia -->
-                    <div class="bg-gradient-to-br from-secondary/10 to-accent/10 backdrop-blur-md border border-secondary/30 rounded-3xl card-hover shadow-xl group overflow-hidden md:col-span-2">
-                        <div class="flex flex-col md:flex-row h-[28rem]">
-                            <div class="md:w-1/4 h-full relative overflow-hidden">
-                                <img src="https://ik.imagekit.io/kfw4taety/eva/aziz-red.png?updatedAt=1749475975043" 
-                                     alt="Aziz - Ketua Panitia" 
-                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                               
-                            </div>
-                            <div class="md:w-3/4 p-8 flex flex-col justify-center">
-                                <h3 class="text-3xl font-bold text-secondary mb-2 font-broadway" style="font-family: 'Broadway', cursive;">Aziz</h3>
-                                <p class="text-xl text-accent font-semibold mb-3" style="font-family: 'Inter', sans-serif;">🌟 Event Director</p>
-                                <p class="text-gray-300 leading-relaxed" style="font-family: 'Inter', sans-serif;">
-                                    Memimpin orkestra Broadway ini dengan visi dan dedikasi tinggi untuk menciptakan pengalaman evaluasi yang berkesan. 
-                                    Dengan kepemimpinan yang inspiratif, beliau memastikan setiap detail acara berjalan sempurna. 
-                                    Sebagai Event Director, Aziz mengkoordinasikan seluruh tim dengan keahlian manajerial yang luar biasa dan komitmen penuh terhadap kesuksesan acara.
-                                </p>
-                                <div class="mt-4 flex gap-3">
-                                    <span class="text-secondary text-sm">📧 aziz@bbgtkjateng.org</span>
-                                    <span class="text-accent text-sm">📱 @aziz_broadway</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Apsari & Monic - Koordinator Acara -->
-                    <div class="bg-gradient-to-br from-accent/10 to-tertiary/10 backdrop-blur-md border border-accent/30 rounded-3xl card-hover shadow-xl group overflow-hidden md:col-span-2">
-                        <div class="flex flex-col md:flex-row h-[28rem]">
-                            <!-- Apsari (Kiri) -->
-                            <div class="md:w-1/4 h-full relative overflow-hidden">
-                                <img src="https://ik.imagekit.io/kfw4taety/eva/apsari-red.png?updatedAt=1749479877875" 
-                                     alt="Apsari" 
-                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                                
-                            </div>
-                            <!-- Content/Teks -->
-                            <div class="md:w-1/2 p-8 flex flex-col justify-center">
-                                <h3 class="text-3xl font-bold text-accent mb-2 font-broadway" style="font-family: 'Broadway', cursive;">Apsari & Monic</h3>
-                                <p class="text-xl text-tertiary font-semibold mb-3" style="font-family: 'Inter', sans-serif;">🎯 Production Manager</p>
-                                <p class="text-gray-300 leading-relaxed" style="font-family: 'Inter', sans-serif;">
-                                    Duo koordinator yang mengoordinasikan setiap detail acara dengan presisi tinggi. 
-                                    Mereka memastikan setiap momen berjalan sempurna dengan kerja sama yang solid dan komunikasi yang efektif. 
-                                    Tim dinamis yang saling melengkapi dalam setiap aspek penyelenggaraan acara Broadway.
-                                </p>
-                                <div class="mt-4 flex flex-col gap-2">
-                                    <div class="flex gap-3">
-                                        <span class="text-accent text-sm">📧 apsari@bbgtkjateng.org</span>
-                                        <span class="text-secondary text-sm">📱 @apsari_production</span>
-                                    </div>
-                                    <div class="flex gap-3">
-                                        <span class="text-accent text-sm">📧 monic@bbgtkjateng.org</span>
-                                        <span class="text-secondary text-sm">📱 @monic_manager</span>
-                                    </div>
-                                </div>
-                            </div>                            <!-- Monic (Kanan) -->
-                            <div class="md:w-1/4 h-full relative overflow-hidden">
-                                <img src="https://ik.imagekit.io/kfw4taety/eva/monic-red.png?updatedAt=1749480520960" 
-                                     alt="Monic" 
-                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                               
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Sigit & Maharaja - Tim Kreatif -->
-                    <div class="bg-gradient-to-br from-tertiary/10 to-primary/10 backdrop-blur-md border border-tertiary/30 rounded-3xl card-hover shadow-xl group overflow-hidden md:col-span-2">
-                        <div class="flex flex-col md:flex-row h-96">
-                            <!-- Sigit (Kiri) -->
-                            <div class="md:w-1/4 h-full relative overflow-hidden">
-                                <img src="https://ik.imagekit.io/kfw4taety/eva/sigit-broadway.png?updatedAt=1749444011133" 
-                                     alt="Sigit" 
-                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                                
-                            </div>
-                            <!-- Content/Teks -->
-                            <div class="md:w-1/2 p-8 flex flex-col justify-center">
-                                <h3 class="text-3xl font-bold text-tertiary mb-2 font-broadway" style="font-family: 'Broadway', cursive;">Sigit & Maharaja</h3>
-                                <p class="text-xl text-primary font-semibold mb-3" style="font-family: 'Inter', sans-serif;">🎨 Creative Director</p>
-                                <p class="text-gray-300 leading-relaxed" style="font-family: 'Inter', sans-serif;">
-                                    Tim kreatif berbakat yang merancang konsep Broadway yang memukau dengan kolaborasi yang harmonis. 
-                                    Mereka menciptakan atmosfer teatrikal yang menginspirasi dengan ide-ide inovatif dan eksekusi yang brilian. 
-                                    Duo kreator yang saling melengkapi dalam menghadirkan pengalaman visual yang tak terlupakan.
-                                </p>
-                                <div class="mt-4 flex flex-col gap-2">
-                                    <div class="flex gap-3">
-                                        <span class="text-tertiary text-sm">📧 sigit@bbgtkjateng.org</span>
-                                        <span class="text-primary text-sm">🎨 @sigit_creative</span>
-                                    </div>
-                                    <div class="flex gap-3">
-                                        <span class="text-tertiary text-sm">📧 maharaja@bbgtkjateng.org</span>
-                                        <span class="text-primary text-sm">🎨 @maharaja_designs</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Maharaja (Kanan) -->                            <div class="md:w-1/4 h-full relative overflow-hidden">
-                                <img src="https://ik.imagekit.io/kfw4taety/eva/maharaja-red.png?updatedAt=1749473250988" 
-                                     alt="Maharaja" 
-                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                               
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Documentation & Catering Team - Row dengan spacing yang baik -->
-                    <div class="md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
-                        <!-- Tyas - Documentation Lead -->
-                        <div class="bg-gradient-to-br from-primary/10 to-dark/10 backdrop-blur-md border border-primary/30 rounded-3xl card-hover shadow-xl group overflow-hidden">
-                            <div class="flex flex-row h-72">
-                                <div class="w-1/3 h-full relative overflow-hidden">
-                                    <img src="https://ik.imagekit.io/kfw4taety/eva/tyas-red.png?updatedAt=1749472526206" 
-                                         alt="Tyas - Documentation Lead" 
-                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                                    
-                                </div>
-                                <div class="w-2/3 p-6 flex flex-col justify-center">
-                                    <h3 class="text-2xl font-bold text-primary mb-2 font-broadway" style="font-family: 'Broadway', cursive;">Tyas</h3>
-                                    <p class="text-lg text-dark font-semibold mb-2" style="font-family: 'Inter', sans-serif;">📝 Documentation Lead</p>
-                                    <p class="text-gray-300 leading-relaxed text-sm" style="font-family: 'Inter', sans-serif;">
-                                        Mendokumentasikan setiap momen berharga dan memastikan administrasi acara berjalan lancar dengan presisi tinggi.
-                                    </p>
-                                    <div class="mt-3">
-                                        <div class="flex flex-col gap-1">
-                                            <span class="text-primary text-xs">📧 tyas@bbgtkjateng.org</span>
-                                            <span class="text-dark text-xs">📝 @tyas_documentation</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Rosyidah - Catering Director -->
-                        <div class="bg-gradient-to-br from-secondary/10 to-primary/10 backdrop-blur-md border border-secondary/30 rounded-3xl card-hover shadow-xl group overflow-hidden">
-                            <div class="flex flex-row h-72">
-                                <div class="w-1/3 h-full relative overflow-hidden">
-                                    <img src="https://ik.imagekit.io/kfw4taety/eva/oci-red.png?updatedAt=1749474951890" 
-                                         alt="Rosyidah - Catering Director" 
-                                         class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                                
-                                </div>
-                                <div class="w-2/3 p-6 flex flex-col justify-center">
-                                    <h3 class="text-2xl font-bold text-secondary mb-2 font-broadway" style="font-family: 'Broadway', cursive;">Rosyidah</h3>
-                                    <p class="text-lg text-primary font-semibold mb-2" style="font-family: 'Inter', sans-serif;">🍽️ Catering Director</p>
-                                    <p class="text-gray-300 leading-relaxed text-sm" style="font-family: 'Inter', sans-serif;">
-                                        Memastikan semua peserta mendapatkan sajian kuliner terbaik sepanjang acara dengan perhatian detail yang luar biasa.
-                                    </p>
-                                    <div class="mt-3">
-                                        <div class="flex flex-col gap-1">
-                                            <span class="text-secondary text-xs">📧 rosyidah@bbgtkjateng.org</span>
-                                            <span class="text-primary text-xs">🍽️ @rosyidah_catering</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Alan & Ben - Dokumentasi -->
-                    <div class="bg-gradient-to-br from-accent/10 to-secondary/10 backdrop-blur-md border border-accent/30 rounded-3xl card-hover shadow-xl group overflow-hidden md:col-span-2">
-                        <div class="flex flex-col md:flex-row h-96">
-                            <!-- Alan (Kiri) -->
-                            <div class="md:w-1/4 h-full relative overflow-hidden">
-                                <img src="https://ik.imagekit.io/kfw4taety/eva/alan-red.png?updatedAt=1749477085683" 
-                                     alt="Alan" 
-                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                                
-                            </div>
-                            <!-- Content/Teks -->
-                            <div class="md:w-1/2 p-8 flex flex-col justify-center">
-                                <h3 class="text-3xl font-bold text-accent mb-2 font-broadway" style="font-family: 'Broadway', cursive;">Alan & Ben</h3>
-                                <p class="text-xl text-secondary font-semibold mb-3" style="font-family: 'Inter', sans-serif;">📸 Visual Storyteller</p>
-                                <p class="text-gray-300 leading-relaxed" style="font-family: 'Inter', sans-serif;">
-                                    Duo dokumentasi yang mengabadikan setiap momen berharga dengan sentuhan artistik yang memukau. 
-                                    Melalui kolaborasi kreatif mereka, setiap cerita Broadway akan terekam dengan perspektif yang beragam untuk kenangan yang tak terlupakan. 
-                                    Tim visual storyteller yang saling melengkapi dalam menciptakan dokumentasi yang menawan.
-                                </p>
-                                <div class="mt-4 flex flex-col gap-2">
-                                    <div class="flex gap-3">
-                                        <span class="text-accent text-sm">📧 alan@bbgtkjateng.org</span>
-                                        <span class="text-secondary text-sm">📸 @alan_photography</span>
-                                    </div>
-                                    <div class="flex gap-3">
-                                        <span class="text-accent text-sm">📧 ben@bbgtkjateng.org</span>
-                                        <span class="text-secondary text-sm">📹 @ben_videography</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Ben (Kanan) -->
-                            <div class="md:w-1/4 h-full relative overflow-hidden">
-                                <img src="https://ik.imagekit.io/kfw4taety/eva/benz-red.png?updatedAt=1749472833871" 
-                                     alt="Ben" 
-                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                               
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Grizenzio - Teknologi Informasi -->
-                    <div class="bg-gradient-to-br from-tertiary/10 to-accent/10 backdrop-blur-md border border-tertiary/30 rounded-3xl card-hover shadow-xl group overflow-hidden md:col-span-2">
-                        <div class="flex flex-col md:flex-row h-96">
-                            <div class="md:w-1/4 h-full relative overflow-hidden">
-                                <img src="https://ik.imagekit.io/kfw4taety/eva/grizenzio-red.png?updatedAt=1749476508373" 
-                                     alt="Grizenzio - Teknologi Informasi" 
-                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                               
-                            </div>
-                            <div class="md:w-3/4 p-8 flex flex-col justify-center">
-                                <h3 class="text-3xl font-bold text-tertiary mb-2 font-broadway" style="font-family: 'Broadway', cursive;">Grizenzio</h3>
-                                <p class="text-xl text-accent font-semibold mb-3" style="font-family: 'Inter', sans-serif;">💻 Technology Wizard</p>
-                                <p class="text-gray-300 leading-relaxed" style="font-family: 'Inter', sans-serif;">
-                                    Ahli teknologi yang memastikan semua sistem digital berjalan sempurna sepanjang acara. 
-                                    Dari live streaming hingga presentasi interaktif, beliau adalah ujung tombak teknologi yang mendukung kesuksesan acara Broadway ini.
-                                </p>
-                                <div class="mt-4">
-                                    <div class="flex flex-col gap-2">
-                                        <span class="text-tertiary text-sm">📧 grizenzio@bbgtkjateng.org</span>
-                                        <span class="text-accent text-sm">💻 @grizenzio_tech</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Khoiri & Kiki - Tim Perlengkapan dan Sarana -->
-                    <div class="bg-gradient-to-br from-primary/10 to-secondary/10 backdrop-blur-md border border-primary/30 rounded-3xl card-hover shadow-xl group overflow-hidden md:col-span-2">
-                        <div class="flex flex-col md:flex-row h-96">
-                            <!-- Khoiri (Kiri) -->
-                            <div class="md:w-1/4 h-full relative overflow-hidden">
-                                <img src="https://ik.imagekit.io/kfw4taety/eva/kho-red.png?updatedAt=1749477793396" 
-                                     alt="Khoiri" 
-                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                               
-                            </div>
-                            <!-- Content/Teks -->
-                            <div class="md:w-1/2 p-8 flex flex-col justify-center">
-                                <h3 class="text-3xl font-bold text-primary mb-2 font-broadway" style="font-family: 'Broadway', cursive;">Khoiri & Kiki</h3>
-                                <p class="text-xl text-secondary font-semibold mb-3" style="font-family: 'Inter', sans-serif;">🔧 Equipment Manager</p>
-                                <p class="text-gray-300 leading-relaxed" style="font-family: 'Inter', sans-serif;">
-                                    Tim andal yang memastikan semua perlengkapan dan sarana acara tersedia dengan sempurna. 
-                                    Dengan koordinasi yang solid, mereka menjaga setiap detail teknis dan logistik untuk mendukung kelancaran Broadway. 
-                                    Duo equipment manager yang berpengalaman dalam mengatur dan mengelola seluruh aspek perlengkapan acara dengan efisiensi tinggi.
-                                </p>
-                                <div class="mt-4 flex flex-col gap-2">
-                                    <div class="flex gap-3">
-                                        <span class="text-primary text-sm">📧 khoiri@bbgtkjateng.org</span>
-                                        <span class="text-secondary text-sm">🔧 @khoiri_equipment</span>
-                                    </div>
-                                    <div class="flex gap-3">
-                                        <span class="text-primary text-sm">📧 kiki@bbgtkjateng.org</span>
-                                        <span class="text-secondary text-sm">⚙️ @kiki_logistics</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Kiki (Kanan) -->
-                            <div class="md:w-1/4 h-full relative overflow-hidden">
-                                <img src="https://ik.imagekit.io/kfw4taety/eva/nori-red.png?updatedAt=1749478271629" 
-                                     alt="Kiki" 
-                                     class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-                               
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Bams - Tim Keuangan dan Anggaran -->
-                    <div class="bg-gradient-to-br from-accent/10 to-tertiary/10 backdrop-blur-md border border-accent/30 rounded-3xl card-hover shadow-xl group overflow-hidden md:col-span-2">
-                        <div class="flex flex-col md:flex-row h-96">
-                            <div class="md:w-1/4 h-full relative overflow-hidden">
-                                <img src="https://ik.imagekit.io/kfw4taety/eva/bam-red.png?updatedAt=1749478751080" 
-                                     alt="Bams - Tim Keuangan dan Anggaran" 
-                                     class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300">
-                                
-                            </div>
-                            <div class="md:w-3/4 p-8 flex flex-col justify-center">
-                                <h3 class="text-3xl font-bold text-accent mb-2 font-broadway" style="font-family: 'Broadway', cursive;">Bams</h3>
-                                <p class="text-xl text-tertiary font-semibold mb-3" style="font-family: 'Inter', sans-serif;">💰 Financial Director</p>
-                                <p class="text-gray-300 leading-relaxed" style="font-family: 'Inter', sans-serif;">
-                                    Mengatur dan mengelola aspek keuangan dan anggaran acara Broadway dengan transparansi dan akuntabilitas tinggi. 
-                                    Dengan keahlian dalam manajemen finansial, beliau memastikan setiap anggaran dialokasikan secara efisien untuk mendukung kesuksesan acara. 
-                                    Sebagai Financial Director, Bams menjaga stabilitas keuangan dan pelaporan yang akurat sepanjang pelaksanaan acara.
-                                </p>
-                                <div class="mt-4">
-                                    <div class="flex flex-col gap-2">
-                                        <span class="text-accent text-sm">📧 bams@bbgtkjateng.org</span>
-                                        <span class="text-tertiary text-sm">💰 @bams_financial</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Team Spirit Section -->
-                <div class="mt-16 text-center">
-                    <div class="bg-gradient-to-r from-secondary/20 to-accent/20 backdrop-blur-md border border-secondary/30 rounded-3xl p-8">
-                        <div class="flex items-center justify-center gap-4 mb-4">
-                            <h3 class="text-3xl font-bold text-secondary font-broadway" style="font-family: 'Broadway', cursive;">
-                                THE SHOW MUST GO ON!
-                            </h3>
-                        </div>
-                        <p class="text-xl text-accent font-semibold mb-4" style="font-family: 'Inter', sans-serif;">✨ Bersama-sama menciptakan Broadway Magic ✨</p>
-                        <p class="text-gray-300 leading-relaxed max-w-3xl mx-auto" style="font-family: 'Inter', sans-serif;">
-                            Tim panitia yang berdedikasi ini bekerja dengan semangat Broadway, menggabungkan kreativitas, 
-                            profesionalisme, dan passion untuk menciptakan pengalaman evaluasi tengah tahun yang tak terlupakan. 
-                            Setiap anggota tim berkontribusi dengan keunikan mereka masing-masing, layaknya ensemble cast 
-                            dalam pertunjukan Broadway yang spektakuler.
-                        </p>
-                        
-                        
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="bg-gradient-to-t from-black to-gray-900 text-white py-20 mt-20 relative overflow-hidden">
-       
-        <div class="container mx-auto px-6 text-center relative z-10">
-            <!-- Logo Section - Centered and Larger -->
-            <div class="mb-12">
-                <div class="flex justify-center mb-6">
-                    <img src="https://ik.imagekit.io/kfw4taety/eva/brodway-icon.png?updatedAt=1749481447510" 
-                         alt="Broadway Logo" 
-                         class="w-60 h-60 md:w-72 md:h-72 object-contain hover:scale-110 transition-transform duration-300 drop-shadow-2xl">
+    <footer class="bg-eva-dark text-white py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Logo & Description -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <div class="w-12 h-12 bg-gradient-to-br from-eva-primary to-eva-secondary rounded-full flex items-center justify-center text-2xl mr-4">
+                            🎨
+                        </div>
+                        <div>
+                            <h3 class="font-bebas text-2xl">EVA 2025</h3>
+                            <p class="text-sm text-gray-300">Eksplorasi Visual dan Aksi</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        BBGTK Provinsi Jawa Tengah menghadirkan rangkaian kegiatan tahunan yang menggabungkan 
+                        kreativitas, seni, dan evaluasi untuk dunia pendidikan yang lebih baik.
+                    </p>
+                    <div class="text-sm text-gray-400">
+                        <p>📍 Jl. Kyai Mojo No. 2, Semarang, Jawa Tengah</p>
+                        <p>📞 (024) 8311146</p>
+                        <p>✉️ info@bbgtkjateng.id</p>
+                    </div>
                 </div>
-                <h3 class="text-4xl md:text-5xl font-broadway mb-4 text-secondary" style="font-family: 'Broadway', cursive; text-shadow: 0 0 15px rgba(242, 198, 65, 0.4);">
-                    BROADWAY TO PROGRESS
-                </h3>
-                <p class="text-xl md:text-2xl text-accent font-bungee mb-6" style="font-family: 'Bungee', cursive;">REWIND & RECHARGE</p>
-                
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Link Cepat</h4>
+                    <ul class="space-y-2">
+                        <li><a href="https://evabbgtkjateng.github.io/tanzaku/" class="text-gray-300 hover:text-eva-accent transition-colors duration-300">🎎 Tanzaku</a></li>
+                        <li><a href="https://evabbgtkjateng.github.io/videos.html" class="text-gray-300 hover:text-eva-accent transition-colors duration-300">🎭 Broadway</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-eva-accent transition-colors duration-300">📚 Kegiatan Lain BBGTK</a></li>
+                        <li><a href="#" class="text-gray-300 hover:text-eva-accent transition-colors duration-300">📄 Tentang Kami</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div>
+                    <h4 class="font-semibold text-lg mb-4">Ikuti Kami</h4>
+                    <div class="space-y-3">
+                        <a href="#" class="flex items-center text-gray-300 hover:text-eva-accent transition-colors duration-300">
+                            <span class="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center mr-3 text-sm">📧</span>
+                            Email
+                        </a>
+                        <a href="#" class="flex items-center text-gray-300 hover:text-eva-accent transition-colors duration-300">
+                            <span class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center mr-3 text-sm">📱</span>
+                            WhatsApp
+                        </a>
+                        <a href="#" class="flex items-center text-gray-300 hover:text-eva-accent transition-colors duration-300">
+                            <span class="w-8 h-8 bg-pink-600 rounded-full flex items-center justify-center mr-3 text-sm">📷</span>
+                            Instagram
+                        </a>
+                        <a href="#" class="flex items-center text-gray-300 hover:text-eva-accent transition-colors duration-300">
+                            <span class="w-8 h-8 bg-black rounded-full flex items-center justify-center mr-3 text-sm">🎵</span>
+                            TikTok
+                        </a>
+                    </div>
+                </div>
             </div>
-            
-            <!-- Footer Info -->
-            <div class="border-t border-secondary/30 pt-8">
-                <p class="text-gray-400 text-sm md:text-base font-sans mb-2">&copy; 2025 Panitia Evaluasi Tengah Tahun. BBGTK Provinsi Jawa Tengah.</p>
-                <p class="text-accent/80 text-xs md:text-sm mt-2 font-bungee" style="font-family: 'Bungee', cursive;">🌟 THE SHOW MUST GO ON! 🌟</p>
+
+            <div class="border-t border-gray-700 pt-8 mt-12">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                        &copy; 2025 BBGTK Provinsi Jawa Tengah. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 text-sm text-gray-400">
+                        <a href="#" class="hover:text-eva-accent transition-colors duration-300">Privacy Policy</a>
+                        <a href="#" class="hover:text-eva-accent transition-colors duration-300">Terms of Service</a>
+                        <a href="#" class="hover:text-eva-accent transition-colors duration-300">Contact</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
 
+    <!-- JavaScript for smooth scrolling and animations -->
     <script>
-        // Combined Navigation Management and Smooth Scrolling
-        document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelectorAll('nav a[href^="#"]');
-            const sections = document.querySelectorAll('section[id], div[id]');
-            
-            // Function to update active navigation based on scroll position
-            function updateActiveNav() {
-                let current = 'hero-images'; // Default to first section
-                
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    
-                    if (window.pageYOffset >= (sectionTop - 200)) {
-                        current = section.getAttribute('id');
-                    }
-                });
-                
-                // Update navigation active states
-                navLinks.forEach(link => {
-                    link.classList.remove('nav-active', 'text-secondary');
-                    
-                    const href = link.getAttribute('href').substring(1);
-                    if (href === current) {
-                        link.classList.add('nav-active', 'text-secondary');
-                    }
-                });
-            }
-            
-            // Handle navigation link clicks with smooth scrolling
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    
-                    const targetId = this.getAttribute('href').substring(1);
-                    const targetSection = document.getElementById(targetId);
-                    
-                    if (targetSection) {
-                        // Smooth scroll to target
-                        targetSection.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                        
-                        // Immediately update active state for better UX
-                        navLinks.forEach(navLink => {
-                            navLink.classList.remove('nav-active', 'text-secondary');
-                        });
-                        this.classList.add('nav-active', 'text-secondary');
-                    }
-                });
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
             });
-            
-            // Handle all other internal links (like the down arrow)
-            document.querySelectorAll('a[href^="#"]:not(nav a)').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-            
-            // Update active nav on scroll
-            window.addEventListener('scroll', updateActiveNav);
-            
-            // Set initial active state
-            updateActiveNav();
         });
 
-        // Navigation highlight on scroll
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 200) {
-                nav.classList.add('backdrop-blur-xl');
-                nav.classList.remove('backdrop-blur-md');
-            } else {
-                nav.classList.add('backdrop-blur-md');
-                nav.classList.remove('backdrop-blur-xl');
-            }
-        });
-
-        // Intersection Observer for fade-in animations
+        // Intersection Observer for scroll animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1626,113 +529,27 @@
             });
         }, observerOptions);
 
-        // Observe all sections for fade-in effect
-        document.querySelectorAll('section').forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(30px)';
-            section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-            observer.observe(section);
+        // Observe elements for scroll animations
+        document.querySelectorAll('.animate-slide-up, .animate-scale-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
         });
 
-        // Broadway interactive effects
-        const broadwayElements = document.querySelectorAll('img[src*="broadway"]');
-        
-        broadwayElements.forEach((element, index) => {
-            // Add staggered animation delay
-            element.style.animationDelay = `${index * 0.2}s`;
-            
-            // Add interactive hover effects
-            element.addEventListener('mouseenter', function() {
-                this.style.transform += ' scale(1.15)';
-                this.style.filter = 'brightness(1.3) saturate(1.4) drop-shadow(0 0 15px rgba(242, 198, 65, 0.6))';
-                this.style.transition = 'all 0.3s ease-out';
-            });
-            
-            element.addEventListener('mouseleave', function() {
-                this.style.transform = this.style.transform.replace(' scale(1.15)', '');
-                this.style.filter = 'none';
-            });
-        });
-
-        // Team member card interactions
-        const teamCards = document.querySelectorAll('#tim .card-hover');
-        teamCards.forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-15px) scale(1.05)';
-                this.style.boxShadow = '0 25px 50px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(242, 198, 65, 0.2)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-                this.style.boxShadow = '';
-            });
-        });
-
-        // Add sparkle effect on click for Broadway elements
-        const clickableElements = document.querySelectorAll('img[src*="stars-broadway"], img[src*="bulbs-broadway"]');
-        clickableElements.forEach(element => {
-            element.style.cursor = 'pointer';
-            element.addEventListener('click', function(e) {
-                // Create sparkle effect
-                const sparkle = document.createElement('div');
-                sparkle.innerHTML = '✨';
-                sparkle.style.position = 'absolute';
-                sparkle.style.left = e.pageX + 'px';
-                sparkle.style.top = e.pageY + 'px';
-                sparkle.style.fontSize = '24px';
-                sparkle.style.pointerEvents = 'none';
-                sparkle.style.animation = 'fadeOut 1.5s ease-out forwards';
-                sparkle.style.zIndex = '1000';
-                document.body.appendChild(sparkle);
-                
-                setTimeout(() => sparkle.remove(), 1500);
-            });
-        });
-
-        // Parallax effect for background elements
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const parallaxElements = document.querySelectorAll('.absolute img');
-            
-            parallaxElements.forEach((element, index) => {
-                const speed = 0.2 + (index * 0.1);
-                element.style.transform = `translateY(${scrolled * speed}px)`;
-            });
-        });
-
-        // Header title animation on load
+        // Add loading animation
         window.addEventListener('load', () => {
-            const title = document.querySelector('h1');
-            const subtitle = document.querySelector('header p');
-            
-            setTimeout(() => {
-                title.classList.add('animate-pulse-glow');
-            }, 500);
-            
-            setTimeout(() => {
-                subtitle.style.opacity = '1';
-                subtitle.style.transform = 'translateY(0)';
-            }, 1000);
+            document.body.classList.add('loaded');
         });
 
-        // Dynamic lighting effect for header
-        document.addEventListener('mousemove', (e) => {
-            const header = document.querySelector('header > div');
-            const rect = header.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            
-            if (x >= 0 && x <= rect.width && y >= 0 && y <= rect.height) {
-                const xPercent = (x / rect.width) * 100;
-                const yPercent = (y / rect.height) * 100;
-                
-                header.style.background = `
-                    radial-gradient(circle at ${xPercent}% ${yPercent}%, 
-                    rgba(242, 198, 65, 0.15) 0%, 
-                    rgba(0, 0, 0, 0.7) 50%),
-                    rgba(0, 0, 0, 0.7)
-                `;
-            }
+        // Performance optimization: Preload critical images
+        const preloadImages = [
+            // Add your image URLs here when you have them
+        ];
+
+        preloadImages.forEach(src => {
+            const img = new Image();
+            img.src = src;
         });
     </script>
 </body>
