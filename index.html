@@ -137,13 +137,92 @@
             0% { left: -100%; }
             100% { left: 100%; }
         }
+        
+        /* Navigation styles */
+        .nav-link.active {
+            color: #0054A6;
+            font-weight: 600;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Offset for fixed navbar */
+        section {
+            scroll-margin-top: 4rem;
+        }
     </style>
 </head>
 
 <body class="font-poppins bg-gradient-to-br from-bbgtk-gray via-bbgtk-white to-bbgtk-accent/10 min-h-screen">
     
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-bbgtk-primary/10 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo EVA -->
+                <div class="flex items-center">
+                    <div class="w-10 h-10 bg-gradient-to-br from-bbgtk-primary to-bbgtk-secondary rounded-full flex items-center justify-center">
+                        <span class="text-white font-bold text-sm">EVA</span>
+                    </div>
+                    <span class="ml-3 font-bebas text-xl text-bbgtk-text">EVA 2025</span>
+                </div>
+                
+                <!-- Navigation Links -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-bbgtk-text hover:text-bbgtk-primary transition-colors duration-300 font-medium">
+                        Beranda
+                    </a>
+                    <a href="#tentang" class="nav-link text-bbgtk-text hover:text-bbgtk-primary transition-colors duration-300 font-medium">
+                        Tentang EVA
+                    </a>
+                    <a href="#kegiatan" class="nav-link text-bbgtk-text hover:text-bbgtk-primary transition-colors duration-300 font-medium">
+                        Kegiatan
+                    </a>
+                    <a href="#testimoni" class="nav-link text-bbgtk-text hover:text-bbgtk-primary transition-colors duration-300 font-medium">
+                        Testimoni
+                    </a>
+                    <a href="#kontak" class="nav-link text-bbgtk-text hover:text-bbgtk-primary transition-colors duration-300 font-medium">
+                        Kontak
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-bbgtk-text hover:text-bbgtk-primary focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-md border-t border-bbgtk-primary/10">
+            <div class="px-4 py-3 space-y-3">
+                <a href="#home" class="block nav-link text-bbgtk-text hover:text-bbgtk-primary transition-colors duration-300 font-medium">
+                    Beranda
+                </a>
+                <a href="#tentang" class="block nav-link text-bbgtk-text hover:text-bbgtk-primary transition-colors duration-300 font-medium">
+                    Tentang EVA
+                </a>
+                <a href="#kegiatan" class="block nav-link text-bbgtk-text hover:text-bbgtk-primary transition-colors duration-300 font-medium">
+                    Kegiatan
+                </a>
+                <a href="#testimoni" class="block nav-link text-bbgtk-text hover:text-bbgtk-primary transition-colors duration-300 font-medium">
+                    Testimoni
+                </a>
+                <a href="#kontak" class="block nav-link text-bbgtk-text hover:text-bbgtk-primary transition-colors duration-300 font-medium">
+                    Kontak
+                </a>
+            </div>
+        </div>
+    </nav>
+
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
         <!-- Animated Background Elements -->
         <div class="absolute inset-0 gradient-bg opacity-20"></div>
         
@@ -180,11 +259,11 @@
                         </div>
                     </div>
                     <!-- BBGTK Badge -->
-                    <div class="mt-3 text-center">
+                    <!-- <div class="mt-3 text-center">
                         <span class="inline-block bg-bbgtk-primary text-white px-3 py-1 rounded-full text-xs font-semibold tracking-wide">
                             BBGTK JAWA TENGAH
                         </span>
-                    </div>
+                    </div> -->
                 </div>
                 
                 <h1 class="font-bebas text-5xl sm:text-7xl lg:text-8xl text-bbgtk-text mb-6 leading-none">
@@ -253,7 +332,7 @@
     </section>
 
     <!-- Tentang EVA Section -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white/80">
+    <section id="tentang" class="py-20 px-4 sm:px-6 lg:px-8 bg-white/80">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16 animate-slide-up">
                 <h2 class="font-bebas text-4xl sm:text-5xl text-bbgtk-text mb-6">Tentang EVA</h2>
@@ -302,7 +381,7 @@
     </section>
 
     <!-- Kegiatan Unggulan Section -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-bbgtk-gray/30 to-bbgtk-white/30">
+    <section id="kegiatan" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-bbgtk-gray/30 to-bbgtk-white/30">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="font-bebas text-4xl sm:text-5xl text-bbgtk-text mb-6">Kegiatan Unggulan</h2>
@@ -374,7 +453,7 @@
     </section>
 
     <!-- Testimoni Section -->
-    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section id="testimoni" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
         <div class="max-w-6xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="font-bebas text-4xl sm:text-5xl text-bbgtk-text mb-6">Kesan Peserta EVA 2024</h2>
@@ -440,7 +519,7 @@
     </section>
 
     <!-- Footer -->
-    <footer class="bg-bbgtk-primary text-white py-16 px-4 sm:px-6 lg:px-8">
+    <footer id="kontak" class="bg-bbgtk-primary text-white py-16 px-4 sm:px-6 lg:px-8">
         <div class="max-w-6xl mx-auto">
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <!-- Logo & Description -->
@@ -577,6 +656,51 @@
             const img = new Image();
             img.src = src;
         });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Enhanced navigation with active state
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section[id]');
+        
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // Update active navigation on scroll
+        function updateActiveNav() {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.offsetHeight;
+                
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        
+        // Listen for scroll events
+        window.addEventListener('scroll', updateActiveNav);
+        window.addEventListener('load', updateActiveNav);
     </script>
 </body>
+</html>
 </html>
